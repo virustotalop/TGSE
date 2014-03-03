@@ -1241,6 +1241,32 @@ namespace tsge
 
             foreach (var label in this.m_InventoryLabels.Where(label => label != this.m_SelectedInventoryItem))
                 label.BackColor = Color.Transparent;
+
+            // Attempt to update the lists with the selected items properties..
+            var item = this.Player.Inventory[(int)lbl.Tag];
+            if (item != null && item.NetID != 0)
+            {
+                this.cboInventoryPrefixCategory.SelectedIndex = 0;
+                if (item.Prefix != 0)
+                {
+                    for (var x = 0; x < this.cboInventoryPrefix.Items.Count; x++)
+                    {
+                        if (((ItemPrefix)this.cboInventoryPrefix.Items[x]).Id == item.Prefix)
+                        {
+                            this.cboInventoryPrefix.SelectedIndex = x;
+                            return;
+                        }
+                    }
+                }
+                else
+                {
+                    var none = (from ItemPrefix i in this.cboInventoryPrefix.Items
+                                where i.Prefix == "None"
+                                select i).SingleOrDefault();
+                    if (none != null)
+                        this.cboInventoryPrefix.SelectedItem = none;
+                }
+            }
         }
 
         /// <summary>
@@ -1283,11 +1309,16 @@ namespace tsge
 
             if (item.NetID == 0)
                 this.Player.Inventory[slot].Count = this.Player.Inventory[slot].Stack = 0;
+            else
+            {
+                // Add the selected prefix to the item..
+                this.Player.Inventory[slot].Prefix = (byte)((ItemPrefix)this.cboInventoryPrefix.SelectedItem).Id;
+            }
 
             // Update the inventory label..
             this.m_SelectedInventoryItem.Image = new Bitmap(string.Format("{0}\\Data\\Items\\item_{1}.png", Application.StartupPath, item.NetID));
             this.m_SelectedInventoryItem.Text = this.Player.Inventory[slot].Count.ToString();
-            this.m_Tooltip.SetToolTip(this.m_SelectedInventoryItem, item.ToString());
+            this.m_Tooltip.SetToolTip(this.m_SelectedInventoryItem, this.Player.Inventory[slot].ToString());
         }
 
         /// <summary>
@@ -1577,6 +1608,53 @@ namespace tsge
                 label.BackColor = Color.Transparent;
 
             this.SetEquipmentListContext();
+
+            // Attempt to set the selected items prefix..
+            var slot = (int)this.m_SelectedEquipmentItem.Tag;
+            this.cboEquipmentPrefixCategory.SelectedIndex = 0;
+
+            var prefix = 0;
+            switch (slot)
+            {
+                case 0:
+                case 1:
+                case 2:
+                    prefix = this.Player.Armor[slot].Prefix;
+                    break;
+                case 3:
+                case 4:
+                case 5:
+                    prefix = this.Player.Vanity[slot - 3].Prefix;
+                    break;
+                case 6:
+                case 7:
+                case 8:
+                case 9:
+                case 10:
+                case 11:
+                case 12:
+                case 13:
+                    prefix = this.Player.Dye[slot - 6].Prefix;
+                    break;
+                case 14:
+                case 15:
+                case 16:
+                case 17:
+                case 18:
+                    prefix = this.Player.Accessories[slot - 14].Prefix;
+                    break;
+                default:
+                    prefix = this.Player.SocialAccessories[slot - 19].Prefix;
+                    break;
+            }
+
+            var prefixEntry = (from ItemPrefix i in this.cboEquipmentPrefix.Items
+                               where i.Id == prefix
+                               select i).SingleOrDefault();
+            if (prefixEntry != null)
+                this.cboEquipmentPrefix.SelectedItem = prefixEntry;
+
+            this.cboEquipmentPrefix_SelectedIndexChanged(null, null);
         }
 
         /// <summary>
@@ -1628,30 +1706,50 @@ namespace tsge
             if (slot == 0 || slot == 1 || slot == 2)
             {
                 this.Player.Armor[slot].SetItem(item.NetID);
+                if (item.NetID != 0)
+                    this.Player.Armor[slot].Prefix = (byte)((ItemPrefix)this.cboEquipmentPrefix.SelectedItem).Id;
+
+                item = this.Player.Armor[slot];
             }
 
             // Vanity..
             else if (slot == 3 || slot == 4 || slot == 5)
             {
                 this.Player.Vanity[slot - 3].SetItem(item.NetID);
+                if (item.NetID != 0)
+                    this.Player.Vanity[slot - 3].Prefix = (byte)((ItemPrefix)this.cboEquipmentPrefix.SelectedItem).Id;
+
+                item = this.Player.Vanity[slot - 3];
             }
 
             // Dye..
             else if (slot >= 6 && slot <= 13)
             {
                 this.Player.Dye[slot - 6].SetItem(item.NetID);
+                if (item.NetID != 0)
+                    this.Player.Dye[slot - 6].Prefix = (byte)((ItemPrefix)this.cboEquipmentPrefix.SelectedItem).Id;
+
+                item = this.Player.Dye[slot - 6];
             }
 
             // Accessories..
             else if (slot >= 14 && slot <= 18)
             {
                 this.Player.Accessories[slot - 14].SetItem(item.NetID);
+                if (item.NetID != 0)
+                    this.Player.Accessories[slot - 14].Prefix = (byte)((ItemPrefix)this.cboEquipmentPrefix.SelectedItem).Id;
+
+                item = this.Player.Accessories[slot - 14];
             }
 
             // Social Accessories
             else
             {
                 this.Player.SocialAccessories[slot - 19].SetItem(item.NetID);
+                if (item.NetID != 0)
+                    this.Player.SocialAccessories[slot - 19].Prefix = (byte)((ItemPrefix)this.cboEquipmentPrefix.SelectedItem).Id;
+
+                item = this.Player.SocialAccessories[slot - 19];
             }
 
             // Update the inventory label..
@@ -2050,6 +2148,32 @@ namespace tsge
 
             foreach (var label in this.m_BankSafeLabels.Where(label => label != this.m_SelectedBankSafeItem))
                 label.BackColor = Color.Transparent;
+
+            var slot = (int)this.m_SelectedBankSafeItem.Tag;
+            var item = (slot <= 39) ? this.Player.Bank1[slot] : this.Player.Bank2[slot - 40];
+            if (item != null && item.NetID != 0)
+            {
+                this.cboBankSafePrefixCategory.SelectedIndex = 0;
+                if (item.Prefix != 0)
+                {
+                    for (var x = 0; x < this.cboBankSafePrefix.Items.Count; x++)
+                    {
+                        if (((ItemPrefix)this.cboBankSafePrefix.Items[x]).Id == item.Prefix)
+                        {
+                            this.cboBankSafePrefix.SelectedIndex = x;
+                            return;
+                        }
+                    }
+                }
+                else
+                {
+                    var none = (from ItemPrefix i in this.cboBankSafePrefix.Items
+                                where i.Prefix == "None"
+                                select i).SingleOrDefault();
+                    if (none != null)
+                        this.cboBankSafePrefix.SelectedItem = none;
+                }
+            }
         }
 
         /// <summary>
@@ -2096,6 +2220,11 @@ namespace tsge
 
                 if (item.NetID == 0)
                     this.Player.Bank1[slot].Count = this.Player.Bank1[slot].Stack = 0;
+                else
+                {
+                    // Add the selected prefix to the item..
+                    this.Player.Bank1[slot].Prefix = (byte)((ItemPrefix)this.cboBankSafePrefix.SelectedItem).Id;
+                }
 
                 count = this.Player.Bank1[slot].Count;
             }
@@ -2106,14 +2235,19 @@ namespace tsge
 
                 if (item.NetID == 0)
                     this.Player.Bank2[slot - 40].Count = this.Player.Bank2[slot - 40].Stack = 0;
+                else
+                {
+                    // Add the selected prefix to the item..
+                    this.Player.Bank2[slot - 40].Prefix = (byte)((ItemPrefix)this.cboBankSafePrefix.SelectedItem).Id;
+                }
 
                 count = this.Player.Bank2[slot - 40].Count;
             }
 
-            // Update the inventory label..
+            // Update the item label..
             this.m_SelectedBankSafeItem.Image = new Bitmap(string.Format("{0}\\Data\\Items\\item_{1}.png", Application.StartupPath, item.NetID));
             this.m_SelectedBankSafeItem.Text = count.ToString();
-            this.m_Tooltip.SetToolTip(this.m_SelectedBankSafeItem, item.ToString());
+            this.m_Tooltip.SetToolTip(this.m_SelectedBankSafeItem, (slot <= 39) ? this.Player.Bank1[slot].ToString() : this.Player.Bank2[slot - 40].ToString());
         }
 
         /// <summary>
@@ -2139,7 +2273,7 @@ namespace tsge
             }
             else
             {
-                if (this.Player.Bank2[slot].NetID == 0)
+                if (this.Player.Bank2[slot - 40].NetID == 0)
                     return;
                 this.Player.Bank2[slot - 40].Prefix = (byte)prefix.Id;
                 this.m_Tooltip.SetToolTip(this.m_SelectedBankSafeItem, this.Player.Bank2[slot - 40].ToString());
