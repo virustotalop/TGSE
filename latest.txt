@@ -1,2 +1,2 @@
-2.1.0.12
-https://github.com/atom0s/TSGE/releases/download/v2.1.0.12/tsge_2.1.0.12_beta.7z
+2.2.0.3
+https://github.com/atom0s/TSGE/releases/download/v2.2.0.3/tsge_2.2.0.3.7z
