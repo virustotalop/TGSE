@@ -1954,11 +1954,33 @@ namespace tsge
                     }));
             }
 
+            // Loop each accessory piece..
+            foreach (var i in this.Player.Accessories)
+            {
+                // Add each item to the xml document..
+                xml.Root.Add(new XElement("accessory", new object[]
+                    {
+                        new XAttribute("id", i.NetID),
+                        new XAttribute("prefix", i.Prefix)
+                    }));
+            }
+
             // Loop each vanity piece..
             foreach (var i in this.Player.Vanity)
             {
                 // Add each item to the xml document..
                 xml.Root.Add(new XElement("vanity", new object[]
+                    {
+                        new XAttribute("id", i.NetID),
+                        new XAttribute("prefix", i.Prefix)
+                    }));
+            }
+
+            // Loop each social accessory piece..
+            foreach (var i in this.Player.SocialAccessories)
+            {
+                // Add each item to the xml document..
+                xml.Root.Add(new XElement("socialaccessory", new object[]
                     {
                         new XAttribute("id", i.NetID),
                         new XAttribute("prefix", i.Prefix)
@@ -1975,18 +1997,7 @@ namespace tsge
                         new XAttribute("prefix", i.Prefix)
                     }));
             }
-
-            // Loop each accessory piece..
-            foreach (var i in this.Player.Accessories)
-            {
-                // Add each item to the xml document..
-                xml.Root.Add(new XElement("accessory", new object[]
-                    {
-                        new XAttribute("id", i.NetID),
-                        new XAttribute("prefix", i.Prefix)
-                    }));
-            }
-
+            
             // Attempt to save the document..
             xml.Save(sfd.FileName);
             sfd.Dispose();
@@ -2029,18 +2040,20 @@ namespace tsge
 
                 // Obtain each categories items..
                 var armorElements = root.Elements("armor");
-                var vanityElements = root.Elements("vanity");
-                var dyeElements = root.Elements("dye");
                 var accessoryElements = root.Elements("accessory");
-
+                var vanityElements = root.Elements("vanity");
+                var socialAccessoryElements = root.Elements("socialaccessory");
+                var dyeElements = root.Elements("dye");
+                
                 // Convert the items to lists..
                 var armor = armorElements as IList<XElement> ?? armorElements.ToList();
-                var vanity = vanityElements as IList<XElement> ?? vanityElements.ToList();
-                var dye = dyeElements as IList<XElement> ?? dyeElements.ToList();
                 var accessory = accessoryElements as IList<XElement> ?? accessoryElements.ToList();
-
+                var vanity = vanityElements as IList<XElement> ?? vanityElements.ToList();
+                var socialAccessory = socialAccessoryElements as IList<XElement> ?? socialAccessoryElements.ToList();
+                var dye = dyeElements as IList<XElement> ?? dyeElements.ToList();
+                
                 // Validate the data..
-                if (armor.Count != 3 || vanity.Count != 3 || dye.Count != 3 || accessory.Count != 5)
+                if (armor.Count != 3 || accessory.Count != 5 || vanity.Count != 3 || socialAccessory.Count != 5 || dye.Count != 8)
                     throw new InvalidDataException("File data is not valid.");
 
                 // Update the armor..
@@ -2050,22 +2063,6 @@ namespace tsge
                 this.Player.Armor[1].Prefix = (byte)int.Parse(armor[1].Attribute("prefix").Value);
                 this.Player.Armor[2].SetItem(int.Parse(armor[2].Attribute("id").Value));
                 this.Player.Armor[2].Prefix = (byte)int.Parse(armor[2].Attribute("prefix").Value);
-
-                // Update the vanity..
-                this.Player.Vanity[0].SetItem(int.Parse(vanity[0].Attribute("id").Value));
-                this.Player.Vanity[0].Prefix = (byte)int.Parse(vanity[0].Attribute("prefix").Value);
-                this.Player.Vanity[1].SetItem(int.Parse(vanity[1].Attribute("id").Value));
-                this.Player.Vanity[1].Prefix = (byte)int.Parse(vanity[1].Attribute("prefix").Value);
-                this.Player.Vanity[2].SetItem(int.Parse(vanity[2].Attribute("id").Value));
-                this.Player.Vanity[2].Prefix = (byte)int.Parse(vanity[2].Attribute("prefix").Value);
-
-                // Update the dye..
-                this.Player.Dye[0].SetItem(int.Parse(dye[0].Attribute("id").Value));
-                this.Player.Dye[0].Prefix = (byte)int.Parse(dye[0].Attribute("prefix").Value);
-                this.Player.Dye[1].SetItem(int.Parse(dye[1].Attribute("id").Value));
-                this.Player.Dye[1].Prefix = (byte)int.Parse(dye[1].Attribute("prefix").Value);
-                this.Player.Dye[2].SetItem(int.Parse(dye[2].Attribute("id").Value));
-                this.Player.Dye[2].Prefix = (byte)int.Parse(dye[2].Attribute("prefix").Value);
 
                 // Update the accessories..
                 this.Player.Accessories[0].SetItem(int.Parse(accessory[0].Attribute("id").Value));
@@ -2078,6 +2075,33 @@ namespace tsge
                 this.Player.Accessories[3].Prefix = (byte)int.Parse(accessory[3].Attribute("prefix").Value);
                 this.Player.Accessories[4].SetItem(int.Parse(accessory[4].Attribute("id").Value));
                 this.Player.Accessories[4].Prefix = (byte)int.Parse(accessory[4].Attribute("prefix").Value);
+
+                // Update the vanity..
+                this.Player.Vanity[0].SetItem(int.Parse(vanity[0].Attribute("id").Value));
+                this.Player.Vanity[0].Prefix = (byte)int.Parse(vanity[0].Attribute("prefix").Value);
+                this.Player.Vanity[1].SetItem(int.Parse(vanity[1].Attribute("id").Value));
+                this.Player.Vanity[1].Prefix = (byte)int.Parse(vanity[1].Attribute("prefix").Value);
+                this.Player.Vanity[2].SetItem(int.Parse(vanity[2].Attribute("id").Value));
+                this.Player.Vanity[2].Prefix = (byte)int.Parse(vanity[2].Attribute("prefix").Value);
+
+                // Update the accessories..
+                this.Player.SocialAccessories[0].SetItem(int.Parse(socialAccessory[0].Attribute("id").Value));
+                this.Player.SocialAccessories[0].Prefix = (byte)int.Parse(socialAccessory[0].Attribute("prefix").Value);
+                this.Player.SocialAccessories[1].SetItem(int.Parse(socialAccessory[1].Attribute("id").Value));
+                this.Player.SocialAccessories[1].Prefix = (byte)int.Parse(socialAccessory[1].Attribute("prefix").Value);
+                this.Player.SocialAccessories[2].SetItem(int.Parse(socialAccessory[2].Attribute("id").Value));
+                this.Player.SocialAccessories[2].Prefix = (byte)int.Parse(socialAccessory[2].Attribute("prefix").Value);
+                this.Player.SocialAccessories[3].SetItem(int.Parse(socialAccessory[3].Attribute("id").Value));
+                this.Player.SocialAccessories[3].Prefix = (byte)int.Parse(socialAccessory[3].Attribute("prefix").Value);
+                this.Player.SocialAccessories[4].SetItem(int.Parse(socialAccessory[4].Attribute("id").Value));
+                this.Player.SocialAccessories[4].Prefix = (byte)int.Parse(socialAccessory[4].Attribute("prefix").Value);
+
+                // Update the dye..
+                for (var x = 0; x < dye.Count; x++)
+                {
+                    this.Player.Dye[x].SetItem(int.Parse(dye[x].Attribute("id").Value));
+                    this.Player.Dye[x].Prefix = (byte)int.Parse(dye[x].Attribute("prefix").Value);
+                }
 
                 // Refresh the player..
                 this.RefreshLoadedPlayer();
