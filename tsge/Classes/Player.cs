@@ -38,6 +38,7 @@ namespace tsge.Classes
             this.Mana = 200;
             this.ManaMax = 200;
             this.IsHotbarLocked = false;
+            this.AnglerQuestsFinished = 0;
             this.File = string.Empty;
 
             // Set default colors..
@@ -363,6 +364,15 @@ namespace tsge.Classes
         {
             get { return this.Get<bool>("IsHotbarLocked"); }
             set { this.Set("IsHotbarLocked", value); }
+        }
+
+        /// <summary>
+        /// Gets or sets the angler quests finished status.
+        /// </summary>
+        public int AnglerQuestsFinished
+        {
+            get { return this.Get<int>("AnglerQuestsFinished"); }
+            set { this.Set("AnglerQuestsFinished", value); }
         }
     }
 }

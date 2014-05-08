@@ -54,12 +54,17 @@ namespace tsge.Classes
         /// <summary>
         /// Current supported game version.
         /// </summary>
-        public static List<int> GameVersions = new List<int>(new[] { 38, 47, 58, 68, 69, 70, 71, 72, 73, 77, 81, 83, 93, 94 });
+        public static List<int> GameVersions = new List<int>(new[] { 38, 47, 58, 68, 69, 70, 71, 72, 73, 77, 81, 83, 93, 94, 101 });
 
         /// <summary>
         /// The latest supported version of Terraria.
         /// </summary>
-        public static int LatestVersion = 94;
+        public static int LatestVersion = 101;
+
+        /// <summary>
+        /// The latest max item used while handling profiles.
+        /// </summary>
+        public static int MaxItemCount = 2743;
 
         /// <summary>
         /// Profile path to the Terraria save game files.
@@ -301,7 +306,7 @@ namespace tsge.Classes
                         for (var x = 0; x < ((p.GameVersion >= 58) ? 58 : 48); x++)
                         {
                             var temp = bReader.ReadInt32();
-                            if (temp >= 2289)
+                            if (temp >= Terraria.MaxItemCount)
                                 p.Inventory[x].SetItem(0);
                             else
                             {
@@ -349,6 +354,10 @@ namespace tsge.Classes
 
                         // Read Hotbar Locked Flag..
                         p.IsHotbarLocked = bReader.ReadBoolean();
+
+                        // Read angler quest data..
+                        if (p.GameVersion >= 98)
+                            p.AnglerQuestsFinished = bReader.ReadInt32();
 
                         // Force the new profile to latest version..
                         p.GameVersion = Terraria.LatestVersion;
@@ -521,6 +530,7 @@ namespace tsge.Classes
 
                 // Write hotbar locked flag..
                 bWriter.Write(player.IsHotbarLocked);
+                bWriter.Write(player.AnglerQuestsFinished);
 
                 // Cleanup..
                 bWriter.Close();
