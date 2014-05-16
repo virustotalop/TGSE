@@ -54,17 +54,17 @@ namespace tsge.Classes
         /// <summary>
         /// Current supported game version.
         /// </summary>
-        public static List<int> GameVersions = new List<int>(new[] { 38, 47, 58, 68, 69, 70, 71, 72, 73, 77, 81, 83, 93, 94, 101 });
+        public static List<int> GameVersions = new List<int>(new[] { 38, 47, 58, 68, 69, 70, 71, 72, 73, 77, 81, 83, 93, 94, 101, 102 });
 
         /// <summary>
         /// The latest supported version of Terraria.
         /// </summary>
-        public static int LatestVersion = 101;
+        public static int LatestVersion = 102;
 
         /// <summary>
         /// The latest max item used while handling profiles.
         /// </summary>
-        public static int MaxItemCount = 2743;
+        public static int MaxItemCount = 2749;
 
         /// <summary>
         /// Profile path to the Terraria save game files.
@@ -285,10 +285,13 @@ namespace tsge.Classes
                         }
 
                         // Read social accessories..
-                        for (var x = 0; x < 5; x++)
+                        if (p.GameVersion >= 81)
                         {
-                            p.SocialAccessories[x].SetItem(bReader.ReadInt32());
-                            p.SocialAccessories[x].Prefix = bReader.ReadByte();
+                            for (var x = 0; x < 5; x++)
+                            {
+                                p.SocialAccessories[x].SetItem(bReader.ReadInt32());
+                                p.SocialAccessories[x].Prefix = bReader.ReadByte();
+                            }
                         }
 
                         // Read dye items..

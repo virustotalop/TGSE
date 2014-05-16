@@ -99,7 +99,7 @@ namespace tsge
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(210, 13);
             this.label4.TabIndex = 3;
-            this.label4.Text = "(c) 2012 - 2013 atom0s [atom0s@live.com]";
+            this.label4.Text = "(c) 2012 - 2014 atom0s [atom0s@live.com]";
             // 
             // lblSourceCode
             // 
@@ -201,9 +201,9 @@ namespace tsge
             this.label9.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(162, 310);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(110, 26);
+            this.label9.Size = new System.Drawing.Size(151, 26);
             this.label9.TabIndex = 12;
-            this.label9.Text = "Terraria 1.2.3 / 1.2.3.1\r\nTerraria 1.2.4";
+            this.label9.Text = "Terraria 1.2.3 / 1.2.3.1\r\nTerraria 1.2.4 / Terraria 1.2.4.1";
             // 
             // frmAbout
             // 

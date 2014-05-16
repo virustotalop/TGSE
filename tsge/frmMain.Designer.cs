@@ -342,6 +342,8 @@ namespace tsge
             this.aboutTSGEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkForUpdatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.txtFishQuestsCompleted = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
             this.tcMainTabControl.SuspendLayout();
             this.tpMainPlayer.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -380,11 +382,11 @@ namespace tsge
             this.tcMainTabControl.Controls.Add(this.tpEquipment);
             this.tcMainTabControl.Controls.Add(this.tpBankSafe);
             this.tcMainTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tcMainTabControl.Location = new System.Drawing.Point(0, 27);
+            this.tcMainTabControl.Location = new System.Drawing.Point(0, 25);
             this.tcMainTabControl.Name = "tcMainTabControl";
             this.tcMainTabControl.Padding = new System.Drawing.Point(25, 3);
             this.tcMainTabControl.SelectedIndex = 0;
-            this.tcMainTabControl.Size = new System.Drawing.Size(620, 439);
+            this.tcMainTabControl.Size = new System.Drawing.Size(620, 441);
             this.tcMainTabControl.TabIndex = 1;
             this.tcMainTabControl.SelectedIndexChanged += new System.EventHandler(this.tcMainTabControl_SelectedIndexChanged);
             // 
@@ -396,7 +398,7 @@ namespace tsge
             this.tpMainPlayer.Location = new System.Drawing.Point(4, 22);
             this.tpMainPlayer.Name = "tpMainPlayer";
             this.tpMainPlayer.Padding = new System.Windows.Forms.Padding(3);
-            this.tpMainPlayer.Size = new System.Drawing.Size(612, 413);
+            this.tpMainPlayer.Size = new System.Drawing.Size(612, 415);
             this.tpMainPlayer.TabIndex = 0;
             this.tpMainPlayer.Text = "Player";
             this.tpMainPlayer.UseVisualStyleBackColor = true;
@@ -762,6 +764,8 @@ namespace tsge
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label32);
+            this.groupBox1.Controls.Add(this.txtFishQuestsCompleted);
             this.groupBox1.Controls.Add(this.chkHideVisual);
             this.groupBox1.Controls.Add(this.cboDifficulty);
             this.groupBox1.Controls.Add(this.txtPlayerName);
@@ -781,7 +785,7 @@ namespace tsge
             // 
             this.chkHideVisual.AutoSize = true;
             this.chkHideVisual.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.playerBindingSource, "HideVisual", true));
-            this.chkHideVisual.Location = new System.Drawing.Point(104, 100);
+            this.chkHideVisual.Location = new System.Drawing.Point(176, 100);
             this.chkHideVisual.Name = "chkHideVisual";
             this.chkHideVisual.Size = new System.Drawing.Size(85, 17);
             this.chkHideVisual.TabIndex = 6;
@@ -4115,7 +4119,7 @@ namespace tsge
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(620, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(620, 25);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -4123,7 +4127,7 @@ namespace tsge
             // 
             this.tscboQuickSelect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.tscboQuickSelect.Name = "tscboQuickSelect";
-            this.tscboQuickSelect.Size = new System.Drawing.Size(121, 23);
+            this.tscboQuickSelect.Size = new System.Drawing.Size(121, 21);
             this.tscboQuickSelect.DropDown += new System.EventHandler(this.tscboQuickSelect_DropDown);
             this.tscboQuickSelect.SelectedIndexChanged += new System.EventHandler(this.tscboQuickSelect_SelectedIndexChanged);
             // 
@@ -4138,14 +4142,14 @@ namespace tsge
             this.toolStripSeparator2,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 23);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(35, 21);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // newCharacterToolStripMenuItem
             // 
             this.newCharacterToolStripMenuItem.Image = global::tsge.Properties.Resources.status_online;
             this.newCharacterToolStripMenuItem.Name = "newCharacterToolStripMenuItem";
-            this.newCharacterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.newCharacterToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.newCharacterToolStripMenuItem.Text = "New Character";
             this.newCharacterToolStripMenuItem.Click += new System.EventHandler(this.newCharacterToolStripMenuItem_Click);
             // 
@@ -4153,20 +4157,20 @@ namespace tsge
             // 
             this.openToolStripMenuItem.Image = global::tsge.Properties.Resources.folder_user;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(143, 6);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Image = global::tsge.Properties.Resources.page_save;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
@@ -4174,20 +4178,20 @@ namespace tsge
             // 
             this.saveAsToolStripMenuItem.Image = global::tsge.Properties.Resources.script_save;
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.saveAsToolStripMenuItem.Text = "Save As";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(143, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Image = global::tsge.Properties.Resources.stop;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -4197,14 +4201,14 @@ namespace tsge
             this.aboutTSGEToolStripMenuItem,
             this.checkForUpdatesToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 23);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(40, 21);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // aboutTSGEToolStripMenuItem
             // 
             this.aboutTSGEToolStripMenuItem.Image = global::tsge.Properties.Resources.information;
             this.aboutTSGEToolStripMenuItem.Name = "aboutTSGEToolStripMenuItem";
-            this.aboutTSGEToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.aboutTSGEToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.aboutTSGEToolStripMenuItem.Text = "About TSGE";
             this.aboutTSGEToolStripMenuItem.Click += new System.EventHandler(this.aboutTSGEToolStripMenuItem_Click);
             // 
@@ -4212,7 +4216,7 @@ namespace tsge
             // 
             this.checkForUpdatesToolStripMenuItem.Image = global::tsge.Properties.Resources._new;
             this.checkForUpdatesToolStripMenuItem.Name = "checkForUpdatesToolStripMenuItem";
-            this.checkForUpdatesToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.checkForUpdatesToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.checkForUpdatesToolStripMenuItem.Text = "Check For Updates";
             this.checkForUpdatesToolStripMenuItem.Click += new System.EventHandler(this.checkForUpdatesToolStripMenuItem_Click);
             // 
@@ -4220,6 +4224,24 @@ namespace tsge
             // 
             this.inventoryBindingSource.DataMember = "Inventory";
             this.inventoryBindingSource.DataSource = this.playerBindingSource;
+            // 
+            // txtFishQuestsCompleted
+            // 
+            this.txtFishQuestsCompleted.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "AnglerQuestsFinished", true));
+            this.txtFishQuestsCompleted.Location = new System.Drawing.Point(104, 97);
+            this.txtFishQuestsCompleted.Name = "txtFishQuestsCompleted";
+            this.txtFishQuestsCompleted.Size = new System.Drawing.Size(61, 20);
+            this.txtFishQuestsCompleted.TabIndex = 24;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(21, 100);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(77, 13);
+            this.label32.TabIndex = 25;
+            this.label32.Text = "Fish Quests:";
             // 
             // frmMain
             // 
@@ -4576,6 +4598,8 @@ namespace tsge
         private Controls.ItemLabel equipmentItem21;
         private Controls.ItemLabel equipmentItem20;
         private Controls.ItemLabel equipmentItem19;
+        private Label label32;
+        private TextBox txtFishQuestsCompleted;
 
     }
 }
