@@ -84,6 +84,8 @@ namespace tsge
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.txtFishQuestsCompleted = new System.Windows.Forms.TextBox();
             this.chkHideVisual = new System.Windows.Forms.CheckBox();
             this.cboDifficulty = new System.Windows.Forms.ComboBox();
             this.txtPlayerName = new System.Windows.Forms.TextBox();
@@ -342,8 +344,6 @@ namespace tsge
             this.aboutTSGEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkForUpdatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.txtFishQuestsCompleted = new System.Windows.Forms.TextBox();
-            this.label32 = new System.Windows.Forms.Label();
             this.tcMainTabControl.SuspendLayout();
             this.tpMainPlayer.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -376,12 +376,14 @@ namespace tsge
             // 
             // tcMainTabControl
             // 
+            this.tcMainTabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tcMainTabControl.Controls.Add(this.tpMainPlayer);
             this.tcMainTabControl.Controls.Add(this.tpBuffs);
             this.tcMainTabControl.Controls.Add(this.tpInventory);
             this.tcMainTabControl.Controls.Add(this.tpEquipment);
             this.tcMainTabControl.Controls.Add(this.tpBankSafe);
-            this.tcMainTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tcMainTabControl.Location = new System.Drawing.Point(0, 25);
             this.tcMainTabControl.Name = "tcMainTabControl";
             this.tcMainTabControl.Padding = new System.Drawing.Point(25, 3);
@@ -405,6 +407,9 @@ namespace tsge
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.btnLoadColorHair);
             this.groupBox3.Controls.Add(this.btnSaveColorHair);
             this.groupBox3.Controls.Add(this.btnRandomColors);
@@ -434,6 +439,7 @@ namespace tsge
             // 
             // btnLoadColorHair
             // 
+            this.btnLoadColorHair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLoadColorHair.Location = new System.Drawing.Point(462, 226);
             this.btnLoadColorHair.Name = "btnLoadColorHair";
             this.btnLoadColorHair.Size = new System.Drawing.Size(120, 23);
@@ -444,6 +450,7 @@ namespace tsge
             // 
             // btnSaveColorHair
             // 
+            this.btnSaveColorHair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSaveColorHair.Location = new System.Drawing.Point(462, 197);
             this.btnSaveColorHair.Name = "btnSaveColorHair";
             this.btnSaveColorHair.Size = new System.Drawing.Size(120, 23);
@@ -454,6 +461,7 @@ namespace tsge
             // 
             // btnRandomColors
             // 
+            this.btnRandomColors.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRandomColors.Location = new System.Drawing.Point(462, 83);
             this.btnRandomColors.Name = "btnRandomColors";
             this.btnRandomColors.Size = new System.Drawing.Size(120, 23);
@@ -464,6 +472,7 @@ namespace tsge
             // 
             // btnRandomHair
             // 
+            this.btnRandomHair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRandomHair.Location = new System.Drawing.Point(462, 54);
             this.btnRandomHair.Name = "btnRandomHair";
             this.btnRandomHair.Size = new System.Drawing.Size(120, 23);
@@ -474,6 +483,7 @@ namespace tsge
             // 
             // btnSelectHair
             // 
+            this.btnSelectHair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSelectHair.Location = new System.Drawing.Point(462, 19);
             this.btnSelectHair.Name = "btnSelectHair";
             this.btnSelectHair.Size = new System.Drawing.Size(120, 23);
@@ -635,6 +645,9 @@ namespace tsge
             // 
             // modelViewer
             // 
+            this.modelViewer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.modelViewer.DataBindings.Add(new System.Windows.Forms.Binding("EyeColor", this.playerBindingSource, "EyeColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.modelViewer.DataBindings.Add(new System.Windows.Forms.Binding("HairColor", this.playerBindingSource, "HairColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.modelViewer.DataBindings.Add(new System.Windows.Forms.Binding("HairId", this.playerBindingSource, "Hair", true));
@@ -673,6 +686,8 @@ namespace tsge
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.txtMaxMana);
             this.groupBox2.Controls.Add(this.txtCurrentMana);
             this.groupBox2.Controls.Add(this.txtMaxHealth);
@@ -690,6 +705,7 @@ namespace tsge
             // 
             // txtMaxMana
             // 
+            this.txtMaxMana.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMaxMana.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "ManaMax", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.txtMaxMana.Location = new System.Drawing.Point(211, 68);
             this.txtMaxMana.Name = "txtMaxMana";
@@ -698,6 +714,7 @@ namespace tsge
             // 
             // txtCurrentMana
             // 
+            this.txtCurrentMana.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCurrentMana.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "Mana", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.txtCurrentMana.Location = new System.Drawing.Point(144, 68);
             this.txtCurrentMana.Name = "txtCurrentMana";
@@ -706,6 +723,7 @@ namespace tsge
             // 
             // txtMaxHealth
             // 
+            this.txtMaxHealth.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMaxHealth.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "HealthMax", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.txtMaxHealth.Location = new System.Drawing.Point(211, 17);
             this.txtMaxHealth.Name = "txtMaxHealth";
@@ -714,6 +732,7 @@ namespace tsge
             // 
             // txtCurrentHealth
             // 
+            this.txtCurrentHealth.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCurrentHealth.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "Health", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.txtCurrentHealth.Location = new System.Drawing.Point(144, 17);
             this.txtCurrentHealth.Name = "txtCurrentHealth";
@@ -722,6 +741,9 @@ namespace tsge
             // 
             // pbPlayerMana
             // 
+            this.pbPlayerMana.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pbPlayerMana.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.playerBindingSource, "Mana", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.pbPlayerMana.DataBindings.Add(new System.Windows.Forms.Binding("Maximum", this.playerBindingSource, "ManaMax", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.pbPlayerMana.ForeColor = System.Drawing.Color.DodgerBlue;
@@ -733,6 +755,8 @@ namespace tsge
             // 
             // pbPlayerHealth
             // 
+            this.pbPlayerHealth.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pbPlayerHealth.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.playerBindingSource, "Health", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.pbPlayerHealth.DataBindings.Add(new System.Windows.Forms.Binding("Maximum", this.playerBindingSource, "HealthMax", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.pbPlayerHealth.ForeColor = System.Drawing.Color.Chartreuse;
@@ -780,6 +804,24 @@ namespace tsge
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Player";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(21, 100);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(77, 13);
+            this.label32.TabIndex = 25;
+            this.label32.Text = "Fish Quests:";
+            // 
+            // txtFishQuestsCompleted
+            // 
+            this.txtFishQuestsCompleted.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "AnglerQuestsFinished", true));
+            this.txtFishQuestsCompleted.Location = new System.Drawing.Point(104, 97);
+            this.txtFishQuestsCompleted.Name = "txtFishQuestsCompleted";
+            this.txtFishQuestsCompleted.Size = new System.Drawing.Size(61, 20);
+            this.txtFishQuestsCompleted.TabIndex = 24;
             // 
             // chkHideVisual
             // 
@@ -862,13 +904,15 @@ namespace tsge
             this.tpBuffs.Location = new System.Drawing.Point(4, 22);
             this.tpBuffs.Name = "tpBuffs";
             this.tpBuffs.Padding = new System.Windows.Forms.Padding(3);
-            this.tpBuffs.Size = new System.Drawing.Size(612, 413);
+            this.tpBuffs.Size = new System.Drawing.Size(612, 415);
             this.tpBuffs.TabIndex = 1;
             this.tpBuffs.Text = "Buffs";
             this.tpBuffs.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.Controls.Add(this.btnLoadBuffs);
             this.groupBox4.Controls.Add(this.btnSaveBuffs);
             this.groupBox4.Controls.Add(this.btnHackAllBuffDurations);
@@ -887,6 +931,7 @@ namespace tsge
             // 
             // btnLoadBuffs
             // 
+            this.btnLoadBuffs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnLoadBuffs.Location = new System.Drawing.Point(156, 362);
             this.btnLoadBuffs.Name = "btnLoadBuffs";
             this.btnLoadBuffs.Size = new System.Drawing.Size(125, 23);
@@ -897,6 +942,7 @@ namespace tsge
             // 
             // btnSaveBuffs
             // 
+            this.btnSaveBuffs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnSaveBuffs.Location = new System.Drawing.Point(6, 362);
             this.btnSaveBuffs.Name = "btnSaveBuffs";
             this.btnSaveBuffs.Size = new System.Drawing.Size(125, 23);
@@ -907,6 +953,7 @@ namespace tsge
             // 
             // btnHackAllBuffDurations
             // 
+            this.btnHackAllBuffDurations.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnHackAllBuffDurations.Location = new System.Drawing.Point(156, 322);
             this.btnHackAllBuffDurations.Name = "btnHackAllBuffDurations";
             this.btnHackAllBuffDurations.Size = new System.Drawing.Size(125, 23);
@@ -917,6 +964,7 @@ namespace tsge
             // 
             // btnMaxAllBuffDurations
             // 
+            this.btnMaxAllBuffDurations.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnMaxAllBuffDurations.Location = new System.Drawing.Point(156, 293);
             this.btnMaxAllBuffDurations.Name = "btnMaxAllBuffDurations";
             this.btnMaxAllBuffDurations.Size = new System.Drawing.Size(125, 23);
@@ -927,6 +975,7 @@ namespace tsge
             // 
             // btnDeleteAllBuffs
             // 
+            this.btnDeleteAllBuffs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnDeleteAllBuffs.Location = new System.Drawing.Point(156, 264);
             this.btnDeleteAllBuffs.Name = "btnDeleteAllBuffs";
             this.btnDeleteAllBuffs.Size = new System.Drawing.Size(125, 23);
@@ -937,6 +986,7 @@ namespace tsge
             // 
             // btnHackBuffDuration
             // 
+            this.btnHackBuffDuration.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnHackBuffDuration.Location = new System.Drawing.Point(6, 322);
             this.btnHackBuffDuration.Name = "btnHackBuffDuration";
             this.btnHackBuffDuration.Size = new System.Drawing.Size(125, 23);
@@ -947,6 +997,7 @@ namespace tsge
             // 
             // btnMaxBuffDuration
             // 
+            this.btnMaxBuffDuration.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnMaxBuffDuration.Location = new System.Drawing.Point(6, 293);
             this.btnMaxBuffDuration.Name = "btnMaxBuffDuration";
             this.btnMaxBuffDuration.Size = new System.Drawing.Size(125, 23);
@@ -957,6 +1008,7 @@ namespace tsge
             // 
             // btnDeleteBuff
             // 
+            this.btnDeleteBuff.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnDeleteBuff.Location = new System.Drawing.Point(6, 264);
             this.btnDeleteBuff.Name = "btnDeleteBuff";
             this.btnDeleteBuff.Size = new System.Drawing.Size(125, 23);
@@ -967,6 +1019,8 @@ namespace tsge
             // 
             // lstBuffSelection
             // 
+            this.lstBuffSelection.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.lstBuffSelection.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.lstBuffSelection.FormattingEnabled = true;
             this.lstBuffSelection.ItemHeight = 38;
@@ -978,6 +1032,9 @@ namespace tsge
             // 
             // lstPlayerBuffs
             // 
+            this.lstPlayerBuffs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lstPlayerBuffs.DataSource = this.buffsBindingSource;
             this.lstPlayerBuffs.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.lstPlayerBuffs.FormattingEnabled = true;
@@ -1064,20 +1121,21 @@ namespace tsge
             this.tpInventory.Controls.Add(this.inventoryItem00);
             this.tpInventory.Location = new System.Drawing.Point(4, 22);
             this.tpInventory.Name = "tpInventory";
-            this.tpInventory.Size = new System.Drawing.Size(612, 413);
+            this.tpInventory.Size = new System.Drawing.Size(612, 415);
             this.tpInventory.TabIndex = 2;
             this.tpInventory.Text = "Inventory";
             this.tpInventory.UseVisualStyleBackColor = true;
             // 
             // groupBox11
             // 
+            this.groupBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox11.Controls.Add(this.label17);
             this.groupBox11.Controls.Add(this.txtInventoryStackCount);
             this.groupBox11.Controls.Add(this.label28);
             this.groupBox11.Controls.Add(this.cboInventoryPrefixCategory);
             this.groupBox11.Controls.Add(this.label16);
             this.groupBox11.Controls.Add(this.cboInventoryPrefix);
-            this.groupBox11.Location = new System.Drawing.Point(186, 267);
+            this.groupBox11.Location = new System.Drawing.Point(24, 278);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Size = new System.Drawing.Size(234, 129);
             this.groupBox11.TabIndex = 75;
@@ -1151,7 +1209,8 @@ namespace tsge
             // 
             // btnInventoryHackAllStacks
             // 
-            this.btnInventoryHackAllStacks.Location = new System.Drawing.Point(535, 301);
+            this.btnInventoryHackAllStacks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInventoryHackAllStacks.Location = new System.Drawing.Point(373, 312);
             this.btnInventoryHackAllStacks.Name = "btnInventoryHackAllStacks";
             this.btnInventoryHackAllStacks.Size = new System.Drawing.Size(100, 23);
             this.btnInventoryHackAllStacks.TabIndex = 74;
@@ -1161,7 +1220,8 @@ namespace tsge
             // 
             // btnInventoryDeleteAllItems
             // 
-            this.btnInventoryDeleteAllItems.Location = new System.Drawing.Point(535, 272);
+            this.btnInventoryDeleteAllItems.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInventoryDeleteAllItems.Location = new System.Drawing.Point(373, 283);
             this.btnInventoryDeleteAllItems.Name = "btnInventoryDeleteAllItems";
             this.btnInventoryDeleteAllItems.Size = new System.Drawing.Size(100, 23);
             this.btnInventoryDeleteAllItems.TabIndex = 73;
@@ -1171,7 +1231,8 @@ namespace tsge
             // 
             // btnInventoryMaxAllStacks
             // 
-            this.btnInventoryMaxAllStacks.Location = new System.Drawing.Point(429, 300);
+            this.btnInventoryMaxAllStacks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInventoryMaxAllStacks.Location = new System.Drawing.Point(267, 311);
             this.btnInventoryMaxAllStacks.Name = "btnInventoryMaxAllStacks";
             this.btnInventoryMaxAllStacks.Size = new System.Drawing.Size(100, 23);
             this.btnInventoryMaxAllStacks.TabIndex = 72;
@@ -1181,7 +1242,8 @@ namespace tsge
             // 
             // btnInventoryDeleteItem
             // 
-            this.btnInventoryDeleteItem.Location = new System.Drawing.Point(429, 272);
+            this.btnInventoryDeleteItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInventoryDeleteItem.Location = new System.Drawing.Point(267, 283);
             this.btnInventoryDeleteItem.Name = "btnInventoryDeleteItem";
             this.btnInventoryDeleteItem.Size = new System.Drawing.Size(100, 23);
             this.btnInventoryDeleteItem.TabIndex = 71;
@@ -1191,7 +1253,8 @@ namespace tsge
             // 
             // btnLoadInventory
             // 
-            this.btnLoadInventory.Location = new System.Drawing.Point(535, 373);
+            this.btnLoadInventory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLoadInventory.Location = new System.Drawing.Point(373, 384);
             this.btnLoadInventory.Name = "btnLoadInventory";
             this.btnLoadInventory.Size = new System.Drawing.Size(100, 23);
             this.btnLoadInventory.TabIndex = 66;
@@ -1201,7 +1264,8 @@ namespace tsge
             // 
             // btnSaveInventory
             // 
-            this.btnSaveInventory.Location = new System.Drawing.Point(429, 373);
+            this.btnSaveInventory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSaveInventory.Location = new System.Drawing.Point(267, 384);
             this.btnSaveInventory.Name = "btnSaveInventory";
             this.btnSaveInventory.Size = new System.Drawing.Size(100, 23);
             this.btnSaveInventory.TabIndex = 65;
@@ -1211,39 +1275,49 @@ namespace tsge
             // 
             // groupBox5
             // 
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox5.Controls.Add(this.lstInventoryItems);
             this.groupBox5.Controls.Add(this.groupBox6);
             this.groupBox5.Location = new System.Drawing.Point(8, 3);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(172, 393);
+            this.groupBox5.Size = new System.Drawing.Size(10, 405);
             this.groupBox5.TabIndex = 63;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Inventory Editor";
             // 
             // lstInventoryItems
             // 
+            this.lstInventoryItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lstInventoryItems.FormattingEnabled = true;
             this.lstInventoryItems.Location = new System.Drawing.Point(6, 19);
             this.lstInventoryItems.Name = "lstInventoryItems";
-            this.lstInventoryItems.Size = new System.Drawing.Size(160, 251);
+            this.lstInventoryItems.Size = new System.Drawing.Size(0, 251);
             this.lstInventoryItems.TabIndex = 0;
             this.lstInventoryItems.SelectedIndexChanged += new System.EventHandler(this.lstInventoryItems_SelectedIndexChanged);
             // 
             // groupBox6
             // 
+            this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox6.Controls.Add(this.cboInvItemFilter);
             this.groupBox6.Controls.Add(this.label15);
             this.groupBox6.Controls.Add(this.txtInvItemFilter);
             this.groupBox6.Controls.Add(this.label14);
-            this.groupBox6.Location = new System.Drawing.Point(0, 282);
+            this.groupBox6.Location = new System.Drawing.Point(0, 294);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(172, 111);
+            this.groupBox6.Size = new System.Drawing.Size(10, 111);
             this.groupBox6.TabIndex = 64;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Item Filter";
             // 
             // cboInvItemFilter
             // 
+            this.cboInvItemFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cboInvItemFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboInvItemFilter.FormattingEnabled = true;
             this.cboInvItemFilter.Items.AddRange(new object[] {
@@ -1258,12 +1332,14 @@ namespace tsge
             "Weapons"});
             this.cboInvItemFilter.Location = new System.Drawing.Point(6, 84);
             this.cboInvItemFilter.Name = "cboInvItemFilter";
-            this.cboInvItemFilter.Size = new System.Drawing.Size(160, 21);
+            this.cboInvItemFilter.Size = new System.Drawing.Size(0, 21);
             this.cboInvItemFilter.TabIndex = 3;
             this.cboInvItemFilter.SelectedIndexChanged += new System.EventHandler(this.cboInvItemFilter_SelectedIndexChanged);
             // 
             // label15
             // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(3, 68);
@@ -1274,14 +1350,18 @@ namespace tsge
             // 
             // txtInvItemFilter
             // 
+            this.txtInvItemFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtInvItemFilter.Location = new System.Drawing.Point(6, 35);
             this.txtInvItemFilter.Name = "txtInvItemFilter";
-            this.txtInvItemFilter.Size = new System.Drawing.Size(160, 20);
+            this.txtInvItemFilter.Size = new System.Drawing.Size(0, 20);
             this.txtInvItemFilter.TabIndex = 1;
             this.txtInvItemFilter.TextChanged += new System.EventHandler(this.txtInvItemFilter_TextChanged);
             // 
             // label14
             // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(3, 19);
@@ -1292,8 +1372,9 @@ namespace tsge
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(739, 197);
+            this.label6.Location = new System.Drawing.Point(567, 197);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(36, 13);
             this.label6.TabIndex = 62;
@@ -1301,8 +1382,9 @@ namespace tsge
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(693, 197);
+            this.label5.Location = new System.Drawing.Point(521, 197);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(33, 13);
             this.label5.TabIndex = 61;
@@ -1310,8 +1392,9 @@ namespace tsge
             // 
             // inventoryItem54
             // 
+            this.inventoryItem54.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem54.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem54.Location = new System.Drawing.Point(736, 9);
+            this.inventoryItem54.Location = new System.Drawing.Point(564, 9);
             this.inventoryItem54.Name = "inventoryItem54";
             this.inventoryItem54.ShowItemCount = true;
             this.inventoryItem54.Size = new System.Drawing.Size(42, 42);
@@ -1324,8 +1407,9 @@ namespace tsge
             // 
             // inventoryItem53
             // 
+            this.inventoryItem53.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem53.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem53.Location = new System.Drawing.Point(688, 150);
+            this.inventoryItem53.Location = new System.Drawing.Point(516, 150);
             this.inventoryItem53.Name = "inventoryItem53";
             this.inventoryItem53.ShowItemCount = true;
             this.inventoryItem53.Size = new System.Drawing.Size(42, 42);
@@ -1338,8 +1422,9 @@ namespace tsge
             // 
             // inventoryItem57
             // 
+            this.inventoryItem57.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem57.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem57.Location = new System.Drawing.Point(736, 150);
+            this.inventoryItem57.Location = new System.Drawing.Point(564, 150);
             this.inventoryItem57.Name = "inventoryItem57";
             this.inventoryItem57.ShowItemCount = true;
             this.inventoryItem57.Size = new System.Drawing.Size(42, 42);
@@ -1352,8 +1437,9 @@ namespace tsge
             // 
             // inventoryItem52
             // 
+            this.inventoryItem52.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem52.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem52.Location = new System.Drawing.Point(688, 103);
+            this.inventoryItem52.Location = new System.Drawing.Point(516, 103);
             this.inventoryItem52.Name = "inventoryItem52";
             this.inventoryItem52.ShowItemCount = true;
             this.inventoryItem52.Size = new System.Drawing.Size(42, 42);
@@ -1366,8 +1452,9 @@ namespace tsge
             // 
             // inventoryItem56
             // 
+            this.inventoryItem56.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem56.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem56.Location = new System.Drawing.Point(736, 103);
+            this.inventoryItem56.Location = new System.Drawing.Point(564, 103);
             this.inventoryItem56.Name = "inventoryItem56";
             this.inventoryItem56.ShowItemCount = true;
             this.inventoryItem56.Size = new System.Drawing.Size(42, 42);
@@ -1380,8 +1467,9 @@ namespace tsge
             // 
             // inventoryItem51
             // 
+            this.inventoryItem51.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem51.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem51.Location = new System.Drawing.Point(688, 56);
+            this.inventoryItem51.Location = new System.Drawing.Point(516, 56);
             this.inventoryItem51.Name = "inventoryItem51";
             this.inventoryItem51.ShowItemCount = true;
             this.inventoryItem51.Size = new System.Drawing.Size(42, 42);
@@ -1394,8 +1482,9 @@ namespace tsge
             // 
             // inventoryItem55
             // 
+            this.inventoryItem55.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem55.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem55.Location = new System.Drawing.Point(736, 56);
+            this.inventoryItem55.Location = new System.Drawing.Point(564, 56);
             this.inventoryItem55.Name = "inventoryItem55";
             this.inventoryItem55.ShowItemCount = true;
             this.inventoryItem55.Size = new System.Drawing.Size(42, 42);
@@ -1408,8 +1497,9 @@ namespace tsge
             // 
             // inventoryItem50
             // 
+            this.inventoryItem50.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem50.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem50.Location = new System.Drawing.Point(688, 9);
+            this.inventoryItem50.Location = new System.Drawing.Point(516, 9);
             this.inventoryItem50.Name = "inventoryItem50";
             this.inventoryItem50.ShowItemCount = true;
             this.inventoryItem50.Size = new System.Drawing.Size(42, 42);
@@ -1422,8 +1512,9 @@ namespace tsge
             // 
             // inventoryItem40
             // 
+            this.inventoryItem40.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem40.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem40.Location = new System.Drawing.Point(189, 197);
+            this.inventoryItem40.Location = new System.Drawing.Point(27, 197);
             this.inventoryItem40.Name = "inventoryItem40";
             this.inventoryItem40.ShowItemCount = true;
             this.inventoryItem40.Size = new System.Drawing.Size(42, 42);
@@ -1436,8 +1527,9 @@ namespace tsge
             // 
             // inventoryItem41
             // 
+            this.inventoryItem41.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem41.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem41.Location = new System.Drawing.Point(237, 197);
+            this.inventoryItem41.Location = new System.Drawing.Point(75, 197);
             this.inventoryItem41.Name = "inventoryItem41";
             this.inventoryItem41.ShowItemCount = true;
             this.inventoryItem41.Size = new System.Drawing.Size(42, 42);
@@ -1450,8 +1542,9 @@ namespace tsge
             // 
             // inventoryItem42
             // 
+            this.inventoryItem42.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem42.Location = new System.Drawing.Point(285, 197);
+            this.inventoryItem42.Location = new System.Drawing.Point(123, 197);
             this.inventoryItem42.Name = "inventoryItem42";
             this.inventoryItem42.ShowItemCount = true;
             this.inventoryItem42.Size = new System.Drawing.Size(42, 42);
@@ -1464,8 +1557,9 @@ namespace tsge
             // 
             // inventoryItem43
             // 
+            this.inventoryItem43.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem43.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem43.Location = new System.Drawing.Point(333, 197);
+            this.inventoryItem43.Location = new System.Drawing.Point(171, 197);
             this.inventoryItem43.Name = "inventoryItem43";
             this.inventoryItem43.ShowItemCount = true;
             this.inventoryItem43.Size = new System.Drawing.Size(42, 42);
@@ -1478,8 +1572,9 @@ namespace tsge
             // 
             // inventoryItem44
             // 
+            this.inventoryItem44.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem44.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem44.Location = new System.Drawing.Point(381, 197);
+            this.inventoryItem44.Location = new System.Drawing.Point(219, 197);
             this.inventoryItem44.Name = "inventoryItem44";
             this.inventoryItem44.ShowItemCount = true;
             this.inventoryItem44.Size = new System.Drawing.Size(42, 42);
@@ -1492,8 +1587,9 @@ namespace tsge
             // 
             // inventoryItem45
             // 
+            this.inventoryItem45.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem45.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem45.Location = new System.Drawing.Point(429, 197);
+            this.inventoryItem45.Location = new System.Drawing.Point(267, 197);
             this.inventoryItem45.Name = "inventoryItem45";
             this.inventoryItem45.ShowItemCount = true;
             this.inventoryItem45.Size = new System.Drawing.Size(42, 42);
@@ -1506,8 +1602,9 @@ namespace tsge
             // 
             // inventoryItem46
             // 
+            this.inventoryItem46.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem46.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem46.Location = new System.Drawing.Point(477, 197);
+            this.inventoryItem46.Location = new System.Drawing.Point(315, 197);
             this.inventoryItem46.Name = "inventoryItem46";
             this.inventoryItem46.ShowItemCount = true;
             this.inventoryItem46.Size = new System.Drawing.Size(42, 42);
@@ -1520,8 +1617,9 @@ namespace tsge
             // 
             // inventoryItem47
             // 
+            this.inventoryItem47.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem47.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem47.Location = new System.Drawing.Point(525, 197);
+            this.inventoryItem47.Location = new System.Drawing.Point(363, 197);
             this.inventoryItem47.Name = "inventoryItem47";
             this.inventoryItem47.ShowItemCount = true;
             this.inventoryItem47.Size = new System.Drawing.Size(42, 42);
@@ -1534,8 +1632,9 @@ namespace tsge
             // 
             // inventoryItem48
             // 
+            this.inventoryItem48.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem48.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem48.Location = new System.Drawing.Point(573, 197);
+            this.inventoryItem48.Location = new System.Drawing.Point(411, 197);
             this.inventoryItem48.Name = "inventoryItem48";
             this.inventoryItem48.ShowItemCount = true;
             this.inventoryItem48.Size = new System.Drawing.Size(42, 42);
@@ -1548,8 +1647,9 @@ namespace tsge
             // 
             // inventoryItem49
             // 
+            this.inventoryItem49.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem49.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem49.Location = new System.Drawing.Point(621, 197);
+            this.inventoryItem49.Location = new System.Drawing.Point(459, 197);
             this.inventoryItem49.Name = "inventoryItem49";
             this.inventoryItem49.ShowItemCount = true;
             this.inventoryItem49.Size = new System.Drawing.Size(42, 42);
@@ -1562,8 +1662,9 @@ namespace tsge
             // 
             // inventoryItem30
             // 
+            this.inventoryItem30.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem30.Location = new System.Drawing.Point(189, 150);
+            this.inventoryItem30.Location = new System.Drawing.Point(27, 150);
             this.inventoryItem30.Name = "inventoryItem30";
             this.inventoryItem30.ShowItemCount = true;
             this.inventoryItem30.Size = new System.Drawing.Size(42, 42);
@@ -1576,8 +1677,9 @@ namespace tsge
             // 
             // inventoryItem31
             // 
+            this.inventoryItem31.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem31.Location = new System.Drawing.Point(237, 150);
+            this.inventoryItem31.Location = new System.Drawing.Point(75, 150);
             this.inventoryItem31.Name = "inventoryItem31";
             this.inventoryItem31.ShowItemCount = true;
             this.inventoryItem31.Size = new System.Drawing.Size(42, 42);
@@ -1590,8 +1692,9 @@ namespace tsge
             // 
             // inventoryItem32
             // 
+            this.inventoryItem32.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem32.Location = new System.Drawing.Point(285, 150);
+            this.inventoryItem32.Location = new System.Drawing.Point(123, 150);
             this.inventoryItem32.Name = "inventoryItem32";
             this.inventoryItem32.ShowItemCount = true;
             this.inventoryItem32.Size = new System.Drawing.Size(42, 42);
@@ -1604,8 +1707,9 @@ namespace tsge
             // 
             // inventoryItem33
             // 
+            this.inventoryItem33.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem33.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem33.Location = new System.Drawing.Point(333, 150);
+            this.inventoryItem33.Location = new System.Drawing.Point(171, 150);
             this.inventoryItem33.Name = "inventoryItem33";
             this.inventoryItem33.ShowItemCount = true;
             this.inventoryItem33.Size = new System.Drawing.Size(42, 42);
@@ -1618,8 +1722,9 @@ namespace tsge
             // 
             // inventoryItem34
             // 
+            this.inventoryItem34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem34.Location = new System.Drawing.Point(381, 150);
+            this.inventoryItem34.Location = new System.Drawing.Point(219, 150);
             this.inventoryItem34.Name = "inventoryItem34";
             this.inventoryItem34.ShowItemCount = true;
             this.inventoryItem34.Size = new System.Drawing.Size(42, 42);
@@ -1632,8 +1737,9 @@ namespace tsge
             // 
             // inventoryItem35
             // 
+            this.inventoryItem35.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem35.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem35.Location = new System.Drawing.Point(429, 150);
+            this.inventoryItem35.Location = new System.Drawing.Point(267, 150);
             this.inventoryItem35.Name = "inventoryItem35";
             this.inventoryItem35.ShowItemCount = true;
             this.inventoryItem35.Size = new System.Drawing.Size(42, 42);
@@ -1646,8 +1752,9 @@ namespace tsge
             // 
             // inventoryItem36
             // 
+            this.inventoryItem36.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem36.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem36.Location = new System.Drawing.Point(477, 150);
+            this.inventoryItem36.Location = new System.Drawing.Point(315, 150);
             this.inventoryItem36.Name = "inventoryItem36";
             this.inventoryItem36.ShowItemCount = true;
             this.inventoryItem36.Size = new System.Drawing.Size(42, 42);
@@ -1660,8 +1767,9 @@ namespace tsge
             // 
             // inventoryItem37
             // 
+            this.inventoryItem37.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem37.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem37.Location = new System.Drawing.Point(525, 150);
+            this.inventoryItem37.Location = new System.Drawing.Point(363, 150);
             this.inventoryItem37.Name = "inventoryItem37";
             this.inventoryItem37.ShowItemCount = true;
             this.inventoryItem37.Size = new System.Drawing.Size(42, 42);
@@ -1674,8 +1782,9 @@ namespace tsge
             // 
             // inventoryItem38
             // 
+            this.inventoryItem38.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem38.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem38.Location = new System.Drawing.Point(573, 150);
+            this.inventoryItem38.Location = new System.Drawing.Point(411, 150);
             this.inventoryItem38.Name = "inventoryItem38";
             this.inventoryItem38.ShowItemCount = true;
             this.inventoryItem38.Size = new System.Drawing.Size(42, 42);
@@ -1688,8 +1797,9 @@ namespace tsge
             // 
             // inventoryItem39
             // 
+            this.inventoryItem39.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem39.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem39.Location = new System.Drawing.Point(621, 150);
+            this.inventoryItem39.Location = new System.Drawing.Point(459, 150);
             this.inventoryItem39.Name = "inventoryItem39";
             this.inventoryItem39.ShowItemCount = true;
             this.inventoryItem39.Size = new System.Drawing.Size(42, 42);
@@ -1702,8 +1812,9 @@ namespace tsge
             // 
             // inventoryItem20
             // 
+            this.inventoryItem20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem20.Location = new System.Drawing.Point(189, 103);
+            this.inventoryItem20.Location = new System.Drawing.Point(27, 103);
             this.inventoryItem20.Name = "inventoryItem20";
             this.inventoryItem20.ShowItemCount = true;
             this.inventoryItem20.Size = new System.Drawing.Size(42, 42);
@@ -1716,8 +1827,9 @@ namespace tsge
             // 
             // inventoryItem21
             // 
+            this.inventoryItem21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem21.Location = new System.Drawing.Point(237, 103);
+            this.inventoryItem21.Location = new System.Drawing.Point(75, 103);
             this.inventoryItem21.Name = "inventoryItem21";
             this.inventoryItem21.ShowItemCount = true;
             this.inventoryItem21.Size = new System.Drawing.Size(42, 42);
@@ -1730,8 +1842,9 @@ namespace tsge
             // 
             // inventoryItem22
             // 
+            this.inventoryItem22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem22.Location = new System.Drawing.Point(285, 103);
+            this.inventoryItem22.Location = new System.Drawing.Point(123, 103);
             this.inventoryItem22.Name = "inventoryItem22";
             this.inventoryItem22.ShowItemCount = true;
             this.inventoryItem22.Size = new System.Drawing.Size(42, 42);
@@ -1744,8 +1857,9 @@ namespace tsge
             // 
             // inventoryItem23
             // 
+            this.inventoryItem23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem23.Location = new System.Drawing.Point(333, 103);
+            this.inventoryItem23.Location = new System.Drawing.Point(171, 103);
             this.inventoryItem23.Name = "inventoryItem23";
             this.inventoryItem23.ShowItemCount = true;
             this.inventoryItem23.Size = new System.Drawing.Size(42, 42);
@@ -1758,8 +1872,9 @@ namespace tsge
             // 
             // inventoryItem24
             // 
+            this.inventoryItem24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem24.Location = new System.Drawing.Point(381, 103);
+            this.inventoryItem24.Location = new System.Drawing.Point(219, 103);
             this.inventoryItem24.Name = "inventoryItem24";
             this.inventoryItem24.ShowItemCount = true;
             this.inventoryItem24.Size = new System.Drawing.Size(42, 42);
@@ -1772,8 +1887,9 @@ namespace tsge
             // 
             // inventoryItem25
             // 
+            this.inventoryItem25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem25.Location = new System.Drawing.Point(429, 103);
+            this.inventoryItem25.Location = new System.Drawing.Point(267, 103);
             this.inventoryItem25.Name = "inventoryItem25";
             this.inventoryItem25.ShowItemCount = true;
             this.inventoryItem25.Size = new System.Drawing.Size(42, 42);
@@ -1786,8 +1902,9 @@ namespace tsge
             // 
             // inventoryItem26
             // 
+            this.inventoryItem26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem26.Location = new System.Drawing.Point(477, 103);
+            this.inventoryItem26.Location = new System.Drawing.Point(315, 103);
             this.inventoryItem26.Name = "inventoryItem26";
             this.inventoryItem26.ShowItemCount = true;
             this.inventoryItem26.Size = new System.Drawing.Size(42, 42);
@@ -1800,8 +1917,9 @@ namespace tsge
             // 
             // inventoryItem27
             // 
+            this.inventoryItem27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem27.Location = new System.Drawing.Point(525, 103);
+            this.inventoryItem27.Location = new System.Drawing.Point(363, 103);
             this.inventoryItem27.Name = "inventoryItem27";
             this.inventoryItem27.ShowItemCount = true;
             this.inventoryItem27.Size = new System.Drawing.Size(42, 42);
@@ -1814,8 +1932,9 @@ namespace tsge
             // 
             // inventoryItem28
             // 
+            this.inventoryItem28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem28.Location = new System.Drawing.Point(573, 103);
+            this.inventoryItem28.Location = new System.Drawing.Point(411, 103);
             this.inventoryItem28.Name = "inventoryItem28";
             this.inventoryItem28.ShowItemCount = true;
             this.inventoryItem28.Size = new System.Drawing.Size(42, 42);
@@ -1828,8 +1947,9 @@ namespace tsge
             // 
             // inventoryItem29
             // 
+            this.inventoryItem29.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem29.Location = new System.Drawing.Point(621, 103);
+            this.inventoryItem29.Location = new System.Drawing.Point(459, 103);
             this.inventoryItem29.Name = "inventoryItem29";
             this.inventoryItem29.ShowItemCount = true;
             this.inventoryItem29.Size = new System.Drawing.Size(42, 42);
@@ -1842,8 +1962,9 @@ namespace tsge
             // 
             // inventoryItem10
             // 
+            this.inventoryItem10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem10.Location = new System.Drawing.Point(189, 56);
+            this.inventoryItem10.Location = new System.Drawing.Point(27, 56);
             this.inventoryItem10.Name = "inventoryItem10";
             this.inventoryItem10.ShowItemCount = true;
             this.inventoryItem10.Size = new System.Drawing.Size(42, 42);
@@ -1856,8 +1977,9 @@ namespace tsge
             // 
             // inventoryItem11
             // 
+            this.inventoryItem11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem11.Location = new System.Drawing.Point(237, 56);
+            this.inventoryItem11.Location = new System.Drawing.Point(75, 56);
             this.inventoryItem11.Name = "inventoryItem11";
             this.inventoryItem11.ShowItemCount = true;
             this.inventoryItem11.Size = new System.Drawing.Size(42, 42);
@@ -1870,8 +1992,9 @@ namespace tsge
             // 
             // inventoryItem12
             // 
+            this.inventoryItem12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem12.Location = new System.Drawing.Point(285, 56);
+            this.inventoryItem12.Location = new System.Drawing.Point(123, 56);
             this.inventoryItem12.Name = "inventoryItem12";
             this.inventoryItem12.ShowItemCount = true;
             this.inventoryItem12.Size = new System.Drawing.Size(42, 42);
@@ -1884,8 +2007,9 @@ namespace tsge
             // 
             // inventoryItem13
             // 
+            this.inventoryItem13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem13.Location = new System.Drawing.Point(333, 56);
+            this.inventoryItem13.Location = new System.Drawing.Point(171, 56);
             this.inventoryItem13.Name = "inventoryItem13";
             this.inventoryItem13.ShowItemCount = true;
             this.inventoryItem13.Size = new System.Drawing.Size(42, 42);
@@ -1898,8 +2022,9 @@ namespace tsge
             // 
             // inventoryItem14
             // 
+            this.inventoryItem14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem14.Location = new System.Drawing.Point(381, 56);
+            this.inventoryItem14.Location = new System.Drawing.Point(219, 56);
             this.inventoryItem14.Name = "inventoryItem14";
             this.inventoryItem14.ShowItemCount = true;
             this.inventoryItem14.Size = new System.Drawing.Size(42, 42);
@@ -1912,8 +2037,9 @@ namespace tsge
             // 
             // inventoryItem15
             // 
+            this.inventoryItem15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem15.Location = new System.Drawing.Point(429, 56);
+            this.inventoryItem15.Location = new System.Drawing.Point(267, 56);
             this.inventoryItem15.Name = "inventoryItem15";
             this.inventoryItem15.ShowItemCount = true;
             this.inventoryItem15.Size = new System.Drawing.Size(42, 42);
@@ -1926,8 +2052,9 @@ namespace tsge
             // 
             // inventoryItem16
             // 
+            this.inventoryItem16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem16.Location = new System.Drawing.Point(477, 56);
+            this.inventoryItem16.Location = new System.Drawing.Point(315, 56);
             this.inventoryItem16.Name = "inventoryItem16";
             this.inventoryItem16.ShowItemCount = true;
             this.inventoryItem16.Size = new System.Drawing.Size(42, 42);
@@ -1940,8 +2067,9 @@ namespace tsge
             // 
             // inventoryItem17
             // 
+            this.inventoryItem17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem17.Location = new System.Drawing.Point(525, 56);
+            this.inventoryItem17.Location = new System.Drawing.Point(363, 56);
             this.inventoryItem17.Name = "inventoryItem17";
             this.inventoryItem17.ShowItemCount = true;
             this.inventoryItem17.Size = new System.Drawing.Size(42, 42);
@@ -1954,8 +2082,9 @@ namespace tsge
             // 
             // inventoryItem18
             // 
+            this.inventoryItem18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem18.Location = new System.Drawing.Point(573, 56);
+            this.inventoryItem18.Location = new System.Drawing.Point(411, 56);
             this.inventoryItem18.Name = "inventoryItem18";
             this.inventoryItem18.ShowItemCount = true;
             this.inventoryItem18.Size = new System.Drawing.Size(42, 42);
@@ -1968,8 +2097,9 @@ namespace tsge
             // 
             // inventoryItem19
             // 
+            this.inventoryItem19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem19.Location = new System.Drawing.Point(621, 56);
+            this.inventoryItem19.Location = new System.Drawing.Point(459, 56);
             this.inventoryItem19.Name = "inventoryItem19";
             this.inventoryItem19.ShowItemCount = true;
             this.inventoryItem19.Size = new System.Drawing.Size(42, 42);
@@ -1982,8 +2112,9 @@ namespace tsge
             // 
             // inventoryItem09
             // 
+            this.inventoryItem09.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem09.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem09.Location = new System.Drawing.Point(621, 9);
+            this.inventoryItem09.Location = new System.Drawing.Point(459, 9);
             this.inventoryItem09.Name = "inventoryItem09";
             this.inventoryItem09.ShowItemCount = true;
             this.inventoryItem09.Size = new System.Drawing.Size(42, 42);
@@ -1996,8 +2127,9 @@ namespace tsge
             // 
             // inventoryItem08
             // 
+            this.inventoryItem08.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem08.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem08.Location = new System.Drawing.Point(573, 9);
+            this.inventoryItem08.Location = new System.Drawing.Point(411, 9);
             this.inventoryItem08.Name = "inventoryItem08";
             this.inventoryItem08.ShowItemCount = true;
             this.inventoryItem08.Size = new System.Drawing.Size(42, 42);
@@ -2010,8 +2142,9 @@ namespace tsge
             // 
             // inventoryItem07
             // 
+            this.inventoryItem07.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem07.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem07.Location = new System.Drawing.Point(525, 9);
+            this.inventoryItem07.Location = new System.Drawing.Point(363, 9);
             this.inventoryItem07.Name = "inventoryItem07";
             this.inventoryItem07.ShowItemCount = true;
             this.inventoryItem07.Size = new System.Drawing.Size(42, 42);
@@ -2024,8 +2157,9 @@ namespace tsge
             // 
             // inventoryItem06
             // 
+            this.inventoryItem06.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem06.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem06.Location = new System.Drawing.Point(477, 9);
+            this.inventoryItem06.Location = new System.Drawing.Point(315, 9);
             this.inventoryItem06.Name = "inventoryItem06";
             this.inventoryItem06.ShowItemCount = true;
             this.inventoryItem06.Size = new System.Drawing.Size(42, 42);
@@ -2038,8 +2172,9 @@ namespace tsge
             // 
             // inventoryItem05
             // 
+            this.inventoryItem05.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem05.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem05.Location = new System.Drawing.Point(429, 9);
+            this.inventoryItem05.Location = new System.Drawing.Point(267, 9);
             this.inventoryItem05.Name = "inventoryItem05";
             this.inventoryItem05.ShowItemCount = true;
             this.inventoryItem05.Size = new System.Drawing.Size(42, 42);
@@ -2052,8 +2187,9 @@ namespace tsge
             // 
             // inventoryItem04
             // 
+            this.inventoryItem04.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem04.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem04.Location = new System.Drawing.Point(381, 9);
+            this.inventoryItem04.Location = new System.Drawing.Point(219, 9);
             this.inventoryItem04.Name = "inventoryItem04";
             this.inventoryItem04.ShowItemCount = true;
             this.inventoryItem04.Size = new System.Drawing.Size(42, 42);
@@ -2066,8 +2202,9 @@ namespace tsge
             // 
             // inventoryItem03
             // 
+            this.inventoryItem03.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem03.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem03.Location = new System.Drawing.Point(333, 9);
+            this.inventoryItem03.Location = new System.Drawing.Point(171, 9);
             this.inventoryItem03.Name = "inventoryItem03";
             this.inventoryItem03.ShowItemCount = true;
             this.inventoryItem03.Size = new System.Drawing.Size(42, 42);
@@ -2080,8 +2217,9 @@ namespace tsge
             // 
             // inventoryItem02
             // 
+            this.inventoryItem02.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem02.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem02.Location = new System.Drawing.Point(285, 9);
+            this.inventoryItem02.Location = new System.Drawing.Point(123, 9);
             this.inventoryItem02.Name = "inventoryItem02";
             this.inventoryItem02.ShowItemCount = true;
             this.inventoryItem02.Size = new System.Drawing.Size(42, 42);
@@ -2094,8 +2232,9 @@ namespace tsge
             // 
             // inventoryItem01
             // 
+            this.inventoryItem01.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem01.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem01.Location = new System.Drawing.Point(237, 9);
+            this.inventoryItem01.Location = new System.Drawing.Point(75, 9);
             this.inventoryItem01.Name = "inventoryItem01";
             this.inventoryItem01.ShowItemCount = true;
             this.inventoryItem01.Size = new System.Drawing.Size(42, 42);
@@ -2108,8 +2247,9 @@ namespace tsge
             // 
             // inventoryItem00
             // 
+            this.inventoryItem00.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.inventoryItem00.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.inventoryItem00.Location = new System.Drawing.Point(189, 9);
+            this.inventoryItem00.Location = new System.Drawing.Point(27, 9);
             this.inventoryItem00.Name = "inventoryItem00";
             this.inventoryItem00.ShowItemCount = true;
             this.inventoryItem00.Size = new System.Drawing.Size(42, 42);
@@ -2156,7 +2296,7 @@ namespace tsge
             this.tpEquipment.Controls.Add(this.equipmentItem00);
             this.tpEquipment.Location = new System.Drawing.Point(4, 22);
             this.tpEquipment.Name = "tpEquipment";
-            this.tpEquipment.Size = new System.Drawing.Size(612, 413);
+            this.tpEquipment.Size = new System.Drawing.Size(612, 415);
             this.tpEquipment.TabIndex = 3;
             this.tpEquipment.Text = "Equipment";
             this.tpEquipment.UseVisualStyleBackColor = true;
@@ -2659,7 +2799,7 @@ namespace tsge
             this.tpBankSafe.Controls.Add(this.groupBox10);
             this.tpBankSafe.Location = new System.Drawing.Point(4, 22);
             this.tpBankSafe.Name = "tpBankSafe";
-            this.tpBankSafe.Size = new System.Drawing.Size(612, 413);
+            this.tpBankSafe.Size = new System.Drawing.Size(612, 415);
             this.tpBankSafe.TabIndex = 4;
             this.tpBankSafe.Text = "Bank / Safe";
             this.tpBankSafe.UseVisualStyleBackColor = true;
@@ -4142,14 +4282,14 @@ namespace tsge
             this.toolStripSeparator2,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(35, 21);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(38, 21);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // newCharacterToolStripMenuItem
             // 
             this.newCharacterToolStripMenuItem.Image = global::tsge.Properties.Resources.status_online;
             this.newCharacterToolStripMenuItem.Name = "newCharacterToolStripMenuItem";
-            this.newCharacterToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.newCharacterToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.newCharacterToolStripMenuItem.Text = "New Character";
             this.newCharacterToolStripMenuItem.Click += new System.EventHandler(this.newCharacterToolStripMenuItem_Click);
             // 
@@ -4157,20 +4297,20 @@ namespace tsge
             // 
             this.openToolStripMenuItem.Image = global::tsge.Properties.Resources.folder_user;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(143, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(156, 6);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Image = global::tsge.Properties.Resources.page_save;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
@@ -4178,20 +4318,20 @@ namespace tsge
             // 
             this.saveAsToolStripMenuItem.Image = global::tsge.Properties.Resources.script_save;
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.saveAsToolStripMenuItem.Text = "Save As";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(143, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(156, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Image = global::tsge.Properties.Resources.stop;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -4201,14 +4341,14 @@ namespace tsge
             this.aboutTSGEToolStripMenuItem,
             this.checkForUpdatesToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(40, 21);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // aboutTSGEToolStripMenuItem
             // 
             this.aboutTSGEToolStripMenuItem.Image = global::tsge.Properties.Resources.information;
             this.aboutTSGEToolStripMenuItem.Name = "aboutTSGEToolStripMenuItem";
-            this.aboutTSGEToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.aboutTSGEToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.aboutTSGEToolStripMenuItem.Text = "About TSGE";
             this.aboutTSGEToolStripMenuItem.Click += new System.EventHandler(this.aboutTSGEToolStripMenuItem_Click);
             // 
@@ -4216,7 +4356,7 @@ namespace tsge
             // 
             this.checkForUpdatesToolStripMenuItem.Image = global::tsge.Properties.Resources._new;
             this.checkForUpdatesToolStripMenuItem.Name = "checkForUpdatesToolStripMenuItem";
-            this.checkForUpdatesToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.checkForUpdatesToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.checkForUpdatesToolStripMenuItem.Text = "Check For Updates";
             this.checkForUpdatesToolStripMenuItem.Click += new System.EventHandler(this.checkForUpdatesToolStripMenuItem_Click);
             // 
@@ -4225,24 +4365,6 @@ namespace tsge
             this.inventoryBindingSource.DataMember = "Inventory";
             this.inventoryBindingSource.DataSource = this.playerBindingSource;
             // 
-            // txtFishQuestsCompleted
-            // 
-            this.txtFishQuestsCompleted.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "AnglerQuestsFinished", true));
-            this.txtFishQuestsCompleted.Location = new System.Drawing.Point(104, 97);
-            this.txtFishQuestsCompleted.Name = "txtFishQuestsCompleted";
-            this.txtFishQuestsCompleted.Size = new System.Drawing.Size(61, 20);
-            this.txtFishQuestsCompleted.TabIndex = 24;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(21, 100);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(77, 13);
-            this.label32.TabIndex = 25;
-            this.label32.Text = "Fish Quests:";
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -4250,11 +4372,12 @@ namespace tsge
             this.ClientSize = new System.Drawing.Size(620, 466);
             this.Controls.Add(this.tcMainTabControl);
             this.Controls.Add(this.menuStrip1);
+            this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.MaximizeBox = false;
             this.Name = "frmMain";
-            this.Text = "TSGE - by atom0s";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
+            this.Text = "TSGE - by atom0s (Visual Changes by Walkman)";
             this.tcMainTabControl.ResumeLayout(false);
             this.tpMainPlayer.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);

@@ -2908,14 +2908,14 @@ namespace tsge
                     }
                 case 2: // Inventory
                     {
-                        this.Width = DpiHelper.ScaleAsDpi(800);
+                        this.Width = DpiHelper.ScaleAsDpi(810);
                         this.Height = DpiHelper.ScaleAsDpi(493);
                         break;
                     }
                 case 4: // Bank / Safe
                     {
                         this.Width = DpiHelper.ScaleAsDpi(705);
-                        this.Height = DpiHelper.ScaleAsDpi(550);
+                        this.Height = DpiHelper.ScaleAsDpi(560);
                         break;
                     }
             }
