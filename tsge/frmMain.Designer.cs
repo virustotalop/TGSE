@@ -1128,14 +1128,14 @@ namespace tsge
             // 
             // groupBox11
             // 
-            this.groupBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox11.Controls.Add(this.label17);
             this.groupBox11.Controls.Add(this.txtInventoryStackCount);
             this.groupBox11.Controls.Add(this.label28);
             this.groupBox11.Controls.Add(this.cboInventoryPrefixCategory);
             this.groupBox11.Controls.Add(this.label16);
             this.groupBox11.Controls.Add(this.cboInventoryPrefix);
-            this.groupBox11.Location = new System.Drawing.Point(24, 278);
+            this.groupBox11.Location = new System.Drawing.Point(24, 242);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Size = new System.Drawing.Size(234, 129);
             this.groupBox11.TabIndex = 75;
@@ -1209,8 +1209,8 @@ namespace tsge
             // 
             // btnInventoryHackAllStacks
             // 
-            this.btnInventoryHackAllStacks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnInventoryHackAllStacks.Location = new System.Drawing.Point(373, 312);
+            this.btnInventoryHackAllStacks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInventoryHackAllStacks.Location = new System.Drawing.Point(373, 276);
             this.btnInventoryHackAllStacks.Name = "btnInventoryHackAllStacks";
             this.btnInventoryHackAllStacks.Size = new System.Drawing.Size(100, 23);
             this.btnInventoryHackAllStacks.TabIndex = 74;
@@ -1220,8 +1220,8 @@ namespace tsge
             // 
             // btnInventoryDeleteAllItems
             // 
-            this.btnInventoryDeleteAllItems.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnInventoryDeleteAllItems.Location = new System.Drawing.Point(373, 283);
+            this.btnInventoryDeleteAllItems.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInventoryDeleteAllItems.Location = new System.Drawing.Point(373, 247);
             this.btnInventoryDeleteAllItems.Name = "btnInventoryDeleteAllItems";
             this.btnInventoryDeleteAllItems.Size = new System.Drawing.Size(100, 23);
             this.btnInventoryDeleteAllItems.TabIndex = 73;
@@ -1231,8 +1231,8 @@ namespace tsge
             // 
             // btnInventoryMaxAllStacks
             // 
-            this.btnInventoryMaxAllStacks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnInventoryMaxAllStacks.Location = new System.Drawing.Point(267, 311);
+            this.btnInventoryMaxAllStacks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInventoryMaxAllStacks.Location = new System.Drawing.Point(267, 275);
             this.btnInventoryMaxAllStacks.Name = "btnInventoryMaxAllStacks";
             this.btnInventoryMaxAllStacks.Size = new System.Drawing.Size(100, 23);
             this.btnInventoryMaxAllStacks.TabIndex = 72;
@@ -1242,8 +1242,8 @@ namespace tsge
             // 
             // btnInventoryDeleteItem
             // 
-            this.btnInventoryDeleteItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnInventoryDeleteItem.Location = new System.Drawing.Point(267, 283);
+            this.btnInventoryDeleteItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInventoryDeleteItem.Location = new System.Drawing.Point(267, 247);
             this.btnInventoryDeleteItem.Name = "btnInventoryDeleteItem";
             this.btnInventoryDeleteItem.Size = new System.Drawing.Size(100, 23);
             this.btnInventoryDeleteItem.TabIndex = 71;
@@ -1253,8 +1253,8 @@ namespace tsge
             // 
             // btnLoadInventory
             // 
-            this.btnLoadInventory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLoadInventory.Location = new System.Drawing.Point(373, 384);
+            this.btnLoadInventory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLoadInventory.Location = new System.Drawing.Point(373, 348);
             this.btnLoadInventory.Name = "btnLoadInventory";
             this.btnLoadInventory.Size = new System.Drawing.Size(100, 23);
             this.btnLoadInventory.TabIndex = 66;
@@ -1264,8 +1264,8 @@ namespace tsge
             // 
             // btnSaveInventory
             // 
-            this.btnSaveInventory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSaveInventory.Location = new System.Drawing.Point(267, 384);
+            this.btnSaveInventory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSaveInventory.Location = new System.Drawing.Point(267, 348);
             this.btnSaveInventory.Name = "btnSaveInventory";
             this.btnSaveInventory.Size = new System.Drawing.Size(100, 23);
             this.btnSaveInventory.TabIndex = 65;
@@ -2303,6 +2303,7 @@ namespace tsge
             // 
             // equipmentItem23
             // 
+            this.equipmentItem23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.equipmentItem23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.equipmentItem23.Location = new System.Drawing.Point(505, 355);
             this.equipmentItem23.Name = "equipmentItem23";
@@ -2316,6 +2317,7 @@ namespace tsge
             // 
             // equipmentItem22
             // 
+            this.equipmentItem22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.equipmentItem22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.equipmentItem22.Location = new System.Drawing.Point(505, 308);
             this.equipmentItem22.Name = "equipmentItem22";
@@ -2329,6 +2331,7 @@ namespace tsge
             // 
             // equipmentItem21
             // 
+            this.equipmentItem21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.equipmentItem21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.equipmentItem21.Location = new System.Drawing.Point(505, 261);
             this.equipmentItem21.Name = "equipmentItem21";
@@ -2342,6 +2345,7 @@ namespace tsge
             // 
             // equipmentItem20
             // 
+            this.equipmentItem20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.equipmentItem20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.equipmentItem20.Location = new System.Drawing.Point(505, 214);
             this.equipmentItem20.Name = "equipmentItem20";
@@ -2355,6 +2359,7 @@ namespace tsge
             // 
             // equipmentItem19
             // 
+            this.equipmentItem19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.equipmentItem19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.equipmentItem19.Location = new System.Drawing.Point(505, 167);
             this.equipmentItem19.Name = "equipmentItem19";
@@ -2368,6 +2373,7 @@ namespace tsge
             // 
             // label31
             // 
+            this.label31.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.Location = new System.Drawing.Point(488, 126);
             this.label31.Name = "label31";
@@ -2378,6 +2384,7 @@ namespace tsge
             // 
             // equipmentItem18
             // 
+            this.equipmentItem18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.equipmentItem18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.equipmentItem18.Location = new System.Drawing.Point(434, 355);
             this.equipmentItem18.Name = "equipmentItem18";
@@ -2391,6 +2398,7 @@ namespace tsge
             // 
             // equipmentItem17
             // 
+            this.equipmentItem17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.equipmentItem17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.equipmentItem17.Location = new System.Drawing.Point(434, 308);
             this.equipmentItem17.Name = "equipmentItem17";
@@ -2404,6 +2412,7 @@ namespace tsge
             // 
             // equipmentItem16
             // 
+            this.equipmentItem16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.equipmentItem16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.equipmentItem16.Location = new System.Drawing.Point(434, 261);
             this.equipmentItem16.Name = "equipmentItem16";
@@ -2417,6 +2426,7 @@ namespace tsge
             // 
             // equipmentItem15
             // 
+            this.equipmentItem15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.equipmentItem15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.equipmentItem15.Location = new System.Drawing.Point(434, 214);
             this.equipmentItem15.Name = "equipmentItem15";
@@ -2430,6 +2440,7 @@ namespace tsge
             // 
             // equipmentItem14
             // 
+            this.equipmentItem14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.equipmentItem14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.equipmentItem14.Location = new System.Drawing.Point(434, 167);
             this.equipmentItem14.Name = "equipmentItem14";
@@ -2443,7 +2454,8 @@ namespace tsge
             // 
             // btnLoadEquipmentSet
             // 
-            this.btnLoadEquipmentSet.Location = new System.Drawing.Point(214, 368);
+            this.btnLoadEquipmentSet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLoadEquipmentSet.Location = new System.Drawing.Point(214, 378);
             this.btnLoadEquipmentSet.Name = "btnLoadEquipmentSet";
             this.btnLoadEquipmentSet.Size = new System.Drawing.Size(120, 23);
             this.btnLoadEquipmentSet.TabIndex = 22;
@@ -2453,7 +2465,8 @@ namespace tsge
             // 
             // btnSaveEquipmentSet
             // 
-            this.btnSaveEquipmentSet.Location = new System.Drawing.Point(214, 339);
+            this.btnSaveEquipmentSet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSaveEquipmentSet.Location = new System.Drawing.Point(214, 349);
             this.btnSaveEquipmentSet.Name = "btnSaveEquipmentSet";
             this.btnSaveEquipmentSet.Size = new System.Drawing.Size(120, 23);
             this.btnSaveEquipmentSet.TabIndex = 21;
@@ -2463,6 +2476,7 @@ namespace tsge
             // 
             // label23
             // 
+            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.Location = new System.Drawing.Point(415, 139);
             this.label23.Name = "label23";
@@ -2473,6 +2487,7 @@ namespace tsge
             // 
             // label22
             // 
+            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.Location = new System.Drawing.Point(347, 3);
             this.label22.Name = "label22";
@@ -2483,6 +2498,7 @@ namespace tsge
             // 
             // label21
             // 
+            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(289, 3);
             this.label21.Name = "label21";
@@ -2493,6 +2509,7 @@ namespace tsge
             // 
             // label20
             // 
+            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.Location = new System.Drawing.Point(234, 3);
             this.label20.Name = "label20";
@@ -2503,6 +2520,9 @@ namespace tsge
             // 
             // groupBox7
             // 
+            this.groupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox7.Controls.Add(this.label29);
             this.groupBox7.Controls.Add(this.cboEquipmentPrefixCategory);
             this.groupBox7.Controls.Add(this.label19);
@@ -2512,16 +2532,18 @@ namespace tsge
             this.groupBox7.Controls.Add(this.lstEquipmentItems);
             this.groupBox7.Location = new System.Drawing.Point(8, 3);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(200, 394);
+            this.groupBox7.Size = new System.Drawing.Size(200, 404);
             this.groupBox7.TabIndex = 0;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Item Editor";
             // 
             // label29
             // 
+            this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(6, 303);
+            this.label29.Location = new System.Drawing.Point(6, 313);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(97, 13);
             this.label29.TabIndex = 6;
@@ -2529,6 +2551,8 @@ namespace tsge
             // 
             // cboEquipmentPrefixCategory
             // 
+            this.cboEquipmentPrefixCategory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cboEquipmentPrefixCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEquipmentPrefixCategory.FormattingEnabled = true;
             this.cboEquipmentPrefixCategory.Items.AddRange(new object[] {
@@ -2539,7 +2563,7 @@ namespace tsge
             "Ranged",
             "Magic",
             "Accessories"});
-            this.cboEquipmentPrefixCategory.Location = new System.Drawing.Point(6, 319);
+            this.cboEquipmentPrefixCategory.Location = new System.Drawing.Point(6, 329);
             this.cboEquipmentPrefixCategory.Name = "cboEquipmentPrefixCategory";
             this.cboEquipmentPrefixCategory.Size = new System.Drawing.Size(188, 21);
             this.cboEquipmentPrefixCategory.TabIndex = 5;
@@ -2547,9 +2571,11 @@ namespace tsge
             // 
             // label19
             // 
+            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(6, 348);
+            this.label19.Location = new System.Drawing.Point(6, 358);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(71, 13);
             this.label19.TabIndex = 4;
@@ -2557,9 +2583,11 @@ namespace tsge
             // 
             // cboEquipmentPrefix
             // 
+            this.cboEquipmentPrefix.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cboEquipmentPrefix.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEquipmentPrefix.FormattingEnabled = true;
-            this.cboEquipmentPrefix.Location = new System.Drawing.Point(6, 367);
+            this.cboEquipmentPrefix.Location = new System.Drawing.Point(6, 377);
             this.cboEquipmentPrefix.Name = "cboEquipmentPrefix";
             this.cboEquipmentPrefix.Size = new System.Drawing.Size(188, 21);
             this.cboEquipmentPrefix.TabIndex = 3;
@@ -2577,6 +2605,8 @@ namespace tsge
             // 
             // txtEquipmentFilter
             // 
+            this.txtEquipmentFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEquipmentFilter.Location = new System.Drawing.Point(79, 19);
             this.txtEquipmentFilter.Name = "txtEquipmentFilter";
             this.txtEquipmentFilter.Size = new System.Drawing.Size(115, 20);
@@ -2585,6 +2615,9 @@ namespace tsge
             // 
             // lstEquipmentItems
             // 
+            this.lstEquipmentItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lstEquipmentItems.FormattingEnabled = true;
             this.lstEquipmentItems.Location = new System.Drawing.Point(6, 45);
             this.lstEquipmentItems.Name = "lstEquipmentItems";
@@ -2594,6 +2627,7 @@ namespace tsge
             // 
             // equipmentItem13
             // 
+            this.equipmentItem13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.equipmentItem13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.equipmentItem13.Location = new System.Drawing.Point(350, 355);
             this.equipmentItem13.Name = "equipmentItem13";
@@ -2608,6 +2642,7 @@ namespace tsge
             // 
             // equipmentItem12
             // 
+            this.equipmentItem12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.equipmentItem12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.equipmentItem12.Location = new System.Drawing.Point(350, 308);
             this.equipmentItem12.Name = "equipmentItem12";
@@ -2622,6 +2657,7 @@ namespace tsge
             // 
             // equipmentItem11
             // 
+            this.equipmentItem11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.equipmentItem11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.equipmentItem11.Location = new System.Drawing.Point(350, 261);
             this.equipmentItem11.Name = "equipmentItem11";
@@ -2636,6 +2672,7 @@ namespace tsge
             // 
             // equipmentItem10
             // 
+            this.equipmentItem10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.equipmentItem10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.equipmentItem10.Location = new System.Drawing.Point(350, 214);
             this.equipmentItem10.Name = "equipmentItem10";
@@ -2650,6 +2687,7 @@ namespace tsge
             // 
             // equipmentItem09
             // 
+            this.equipmentItem09.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.equipmentItem09.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.equipmentItem09.Location = new System.Drawing.Point(350, 167);
             this.equipmentItem09.Name = "equipmentItem09";
@@ -2664,6 +2702,7 @@ namespace tsge
             // 
             // equipmentItem08
             // 
+            this.equipmentItem08.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.equipmentItem08.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.equipmentItem08.Location = new System.Drawing.Point(350, 120);
             this.equipmentItem08.Name = "equipmentItem08";
@@ -2678,6 +2717,7 @@ namespace tsge
             // 
             // equipmentItem07
             // 
+            this.equipmentItem07.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.equipmentItem07.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.equipmentItem07.Location = new System.Drawing.Point(350, 73);
             this.equipmentItem07.Name = "equipmentItem07";
@@ -2692,6 +2732,7 @@ namespace tsge
             // 
             // equipmentItem06
             // 
+            this.equipmentItem06.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.equipmentItem06.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.equipmentItem06.Location = new System.Drawing.Point(350, 26);
             this.equipmentItem06.Name = "equipmentItem06";
@@ -2706,6 +2747,7 @@ namespace tsge
             // 
             // equipmentItem05
             // 
+            this.equipmentItem05.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.equipmentItem05.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.equipmentItem05.Location = new System.Drawing.Point(292, 120);
             this.equipmentItem05.Name = "equipmentItem05";
@@ -2720,6 +2762,7 @@ namespace tsge
             // 
             // equipmentItem04
             // 
+            this.equipmentItem04.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.equipmentItem04.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.equipmentItem04.Location = new System.Drawing.Point(292, 73);
             this.equipmentItem04.Name = "equipmentItem04";
@@ -2734,6 +2777,7 @@ namespace tsge
             // 
             // equipmentItem03
             // 
+            this.equipmentItem03.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.equipmentItem03.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.equipmentItem03.Location = new System.Drawing.Point(292, 26);
             this.equipmentItem03.Name = "equipmentItem03";
@@ -2748,6 +2792,7 @@ namespace tsge
             // 
             // equipmentItem02
             // 
+            this.equipmentItem02.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.equipmentItem02.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.equipmentItem02.Location = new System.Drawing.Point(234, 120);
             this.equipmentItem02.Name = "equipmentItem02";
@@ -2762,6 +2807,7 @@ namespace tsge
             // 
             // equipmentItem01
             // 
+            this.equipmentItem01.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.equipmentItem01.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.equipmentItem01.Location = new System.Drawing.Point(234, 73);
             this.equipmentItem01.Name = "equipmentItem01";
@@ -2776,6 +2822,7 @@ namespace tsge
             // 
             // equipmentItem00
             // 
+            this.equipmentItem00.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.equipmentItem00.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.equipmentItem00.Location = new System.Drawing.Point(234, 26);
             this.equipmentItem00.Name = "equipmentItem00";
@@ -2806,7 +2853,8 @@ namespace tsge
             // 
             // btnLoadSafeItems
             // 
-            this.btnLoadSafeItems.Location = new System.Drawing.Point(384, 383);
+            this.btnLoadSafeItems.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLoadSafeItems.Location = new System.Drawing.Point(322, 383);
             this.btnLoadSafeItems.Name = "btnLoadSafeItems";
             this.btnLoadSafeItems.Size = new System.Drawing.Size(106, 23);
             this.btnLoadSafeItems.TabIndex = 89;
@@ -2816,7 +2864,8 @@ namespace tsge
             // 
             // btnSaveSafeItems
             // 
-            this.btnSaveSafeItems.Location = new System.Drawing.Point(272, 383);
+            this.btnSaveSafeItems.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSaveSafeItems.Location = new System.Drawing.Point(210, 383);
             this.btnSaveSafeItems.Name = "btnSaveSafeItems";
             this.btnSaveSafeItems.Size = new System.Drawing.Size(106, 23);
             this.btnSaveSafeItems.TabIndex = 88;
@@ -2826,7 +2875,8 @@ namespace tsge
             // 
             // btnLoadBankItems
             // 
-            this.btnLoadBankItems.Location = new System.Drawing.Point(384, 173);
+            this.btnLoadBankItems.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLoadBankItems.Location = new System.Drawing.Point(322, 173);
             this.btnLoadBankItems.Name = "btnLoadBankItems";
             this.btnLoadBankItems.Size = new System.Drawing.Size(106, 23);
             this.btnLoadBankItems.TabIndex = 87;
@@ -2836,7 +2886,8 @@ namespace tsge
             // 
             // btnSaveBankItems
             // 
-            this.btnSaveBankItems.Location = new System.Drawing.Point(272, 173);
+            this.btnSaveBankItems.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSaveBankItems.Location = new System.Drawing.Point(210, 173);
             this.btnSaveBankItems.Name = "btnSaveBankItems";
             this.btnSaveBankItems.Size = new System.Drawing.Size(106, 23);
             this.btnSaveBankItems.TabIndex = 86;
@@ -2846,6 +2897,9 @@ namespace tsge
             // 
             // groupBox8
             // 
+            this.groupBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox8.Controls.Add(this.label30);
             this.groupBox8.Controls.Add(this.cboBankSafePrefixCategory);
             this.groupBox8.Controls.Add(this.btnHackAllBankSafeStacks);
@@ -2863,16 +2917,18 @@ namespace tsge
             this.groupBox8.Controls.Add(this.lstBankSafeItems);
             this.groupBox8.Location = new System.Drawing.Point(8, 3);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(258, 463);
+            this.groupBox8.Size = new System.Drawing.Size(196, 403);
             this.groupBox8.TabIndex = 83;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Item Editor";
             // 
             // label30
             // 
+            this.label30.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(6, 297);
+            this.label30.Location = new System.Drawing.Point(6, 237);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(97, 13);
             this.label30.TabIndex = 14;
@@ -2880,6 +2936,8 @@ namespace tsge
             // 
             // cboBankSafePrefixCategory
             // 
+            this.cboBankSafePrefixCategory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cboBankSafePrefixCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboBankSafePrefixCategory.FormattingEnabled = true;
             this.cboBankSafePrefixCategory.Items.AddRange(new object[] {
@@ -2890,17 +2948,20 @@ namespace tsge
             "Ranged",
             "Magic",
             "Accessories"});
-            this.cboBankSafePrefixCategory.Location = new System.Drawing.Point(6, 313);
+            this.cboBankSafePrefixCategory.Location = new System.Drawing.Point(6, 253);
             this.cboBankSafePrefixCategory.Name = "cboBankSafePrefixCategory";
-            this.cboBankSafePrefixCategory.Size = new System.Drawing.Size(246, 21);
+            this.cboBankSafePrefixCategory.Size = new System.Drawing.Size(184, 21);
             this.cboBankSafePrefixCategory.TabIndex = 13;
             this.cboBankSafePrefixCategory.SelectedIndexChanged += new System.EventHandler(this.cboBankSafePrefixCategory_SelectedIndexChanged);
             // 
             // btnHackAllBankSafeStacks
             // 
-            this.btnHackAllBankSafeStacks.Location = new System.Drawing.Point(127, 435);
+            this.btnHackAllBankSafeStacks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHackAllBankSafeStacks.AutoSize = true;
+            this.btnHackAllBankSafeStacks.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnHackAllBankSafeStacks.Location = new System.Drawing.Point(75, 375);
             this.btnHackAllBankSafeStacks.Name = "btnHackAllBankSafeStacks";
-            this.btnHackAllBankSafeStacks.Size = new System.Drawing.Size(125, 23);
+            this.btnHackAllBankSafeStacks.Size = new System.Drawing.Size(116, 23);
             this.btnHackAllBankSafeStacks.TabIndex = 12;
             this.btnHackAllBankSafeStacks.Text = "Hack All Item Stacks";
             this.btnHackAllBankSafeStacks.UseVisualStyleBackColor = true;
@@ -2908,9 +2969,12 @@ namespace tsge
             // 
             // btnMaxAllBankSafeStacks
             // 
-            this.btnMaxAllBankSafeStacks.Location = new System.Drawing.Point(127, 406);
+            this.btnMaxAllBankSafeStacks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMaxAllBankSafeStacks.AutoSize = true;
+            this.btnMaxAllBankSafeStacks.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMaxAllBankSafeStacks.Location = new System.Drawing.Point(81, 346);
             this.btnMaxAllBankSafeStacks.Name = "btnMaxAllBankSafeStacks";
-            this.btnMaxAllBankSafeStacks.Size = new System.Drawing.Size(125, 23);
+            this.btnMaxAllBankSafeStacks.Size = new System.Drawing.Size(110, 23);
             this.btnMaxAllBankSafeStacks.TabIndex = 11;
             this.btnMaxAllBankSafeStacks.Text = "Max All Item Stacks";
             this.btnMaxAllBankSafeStacks.UseVisualStyleBackColor = true;
@@ -2918,9 +2982,11 @@ namespace tsge
             // 
             // btnDeleteAllSafeItems
             // 
-            this.btnDeleteAllSafeItems.Location = new System.Drawing.Point(9, 435);
+            this.btnDeleteAllSafeItems.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDeleteAllSafeItems.Location = new System.Drawing.Point(9, 375);
             this.btnDeleteAllSafeItems.Name = "btnDeleteAllSafeItems";
-            this.btnDeleteAllSafeItems.Size = new System.Drawing.Size(112, 23);
+            this.btnDeleteAllSafeItems.Size = new System.Drawing.Size(63, 23);
             this.btnDeleteAllSafeItems.TabIndex = 10;
             this.btnDeleteAllSafeItems.Text = "Delete All Safe";
             this.btnDeleteAllSafeItems.UseVisualStyleBackColor = true;
@@ -2928,9 +2994,11 @@ namespace tsge
             // 
             // btnDeleteAllBankItems
             // 
-            this.btnDeleteAllBankItems.Location = new System.Drawing.Point(9, 406);
+            this.btnDeleteAllBankItems.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDeleteAllBankItems.Location = new System.Drawing.Point(9, 346);
             this.btnDeleteAllBankItems.Name = "btnDeleteAllBankItems";
-            this.btnDeleteAllBankItems.Size = new System.Drawing.Size(112, 23);
+            this.btnDeleteAllBankItems.Size = new System.Drawing.Size(66, 23);
             this.btnDeleteAllBankItems.TabIndex = 9;
             this.btnDeleteAllBankItems.Text = "Delete All Bank";
             this.btnDeleteAllBankItems.UseVisualStyleBackColor = true;
@@ -2938,9 +3006,11 @@ namespace tsge
             // 
             // label27
             // 
+            this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(76, 383);
+            this.label27.Location = new System.Drawing.Point(76, 323);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(72, 13);
             this.label27.TabIndex = 8;
@@ -2948,15 +3018,19 @@ namespace tsge
             // 
             // txtBankSafeStackCount
             // 
-            this.txtBankSafeStackCount.Location = new System.Drawing.Point(154, 380);
+            this.txtBankSafeStackCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBankSafeStackCount.Location = new System.Drawing.Point(154, 320);
             this.txtBankSafeStackCount.Name = "txtBankSafeStackCount";
-            this.txtBankSafeStackCount.Size = new System.Drawing.Size(98, 20);
+            this.txtBankSafeStackCount.Size = new System.Drawing.Size(36, 20);
             this.txtBankSafeStackCount.TabIndex = 7;
             this.txtBankSafeStackCount.TextChanged += new System.EventHandler(this.txtBankSafeStackCount_TextChanged);
             this.txtBankSafeStackCount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBankSafeStackCount_KeyPress);
             // 
             // label26
             // 
+            this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.Location = new System.Drawing.Point(6, 48);
@@ -2967,6 +3041,8 @@ namespace tsge
             // 
             // cboBankSafeItemFilter
             // 
+            this.cboBankSafeItemFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cboBankSafeItemFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboBankSafeItemFilter.FormattingEnabled = true;
             this.cboBankSafeItemFilter.Items.AddRange(new object[] {
@@ -2981,15 +3057,17 @@ namespace tsge
             "Weapons"});
             this.cboBankSafeItemFilter.Location = new System.Drawing.Point(79, 45);
             this.cboBankSafeItemFilter.Name = "cboBankSafeItemFilter";
-            this.cboBankSafeItemFilter.Size = new System.Drawing.Size(173, 21);
+            this.cboBankSafeItemFilter.Size = new System.Drawing.Size(111, 21);
             this.cboBankSafeItemFilter.TabIndex = 5;
             this.cboBankSafeItemFilter.SelectedIndexChanged += new System.EventHandler(this.cboBankSafeItemFilter_SelectedIndexChanged);
             // 
             // label24
             // 
+            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(6, 337);
+            this.label24.Location = new System.Drawing.Point(6, 277);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(71, 13);
             this.label24.TabIndex = 4;
@@ -2997,16 +3075,20 @@ namespace tsge
             // 
             // cboBankSafePrefix
             // 
+            this.cboBankSafePrefix.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cboBankSafePrefix.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboBankSafePrefix.FormattingEnabled = true;
-            this.cboBankSafePrefix.Location = new System.Drawing.Point(6, 353);
+            this.cboBankSafePrefix.Location = new System.Drawing.Point(6, 293);
             this.cboBankSafePrefix.Name = "cboBankSafePrefix";
-            this.cboBankSafePrefix.Size = new System.Drawing.Size(246, 21);
+            this.cboBankSafePrefix.Size = new System.Drawing.Size(184, 21);
             this.cboBankSafePrefix.TabIndex = 3;
             this.cboBankSafePrefix.SelectedIndexChanged += new System.EventHandler(this.cboBankSafePrefix_SelectedIndexChanged);
             // 
             // label25
             // 
+            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.Location = new System.Drawing.Point(6, 22);
@@ -3017,23 +3099,29 @@ namespace tsge
             // 
             // txtBankSafeFilter
             // 
+            this.txtBankSafeFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBankSafeFilter.Location = new System.Drawing.Point(79, 19);
             this.txtBankSafeFilter.Name = "txtBankSafeFilter";
-            this.txtBankSafeFilter.Size = new System.Drawing.Size(173, 20);
+            this.txtBankSafeFilter.Size = new System.Drawing.Size(111, 20);
             this.txtBankSafeFilter.TabIndex = 1;
             this.txtBankSafeFilter.TextChanged += new System.EventHandler(this.txtBankSafeFilter_TextChanged);
             // 
             // lstBankSafeItems
             // 
+            this.lstBankSafeItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lstBankSafeItems.FormattingEnabled = true;
             this.lstBankSafeItems.Location = new System.Drawing.Point(6, 71);
             this.lstBankSafeItems.Name = "lstBankSafeItems";
-            this.lstBankSafeItems.Size = new System.Drawing.Size(246, 225);
+            this.lstBankSafeItems.Size = new System.Drawing.Size(184, 160);
             this.lstBankSafeItems.TabIndex = 0;
             this.lstBankSafeItems.SelectedIndexChanged += new System.EventHandler(this.lstBankSafeItems_SelectedIndexChanged);
             // 
             // groupBox9
             // 
+            this.groupBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox9.Controls.Add(this.bankSafeItem02);
             this.groupBox9.Controls.Add(this.bankSafeItem01);
             this.groupBox9.Controls.Add(this.bankSafeItem03);
@@ -3074,7 +3162,7 @@ namespace tsge
             this.groupBox9.Controls.Add(this.bankSafeItem34);
             this.groupBox9.Controls.Add(this.bankSafeItem33);
             this.groupBox9.Controls.Add(this.bankSafeItem00);
-            this.groupBox9.Location = new System.Drawing.Point(272, 3);
+            this.groupBox9.Location = new System.Drawing.Point(210, 3);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(399, 164);
             this.groupBox9.TabIndex = 84;
@@ -3643,6 +3731,7 @@ namespace tsge
             // 
             // groupBox10
             // 
+            this.groupBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox10.BackColor = System.Drawing.Color.Transparent;
             this.groupBox10.Controls.Add(this.bankSafeItem40);
             this.groupBox10.Controls.Add(this.bankSafeItem41);
@@ -3684,7 +3773,7 @@ namespace tsge
             this.groupBox10.Controls.Add(this.bankSafeItem59);
             this.groupBox10.Controls.Add(this.bankSafeItem61);
             this.groupBox10.Controls.Add(this.bankSafeItem60);
-            this.groupBox10.Location = new System.Drawing.Point(272, 208);
+            this.groupBox10.Location = new System.Drawing.Point(210, 208);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(399, 169);
             this.groupBox10.TabIndex = 85;
