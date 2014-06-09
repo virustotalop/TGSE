@@ -4466,7 +4466,7 @@ namespace tsge
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
-            this.Text = "TSGE - by atom0s (Visual Changes by Walkman)";
+            this.Text = "TSGE - by atom0s";
             this.tcMainTabControl.ResumeLayout(false);
             this.tpMainPlayer.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
