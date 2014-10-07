@@ -1,2 +1,0 @@
-2.2.0.3
-https://github.com/atom0s/TSGE/releases/download/v2.2.0.3/tsge_2.2.0.3.7z
