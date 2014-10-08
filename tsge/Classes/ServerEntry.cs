@@ -15,7 +15,7 @@
 //    along with TSGE.  If not, see <http://www.gnu.org/licenses/>.
 // -----------------------------------------------------------------------
 
-namespace tsge.Classes
+namespace TSGE.Classes
 {
     public class ServerEntry : ModelBase
     {

@@ -15,7 +15,7 @@
 //    along with TSGE.  If not, see <http://www.gnu.org/licenses/>.
 // -----------------------------------------------------------------------
 
-namespace tsge
+namespace TSGE
 {
     partial class frmHairSelection
     {
@@ -46,7 +46,7 @@ namespace tsge
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHairSelection));
-            this.lstHairSelection = new tsge.Controls.HairListBox();
+            this.lstHairSelection = new TSGE.Controls.HairListBox();
             this.btnSelectHair = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();

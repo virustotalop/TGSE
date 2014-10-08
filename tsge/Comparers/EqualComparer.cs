@@ -22,7 +22,7 @@
 //    http://stackoverflow.com/questions/248603/natural-sort-order-in-c-sharp/248613#248613
 // -----------------------------------------------------------------------
 
-namespace tsge.Comparers
+namespace TSGE.Comparers
 {
     using System.Collections.Generic;
     using System.IO;
@@ -70,7 +70,7 @@ namespace tsge.Comparers
         }
     }
 
-    public sealed class NaturalBuffNameComparer : IComparer<tsge.Classes.Buff>
+    public sealed class NaturalBuffNameComparer : IComparer<TSGE.Classes.Buff>
     {
         /// <summary>
         /// Compares two Buff classes logically to each other by name.
@@ -78,13 +78,13 @@ namespace tsge.Comparers
         /// <param name="a"></param>
         /// <param name="b"></param>
         /// <returns></returns>
-        public int Compare(tsge.Classes.Buff a, tsge.Classes.Buff b)
+        public int Compare(TSGE.Classes.Buff a, TSGE.Classes.Buff b)
         {
             return SafeNativeMethods.StrCmpLogicalW(a.Name, b.Name);
         }
     }
 
-    public sealed class NaturalItemNameComparer : IComparer<tsge.Classes.Item>
+    public sealed class NaturalItemNameComparer : IComparer<TSGE.Classes.Item>
     {
         /// <summary>
         /// Compares two Item classes logically to each other by name.
@@ -92,13 +92,13 @@ namespace tsge.Comparers
         /// <param name="a"></param>
         /// <param name="b"></param>
         /// <returns></returns>
-        public int Compare(tsge.Classes.Item a, tsge.Classes.Item b)
+        public int Compare(TSGE.Classes.Item a, TSGE.Classes.Item b)
         {
             return SafeNativeMethods.StrCmpLogicalW(a.Name, b.Name);
         }
     }
 
-    public sealed class NaturalItemPrefixNameComparer : IComparer<tsge.Classes.ItemPrefix>
+    public sealed class NaturalItemPrefixNameComparer : IComparer<TSGE.Classes.ItemPrefix>
     {
         /// <summary>
         /// Compares two ItemPrefix classes logically to each other by name.
@@ -106,7 +106,7 @@ namespace tsge.Comparers
         /// <param name="a"></param>
         /// <param name="b"></param>
         /// <returns></returns>
-        public int Compare(tsge.Classes.ItemPrefix a, tsge.Classes.ItemPrefix b)
+        public int Compare(TSGE.Classes.ItemPrefix a, TSGE.Classes.ItemPrefix b)
         {
             return SafeNativeMethods.StrCmpLogicalW(a.Prefix, b.Prefix);
         }

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace tsge.Properties
+namespace TSGE.Properties
 {
 
 

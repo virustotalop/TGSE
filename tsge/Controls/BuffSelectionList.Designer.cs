@@ -15,7 +15,7 @@
 //    along with TSGE.  If not, see <http://www.gnu.org/licenses/>.
 // -----------------------------------------------------------------------
 
-namespace tsge.Controls
+namespace TSGE.Controls
 {
     partial class BuffSelectionListBox
     {

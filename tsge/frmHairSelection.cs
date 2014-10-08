@@ -15,7 +15,7 @@
 //    along with TSGE.  If not, see <http://www.gnu.org/licenses/>.
 // -----------------------------------------------------------------------
 
-namespace tsge
+namespace TSGE
 {
     using System;
     using System.Windows.Forms;

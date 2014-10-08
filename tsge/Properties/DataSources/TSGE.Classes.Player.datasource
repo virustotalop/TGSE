@@ -6,8 +6,8 @@
     cause the file to be unrecognizable by the program.
 -->
 <GenericObjectDataSource DisplayName="Player" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-   <TypeInfo>tsge.Classes.Player, tsge, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
-   <TypeInfo>tsge.Classes.Item, tsge, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
-   <TypeInfo>tsge.Classes.ItemPrefix, tsge, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
-   <TypeInfo>tsge.Classes.Buff, tsge, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
+   <TypeInfo>TSGE.Classes.Player, TSGE, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
+   <TypeInfo>TSGE.Classes.Item, TSGE, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
+   <TypeInfo>TSGE.Classes.ItemPrefix, TSGE, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
+   <TypeInfo>TSGE.Classes.Buff, TSGE, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
 </GenericObjectDataSource>
