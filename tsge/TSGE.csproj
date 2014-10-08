@@ -7,8 +7,8 @@
     <ProjectGuid>{2C4D0926-C0B1-4427-B5DC-4BEC5BB2304E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>tsge</RootNamespace>
-    <AssemblyName>tsge</AssemblyName>
+    <RootNamespace>TSGE</RootNamespace>
+    <AssemblyName>TSGE</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -142,7 +142,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Properties\DataSources\tsge.Classes.Player.datasource" />
+    <None Include="Properties\DataSources\TSGE.Classes.Player.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
