@@ -919,7 +919,7 @@ namespace tsge
             this.groupBox4.Controls.Add(this.lstBuffSelection);
             this.groupBox4.Location = new System.Drawing.Point(309, 6);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(287, 391);
+            this.groupBox4.Size = new System.Drawing.Size(295, 403);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Buff Editor";
@@ -927,7 +927,7 @@ namespace tsge
             // btnLoadBuffs
             // 
             this.btnLoadBuffs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnLoadBuffs.Location = new System.Drawing.Point(156, 362);
+            this.btnLoadBuffs.Location = new System.Drawing.Point(164, 374);
             this.btnLoadBuffs.Name = "btnLoadBuffs";
             this.btnLoadBuffs.Size = new System.Drawing.Size(125, 23);
             this.btnLoadBuffs.TabIndex = 8;
@@ -938,7 +938,7 @@ namespace tsge
             // btnSaveBuffs
             // 
             this.btnSaveBuffs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnSaveBuffs.Location = new System.Drawing.Point(6, 362);
+            this.btnSaveBuffs.Location = new System.Drawing.Point(6, 374);
             this.btnSaveBuffs.Name = "btnSaveBuffs";
             this.btnSaveBuffs.Size = new System.Drawing.Size(125, 23);
             this.btnSaveBuffs.TabIndex = 7;
@@ -949,7 +949,7 @@ namespace tsge
             // btnHackAllBuffDurations
             // 
             this.btnHackAllBuffDurations.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnHackAllBuffDurations.Location = new System.Drawing.Point(156, 322);
+            this.btnHackAllBuffDurations.Location = new System.Drawing.Point(164, 334);
             this.btnHackAllBuffDurations.Name = "btnHackAllBuffDurations";
             this.btnHackAllBuffDurations.Size = new System.Drawing.Size(125, 23);
             this.btnHackAllBuffDurations.TabIndex = 6;
@@ -960,7 +960,7 @@ namespace tsge
             // btnMaxAllBuffDurations
             // 
             this.btnMaxAllBuffDurations.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnMaxAllBuffDurations.Location = new System.Drawing.Point(156, 293);
+            this.btnMaxAllBuffDurations.Location = new System.Drawing.Point(164, 305);
             this.btnMaxAllBuffDurations.Name = "btnMaxAllBuffDurations";
             this.btnMaxAllBuffDurations.Size = new System.Drawing.Size(125, 23);
             this.btnMaxAllBuffDurations.TabIndex = 5;
@@ -971,7 +971,7 @@ namespace tsge
             // btnDeleteAllBuffs
             // 
             this.btnDeleteAllBuffs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnDeleteAllBuffs.Location = new System.Drawing.Point(156, 264);
+            this.btnDeleteAllBuffs.Location = new System.Drawing.Point(164, 276);
             this.btnDeleteAllBuffs.Name = "btnDeleteAllBuffs";
             this.btnDeleteAllBuffs.Size = new System.Drawing.Size(125, 23);
             this.btnDeleteAllBuffs.TabIndex = 4;
@@ -982,7 +982,7 @@ namespace tsge
             // btnHackBuffDuration
             // 
             this.btnHackBuffDuration.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnHackBuffDuration.Location = new System.Drawing.Point(6, 322);
+            this.btnHackBuffDuration.Location = new System.Drawing.Point(6, 334);
             this.btnHackBuffDuration.Name = "btnHackBuffDuration";
             this.btnHackBuffDuration.Size = new System.Drawing.Size(125, 23);
             this.btnHackBuffDuration.TabIndex = 3;
@@ -993,7 +993,7 @@ namespace tsge
             // btnMaxBuffDuration
             // 
             this.btnMaxBuffDuration.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnMaxBuffDuration.Location = new System.Drawing.Point(6, 293);
+            this.btnMaxBuffDuration.Location = new System.Drawing.Point(6, 305);
             this.btnMaxBuffDuration.Name = "btnMaxBuffDuration";
             this.btnMaxBuffDuration.Size = new System.Drawing.Size(125, 23);
             this.btnMaxBuffDuration.TabIndex = 2;
@@ -1004,7 +1004,7 @@ namespace tsge
             // btnDeleteBuff
             // 
             this.btnDeleteBuff.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnDeleteBuff.Location = new System.Drawing.Point(6, 264);
+            this.btnDeleteBuff.Location = new System.Drawing.Point(6, 276);
             this.btnDeleteBuff.Name = "btnDeleteBuff";
             this.btnDeleteBuff.Size = new System.Drawing.Size(125, 23);
             this.btnDeleteBuff.TabIndex = 1;
@@ -1014,14 +1014,15 @@ namespace tsge
             // 
             // lstBuffSelection
             // 
-            this.lstBuffSelection.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.lstBuffSelection.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lstBuffSelection.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.lstBuffSelection.FormattingEnabled = true;
             this.lstBuffSelection.ItemHeight = 38;
             this.lstBuffSelection.Location = new System.Drawing.Point(6, 19);
             this.lstBuffSelection.Name = "lstBuffSelection";
-            this.lstBuffSelection.Size = new System.Drawing.Size(275, 239);
+            this.lstBuffSelection.Size = new System.Drawing.Size(283, 251);
             this.lstBuffSelection.TabIndex = 0;
             this.lstBuffSelection.SelectedIndexChanged += new System.EventHandler(this.lstBuffSelection_SelectedIndexChanged);
             // 
@@ -1033,10 +1034,11 @@ namespace tsge
             this.lstPlayerBuffs.DataSource = this.buffsBindingSource;
             this.lstPlayerBuffs.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.lstPlayerBuffs.FormattingEnabled = true;
+            this.lstPlayerBuffs.IntegralHeight = false;
             this.lstPlayerBuffs.ItemHeight = 60;
             this.lstPlayerBuffs.Location = new System.Drawing.Point(8, 6);
             this.lstPlayerBuffs.Name = "lstPlayerBuffs";
-            this.lstPlayerBuffs.Size = new System.Drawing.Size(295, 394);
+            this.lstPlayerBuffs.Size = new System.Drawing.Size(295, 403);
             this.lstPlayerBuffs.TabIndex = 0;
             // 
             // buffsBindingSource
@@ -1288,9 +1290,10 @@ namespace tsge
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lstInventoryItems.FormattingEnabled = true;
+            this.lstInventoryItems.IntegralHeight = false;
             this.lstInventoryItems.Location = new System.Drawing.Point(6, 19);
             this.lstInventoryItems.Name = "lstInventoryItems";
-            this.lstInventoryItems.Size = new System.Drawing.Size(0, 251);
+            this.lstInventoryItems.Size = new System.Drawing.Size(0, 270);
             this.lstInventoryItems.TabIndex = 0;
             this.lstInventoryItems.SelectedIndexChanged += new System.EventHandler(this.lstInventoryItems_SelectedIndexChanged);
             // 
@@ -2614,9 +2617,10 @@ namespace tsge
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lstEquipmentItems.FormattingEnabled = true;
+            this.lstEquipmentItems.IntegralHeight = false;
             this.lstEquipmentItems.Location = new System.Drawing.Point(6, 45);
             this.lstEquipmentItems.Name = "lstEquipmentItems";
-            this.lstEquipmentItems.Size = new System.Drawing.Size(188, 251);
+            this.lstEquipmentItems.Size = new System.Drawing.Size(188, 264);
             this.lstEquipmentItems.TabIndex = 0;
             this.lstEquipmentItems.SelectedIndexChanged += new System.EventHandler(this.lstEquipmentItems_SelectedIndexChanged);
             // 
@@ -2952,11 +2956,9 @@ namespace tsge
             // btnHackAllBankSafeStacks
             // 
             this.btnHackAllBankSafeStacks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHackAllBankSafeStacks.AutoSize = true;
-            this.btnHackAllBankSafeStacks.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnHackAllBankSafeStacks.Location = new System.Drawing.Point(75, 375);
+            this.btnHackAllBankSafeStacks.Location = new System.Drawing.Point(75, 374);
             this.btnHackAllBankSafeStacks.Name = "btnHackAllBankSafeStacks";
-            this.btnHackAllBankSafeStacks.Size = new System.Drawing.Size(116, 23);
+            this.btnHackAllBankSafeStacks.Size = new System.Drawing.Size(115, 23);
             this.btnHackAllBankSafeStacks.TabIndex = 12;
             this.btnHackAllBankSafeStacks.Text = "Hack All Item Stacks";
             this.btnHackAllBankSafeStacks.UseVisualStyleBackColor = true;
@@ -2965,11 +2967,9 @@ namespace tsge
             // btnMaxAllBankSafeStacks
             // 
             this.btnMaxAllBankSafeStacks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaxAllBankSafeStacks.AutoSize = true;
-            this.btnMaxAllBankSafeStacks.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnMaxAllBankSafeStacks.Location = new System.Drawing.Point(81, 346);
+            this.btnMaxAllBankSafeStacks.Location = new System.Drawing.Point(75, 345);
             this.btnMaxAllBankSafeStacks.Name = "btnMaxAllBankSafeStacks";
-            this.btnMaxAllBankSafeStacks.Size = new System.Drawing.Size(110, 23);
+            this.btnMaxAllBankSafeStacks.Size = new System.Drawing.Size(115, 23);
             this.btnMaxAllBankSafeStacks.TabIndex = 11;
             this.btnMaxAllBankSafeStacks.Text = "Max All Item Stacks";
             this.btnMaxAllBankSafeStacks.UseVisualStyleBackColor = true;
@@ -2979,7 +2979,7 @@ namespace tsge
             // 
             this.btnDeleteAllSafeItems.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDeleteAllSafeItems.Location = new System.Drawing.Point(9, 375);
+            this.btnDeleteAllSafeItems.Location = new System.Drawing.Point(6, 374);
             this.btnDeleteAllSafeItems.Name = "btnDeleteAllSafeItems";
             this.btnDeleteAllSafeItems.Size = new System.Drawing.Size(63, 23);
             this.btnDeleteAllSafeItems.TabIndex = 10;
@@ -2991,9 +2991,9 @@ namespace tsge
             // 
             this.btnDeleteAllBankItems.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDeleteAllBankItems.Location = new System.Drawing.Point(9, 346);
+            this.btnDeleteAllBankItems.Location = new System.Drawing.Point(6, 345);
             this.btnDeleteAllBankItems.Name = "btnDeleteAllBankItems";
-            this.btnDeleteAllBankItems.Size = new System.Drawing.Size(66, 23);
+            this.btnDeleteAllBankItems.Size = new System.Drawing.Size(63, 23);
             this.btnDeleteAllBankItems.TabIndex = 9;
             this.btnDeleteAllBankItems.Text = "Delete All Bank";
             this.btnDeleteAllBankItems.UseVisualStyleBackColor = true;
@@ -3108,9 +3108,10 @@ namespace tsge
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lstBankSafeItems.FormattingEnabled = true;
+            this.lstBankSafeItems.IntegralHeight = false;
             this.lstBankSafeItems.Location = new System.Drawing.Point(6, 71);
             this.lstBankSafeItems.Name = "lstBankSafeItems";
-            this.lstBankSafeItems.Size = new System.Drawing.Size(184, 160);
+            this.lstBankSafeItems.Size = new System.Drawing.Size(184, 161);
             this.lstBankSafeItems.TabIndex = 0;
             this.lstBankSafeItems.SelectedIndexChanged += new System.EventHandler(this.lstBankSafeItems_SelectedIndexChanged);
             // 

@@ -1,0 +1,5 @@
+language: c
+compiler:
+  - msbuild
+# Change this to your needs
+script: TSGE.sln
