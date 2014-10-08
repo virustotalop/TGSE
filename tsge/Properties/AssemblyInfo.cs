@@ -21,11 +21,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("tsge")]
+[assembly: AssemblyTitle("TSGE")]
 [assembly: AssemblyDescription("Terraria Save Game Editor - by atom0s")]
 [assembly: AssemblyConfiguration("Release")]
 [assembly: AssemblyCompany("atom0s")]
-[assembly: AssemblyProduct("tsge")]
+[assembly: AssemblyProduct("TSGE")]
 [assembly: AssemblyCopyright("Copyright © atom0s 2012-2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

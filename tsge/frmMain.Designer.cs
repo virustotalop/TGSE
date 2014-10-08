@@ -439,8 +439,7 @@ namespace tsge
             // 
             // btnLoadColorHair
             // 
-            this.btnLoadColorHair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLoadColorHair.Location = new System.Drawing.Point(462, 226);
+            this.btnLoadColorHair.Location = new System.Drawing.Point(449, 213);
             this.btnLoadColorHair.Name = "btnLoadColorHair";
             this.btnLoadColorHair.Size = new System.Drawing.Size(120, 23);
             this.btnLoadColorHair.TabIndex = 21;
@@ -450,8 +449,7 @@ namespace tsge
             // 
             // btnSaveColorHair
             // 
-            this.btnSaveColorHair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSaveColorHair.Location = new System.Drawing.Point(462, 197);
+            this.btnSaveColorHair.Location = new System.Drawing.Point(449, 184);
             this.btnSaveColorHair.Name = "btnSaveColorHair";
             this.btnSaveColorHair.Size = new System.Drawing.Size(120, 23);
             this.btnSaveColorHair.TabIndex = 20;
@@ -461,8 +459,7 @@ namespace tsge
             // 
             // btnRandomColors
             // 
-            this.btnRandomColors.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRandomColors.Location = new System.Drawing.Point(462, 83);
+            this.btnRandomColors.Location = new System.Drawing.Point(449, 83);
             this.btnRandomColors.Name = "btnRandomColors";
             this.btnRandomColors.Size = new System.Drawing.Size(120, 23);
             this.btnRandomColors.TabIndex = 19;
@@ -472,8 +469,7 @@ namespace tsge
             // 
             // btnRandomHair
             // 
-            this.btnRandomHair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRandomHair.Location = new System.Drawing.Point(462, 54);
+            this.btnRandomHair.Location = new System.Drawing.Point(449, 54);
             this.btnRandomHair.Name = "btnRandomHair";
             this.btnRandomHair.Size = new System.Drawing.Size(120, 23);
             this.btnRandomHair.TabIndex = 18;
@@ -483,8 +479,7 @@ namespace tsge
             // 
             // btnSelectHair
             // 
-            this.btnSelectHair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSelectHair.Location = new System.Drawing.Point(462, 19);
+            this.btnSelectHair.Location = new System.Drawing.Point(449, 19);
             this.btnSelectHair.Name = "btnSelectHair";
             this.btnSelectHair.Size = new System.Drawing.Size(120, 23);
             this.btnSelectHair.TabIndex = 17;
@@ -4376,7 +4371,7 @@ namespace tsge
             // 
             // newCharacterToolStripMenuItem
             // 
-            this.newCharacterToolStripMenuItem.Image = global::tsge.Properties.Resources.status_online;
+            this.newCharacterToolStripMenuItem.Image = global::TSGE.Properties.Resources.status_online;
             this.newCharacterToolStripMenuItem.Name = "newCharacterToolStripMenuItem";
             this.newCharacterToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.newCharacterToolStripMenuItem.Text = "New Character";
@@ -4384,7 +4379,7 @@ namespace tsge
             // 
             // openToolStripMenuItem
             // 
-            this.openToolStripMenuItem.Image = global::tsge.Properties.Resources.folder_user;
+            this.openToolStripMenuItem.Image = global::TSGE.Properties.Resources.folder_user;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.openToolStripMenuItem.Text = "Open";
@@ -4397,7 +4392,7 @@ namespace tsge
             // 
             // saveToolStripMenuItem
             // 
-            this.saveToolStripMenuItem.Image = global::tsge.Properties.Resources.page_save;
+            this.saveToolStripMenuItem.Image = global::TSGE.Properties.Resources.page_save;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.saveToolStripMenuItem.Text = "Save";
@@ -4405,7 +4400,7 @@ namespace tsge
             // 
             // saveAsToolStripMenuItem
             // 
-            this.saveAsToolStripMenuItem.Image = global::tsge.Properties.Resources.script_save;
+            this.saveAsToolStripMenuItem.Image = global::TSGE.Properties.Resources.script_save;
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
             this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.saveAsToolStripMenuItem.Text = "Save As";
@@ -4418,7 +4413,7 @@ namespace tsge
             // 
             // exitToolStripMenuItem
             // 
-            this.exitToolStripMenuItem.Image = global::tsge.Properties.Resources.stop;
+            this.exitToolStripMenuItem.Image = global::TSGE.Properties.Resources.stop;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.exitToolStripMenuItem.Text = "Exit";
@@ -4435,7 +4430,7 @@ namespace tsge
             // 
             // aboutTSGEToolStripMenuItem
             // 
-            this.aboutTSGEToolStripMenuItem.Image = global::tsge.Properties.Resources.information;
+            this.aboutTSGEToolStripMenuItem.Image = global::TSGE.Properties.Resources.information;
             this.aboutTSGEToolStripMenuItem.Name = "aboutTSGEToolStripMenuItem";
             this.aboutTSGEToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.aboutTSGEToolStripMenuItem.Text = "About TSGE";
@@ -4443,7 +4438,7 @@ namespace tsge
             // 
             // checkForUpdatesToolStripMenuItem
             // 
-            this.checkForUpdatesToolStripMenuItem.Image = global::tsge.Properties.Resources._new;
+            this.checkForUpdatesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("checkForUpdatesToolStripMenuItem.Image")));
             this.checkForUpdatesToolStripMenuItem.Name = "checkForUpdatesToolStripMenuItem";
             this.checkForUpdatesToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.checkForUpdatesToolStripMenuItem.Text = "Check For Updates";
@@ -4466,7 +4461,9 @@ namespace tsge
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
-            this.Text = "TSGE - by atom0s (Visual Changes by Walkman)";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "TSGE - by atom0s (Visual Changes by Walkman100)";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tcMainTabControl.ResumeLayout(false);
             this.tpMainPlayer.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);

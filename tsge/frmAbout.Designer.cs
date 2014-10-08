@@ -170,7 +170,7 @@ namespace tsge
             // btnDonate
             // 
             this.btnDonate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDonate.Image = global::tsge.Properties.Resources.donate;
+            this.btnDonate.Image = global::TSGE.Properties.Resources.donate;
             this.btnDonate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDonate.Location = new System.Drawing.Point(362, 82);
             this.btnDonate.Name = "btnDonate";
@@ -184,7 +184,7 @@ namespace tsge
             // btnTwitter
             // 
             this.btnTwitter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTwitter.Image = global::tsge.Properties.Resources.Twitter;
+            this.btnTwitter.Image = global::TSGE.Properties.Resources.Twitter;
             this.btnTwitter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTwitter.Location = new System.Drawing.Point(362, 12);
             this.btnTwitter.Name = "btnTwitter";
