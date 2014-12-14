@@ -32,7 +32,7 @@ namespace TSGE
 
             // Set the application version label..
             var appVersion = Assembly.GetExecutingAssembly().GetName().Version;
-            this.lblVersion.Text = string.Format("Version: {0}.{1}.{2}.{3}", appVersion.Major, appVersion.Minor, appVersion.Build, appVersion.Revision);
+            this.lblVersion.Text = string.Format("{0}.{1}.{2}.{3}", appVersion.Major, appVersion.Minor, appVersion.Build, appVersion.Revision) + " - Made resisable by Walkman100";
         }
         
         /// <summary>
@@ -56,7 +56,7 @@ namespace TSGE
         }
 
         /// <summary>
-        /// Launches the users browser and navigates to Google.
+        /// Launches the users browser and navigates to Github.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
