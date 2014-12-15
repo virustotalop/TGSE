@@ -2955,10 +2955,10 @@ namespace TSGE
             // 
             // btnHackAllBankSafeStacks
             // 
-            this.btnHackAllBankSafeStacks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHackAllBankSafeStacks.Location = new System.Drawing.Point(75, 374);
+            this.btnHackAllBankSafeStacks.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnHackAllBankSafeStacks.Location = new System.Drawing.Point(101, 374);
             this.btnHackAllBankSafeStacks.Name = "btnHackAllBankSafeStacks";
-            this.btnHackAllBankSafeStacks.Size = new System.Drawing.Size(115, 23);
+            this.btnHackAllBankSafeStacks.Size = new System.Drawing.Size(125, 23);
             this.btnHackAllBankSafeStacks.TabIndex = 12;
             this.btnHackAllBankSafeStacks.Text = "Hack All Item Stacks";
             this.btnHackAllBankSafeStacks.UseVisualStyleBackColor = true;
@@ -2966,10 +2966,10 @@ namespace TSGE
             // 
             // btnMaxAllBankSafeStacks
             // 
-            this.btnMaxAllBankSafeStacks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaxAllBankSafeStacks.Location = new System.Drawing.Point(75, 345);
+            this.btnMaxAllBankSafeStacks.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnMaxAllBankSafeStacks.Location = new System.Drawing.Point(101, 345);
             this.btnMaxAllBankSafeStacks.Name = "btnMaxAllBankSafeStacks";
-            this.btnMaxAllBankSafeStacks.Size = new System.Drawing.Size(115, 23);
+            this.btnMaxAllBankSafeStacks.Size = new System.Drawing.Size(125, 23);
             this.btnMaxAllBankSafeStacks.TabIndex = 11;
             this.btnMaxAllBankSafeStacks.Text = "Max All Item Stacks";
             this.btnMaxAllBankSafeStacks.UseVisualStyleBackColor = true;
@@ -2977,11 +2977,10 @@ namespace TSGE
             // 
             // btnDeleteAllSafeItems
             // 
-            this.btnDeleteAllSafeItems.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDeleteAllSafeItems.Location = new System.Drawing.Point(6, 374);
+            this.btnDeleteAllSafeItems.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnDeleteAllSafeItems.Location = new System.Drawing.Point(-29, 374);
             this.btnDeleteAllSafeItems.Name = "btnDeleteAllSafeItems";
-            this.btnDeleteAllSafeItems.Size = new System.Drawing.Size(63, 23);
+            this.btnDeleteAllSafeItems.Size = new System.Drawing.Size(125, 23);
             this.btnDeleteAllSafeItems.TabIndex = 10;
             this.btnDeleteAllSafeItems.Text = "Delete All Safe";
             this.btnDeleteAllSafeItems.UseVisualStyleBackColor = true;
@@ -2989,11 +2988,10 @@ namespace TSGE
             // 
             // btnDeleteAllBankItems
             // 
-            this.btnDeleteAllBankItems.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDeleteAllBankItems.Location = new System.Drawing.Point(6, 345);
+            this.btnDeleteAllBankItems.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnDeleteAllBankItems.Location = new System.Drawing.Point(-29, 345);
             this.btnDeleteAllBankItems.Name = "btnDeleteAllBankItems";
-            this.btnDeleteAllBankItems.Size = new System.Drawing.Size(63, 23);
+            this.btnDeleteAllBankItems.Size = new System.Drawing.Size(125, 23);
             this.btnDeleteAllBankItems.TabIndex = 9;
             this.btnDeleteAllBankItems.Text = "Delete All Bank";
             this.btnDeleteAllBankItems.UseVisualStyleBackColor = true;
@@ -3005,7 +3003,7 @@ namespace TSGE
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(76, 323);
+            this.label27.Location = new System.Drawing.Point(6, 323);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(72, 13);
             this.label27.TabIndex = 8;
@@ -3015,9 +3013,9 @@ namespace TSGE
             // 
             this.txtBankSafeStackCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBankSafeStackCount.Location = new System.Drawing.Point(154, 320);
+            this.txtBankSafeStackCount.Location = new System.Drawing.Point(84, 320);
             this.txtBankSafeStackCount.Name = "txtBankSafeStackCount";
-            this.txtBankSafeStackCount.Size = new System.Drawing.Size(36, 20);
+            this.txtBankSafeStackCount.Size = new System.Drawing.Size(106, 20);
             this.txtBankSafeStackCount.TabIndex = 7;
             this.txtBankSafeStackCount.TextChanged += new System.EventHandler(this.txtBankSafeStackCount_TextChanged);
             this.txtBankSafeStackCount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBankSafeStackCount_KeyPress);
@@ -4461,10 +4459,8 @@ namespace TSGE
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
-            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "TSGE - by atom0s (Visual Changes by Walkman100)";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tcMainTabControl.ResumeLayout(false);
             this.tpMainPlayer.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
