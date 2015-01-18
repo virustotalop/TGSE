@@ -19,41 +19,41 @@ Imports System.IO
 Imports System.Windows.Forms
 
 Friend NotInheritable Class Program
-	Private Sub New()
-	End Sub
-	''' <summary>
-	''' The main entry point for the application.
-	''' </summary>
-	<STAThread> _
-	Friend Shared Sub Main()
-		' Attach unhandled exception handler..
-		AddHandler AppDomain.CurrentDomain.UnhandledException, AddressOf CurrentDomainOnUnhandledException
+    Private Sub New()
+    End Sub
+    ''' <summary>
+    ''' The main entry point for the application.
+    ''' </summary>
+    <STAThread> _
+    Friend Shared Sub Main()
+        ' Attach unhandled exception handler..
+        AddHandler AppDomain.CurrentDomain.UnhandledException, AddressOf CurrentDomainOnUnhandledException
 
-		' Execute the application..
-		Application.EnableVisualStyles()
-		Application.SetCompatibleTextRenderingDefault(False)
-		Application.Run(New frmMain())
-	End Sub
+        ' Execute the application..
+        Application.EnableVisualStyles()
+        Application.SetCompatibleTextRenderingDefault(False)
+        Application.Run(New frmMain())
+    End Sub
 
-	''' <summary>
-	''' Catches and saves unhandled exceptions.
-	''' </summary>
-	''' <param name="sender"></param>
-	''' <param name="unhandledExceptionEventArgs"></param>
-	Private Shared Sub CurrentDomainOnUnhandledException(sender As Object, unhandledExceptionEventArgs As UnhandledExceptionEventArgs)
-		Try
-			If unhandledExceptionEventArgs.ExceptionObject Is Nothing Then
-				Return
-			End If
+    ''' <summary>
+    ''' Catches and saves unhandled exceptions.
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="unhandledExceptionEventArgs"></param>
+    Private Shared Sub CurrentDomainOnUnhandledException(sender As Object, unhandledExceptionEventArgs As UnhandledExceptionEventArgs)
+        Try
+            If unhandledExceptionEventArgs.ExceptionObject Is Nothing Then
+                Return
+            End If
 
-			Dim ex = DirectCast(unhandledExceptionEventArgs.ExceptionObject, Exception)
-			Using writer = New StreamWriter("crashlog.txt")
-				writer.Write(ex)
-				writer.Flush()
-			End Using
+            Dim ex = DirectCast(unhandledExceptionEventArgs.ExceptionObject, Exception)
+            Using writer = New StreamWriter("crashlog.txt")
+                writer.Write(ex)
+                writer.Flush()
+            End Using
 
-			MessageBox.Show(ex.ToString(), "Error!")
-		Catch
-		End Try
-	End Sub
+            MessageBox.Show(ex.ToString(), "Error!")
+        Catch
+        End Try
+    End Sub
 End Class

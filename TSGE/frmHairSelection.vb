@@ -18,62 +18,62 @@
 Imports System.Windows.Forms
 
 Public Partial Class frmHairSelection
-	Inherits Form
-	''' <summary>
-	''' Internal hair id value.
-	''' </summary>
-	Private m_HairId As Integer
+    Inherits Form
+    ''' <summary>
+    ''' Internal hair id value.
+    ''' </summary>
+    Private m_HairId As Integer
 
-	''' <summary>
-	''' Default Constructor
-	''' </summary>
-	Public Sub New()
-		InitializeComponent()
+    ''' <summary>
+    ''' Default Constructor
+    ''' </summary>
+    Public Sub New()
+        InitializeComponent()
 
-		Me.m_HairId = 0
-		Me.lstHairSelection.SelectedIndex = Me.HairId
-	End Sub
+        Me.m_HairId = 0
+        Me.lstHairSelection.SelectedIndex = Me.HairId
+    End Sub
 
-	''' <summary>
-	''' Selects the hair style.
-	''' </summary>
-	''' <param name="sender"></param>
-	''' <param name="e"></param>
-	Private Sub lstHairSelection_SelectedIndexChanged(sender As Object, e As EventArgs)
-		Me.HairId = Me.lstHairSelection.SelectedIndex
-	End Sub
+    ''' <summary>
+    ''' Selects the hair style.
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub lstHairSelection_SelectedIndexChanged(sender As Object, e As EventArgs)
+        Me.HairId = Me.lstHairSelection.SelectedIndex
+    End Sub
 
-	''' <summary>
-	''' Closes this form with a valid result.
-	''' </summary>
-	''' <param name="sender"></param>
-	''' <param name="e"></param>
-	Private Sub btnSelectHair_Click(sender As Object, e As EventArgs)
-		Me.DialogResult = DialogResult.OK
-		Me.Close()
-	End Sub
+    ''' <summary>
+    ''' Closes this form with a valid result.
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub btnSelectHair_Click(sender As Object, e As EventArgs)
+        Me.DialogResult = DialogResult.OK
+        Me.Close()
+    End Sub
 
-	''' <summary>
-	''' Closes this form with a cancelled result.
-	''' </summary>
-	''' <param name="sender"></param>
-	''' <param name="e"></param>
-	Private Sub btnCancel_Click(sender As Object, e As EventArgs)
-		Me.DialogResult = DialogResult.Cancel
-		Me.Close()
-	End Sub
+    ''' <summary>
+    ''' Closes this form with a cancelled result.
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs)
+        Me.DialogResult = DialogResult.Cancel
+        Me.Close()
+    End Sub
 
-	''' <summary>
-	''' Gets or sets the selected hair index.
-	''' </summary>
-	Public Property HairId() As Integer
+    ''' <summary>
+    ''' Gets or sets the selected hair index.
+    ''' </summary>
+    Public Property HairId() As Integer
 
-		Get
-			Return Me.m_HairId
-		End Get
-		Set
-			Me.m_HairId = value
-			Me.lstHairSelection.SelectedIndex = value
-		End Set
-	End Property
+        Get
+            Return Me.m_HairId
+        End Get
+        Set
+            Me.m_HairId = value
+            Me.lstHairSelection.SelectedIndex = value
+        End Set
+    End Property
 End Class

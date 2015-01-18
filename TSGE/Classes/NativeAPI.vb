@@ -19,15 +19,15 @@ Imports System.Drawing
 Imports System.Runtime.InteropServices
 Namespace Classes
 
-	Friend NotInheritable Class NativeAPI
-		Private Sub New()
-		End Sub
-		''' <summary>
-		''' gdi32.GetDeviceCaps import.
-		''' </summary>
-		''' <param name="hDC"></param>
-		''' <param name="nIndex"></param>
-		''' <returns></returns>
-		Friend Declare Ansi Function GetDeviceCaps Lib "gdi32.dll" (hDC As IntPtr, nIndex As Integer) As Integer
-	End Class
+    Friend NotInheritable Class NativeAPI
+        Private Sub New()
+        End Sub
+        ''' <summary>
+        ''' gdi32.GetDeviceCaps import.
+        ''' </summary>
+        ''' <param name="hDC"></param>
+        ''' <param name="nIndex"></param>
+        ''' <returns></returns>
+        Friend Declare Ansi Function GetDeviceCaps Lib "gdi32.dll" (hDC As IntPtr, nIndex As Integer) As Integer
+    End Class
 End Namespace

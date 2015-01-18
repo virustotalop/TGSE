@@ -28,83 +28,83 @@ Imports System.Runtime.InteropServices
 Imports System.Security
 Namespace Comparers
 
-	<SuppressUnmanagedCodeSecurity> _
-	Friend NotInheritable Class SafeNativeMethods
-		Private Sub New()
-		End Sub
-		''' <summary>
-		''' shlwapi.StrCmpLogicalW Function Import Definition
-		''' </summary>
-		''' <param name="psz1"></param>
-		''' <param name="psz2"></param>
-		''' <returns></returns>
-		<DllImport("shlwapi.dll", CharSet := CharSet.Unicode)> _
-		Public Shared Function StrCmpLogicalW(psz1 As String, psz2 As String) As Integer
-		End Function
-	End Class
+    <SuppressUnmanagedCodeSecurity> _
+    Friend NotInheritable Class SafeNativeMethods
+        Private Sub New()
+        End Sub
+        ''' <summary>
+        ''' shlwapi.StrCmpLogicalW Function Import Definition
+        ''' </summary>
+        ''' <param name="psz1"></param>
+        ''' <param name="psz2"></param>
+        ''' <returns></returns>
+        <DllImport("shlwapi.dll", CharSet := CharSet.Unicode)> _
+        Public Shared Function StrCmpLogicalW(psz1 As String, psz2 As String) As Integer
+        End Function
+    End Class
 
-	Public NotInheritable Class NaturalStringComparer
-		Implements IComparer(Of String)
-		''' <summary>
-		''' Compares two strings logically to each other.
-		''' </summary>
-		''' <param name="a"></param>
-		''' <param name="b"></param>
-		''' <returns></returns>
-		Public Function Compare(a As String, b As String) As Integer
-			Return SafeNativeMethods.StrCmpLogicalW(a, b)
-		End Function
-	End Class
+    Public NotInheritable Class NaturalStringComparer
+        Implements IComparer(Of String)
+        ''' <summary>
+        ''' Compares two strings logically to each other.
+        ''' </summary>
+        ''' <param name="a"></param>
+        ''' <param name="b"></param>
+        ''' <returns></returns>
+        Public Function Compare(a As String, b As String) As Integer
+            Return SafeNativeMethods.StrCmpLogicalW(a, b)
+        End Function
+    End Class
 
-	Public NotInheritable Class NaturalFileInfoNameComparer
-		Implements IComparer(Of FileInfo)
-		''' <summary>
-		''' Compares two file names logically to each other.
-		''' </summary>
-		''' <param name="a"></param>
-		''' <param name="b"></param>
-		''' <returns></returns>
-		Public Function Compare(a As FileInfo, b As FileInfo) As Integer
-			Return SafeNativeMethods.StrCmpLogicalW(a.Name, b.Name)
-		End Function
-	End Class
+    Public NotInheritable Class NaturalFileInfoNameComparer
+        Implements IComparer(Of FileInfo)
+        ''' <summary>
+        ''' Compares two file names logically to each other.
+        ''' </summary>
+        ''' <param name="a"></param>
+        ''' <param name="b"></param>
+        ''' <returns></returns>
+        Public Function Compare(a As FileInfo, b As FileInfo) As Integer
+            Return SafeNativeMethods.StrCmpLogicalW(a.Name, b.Name)
+        End Function
+    End Class
 
-	Public NotInheritable Class NaturalBuffNameComparer
-		Implements IComparer(Of TSGE.Classes.Buff)
-		''' <summary>
-		''' Compares two Buff classes logically to each other by name.
-		''' </summary>
-		''' <param name="a"></param>
-		''' <param name="b"></param>
-		''' <returns></returns>
-		Public Function Compare(a As TSGE.Classes.Buff, b As TSGE.Classes.Buff) As Integer
-			Return SafeNativeMethods.StrCmpLogicalW(a.Name, b.Name)
-		End Function
-	End Class
+    Public NotInheritable Class NaturalBuffNameComparer
+        Implements IComparer(Of TSGE.Classes.Buff)
+        ''' <summary>
+        ''' Compares two Buff classes logically to each other by name.
+        ''' </summary>
+        ''' <param name="a"></param>
+        ''' <param name="b"></param>
+        ''' <returns></returns>
+        Public Function Compare(a As TSGE.Classes.Buff, b As TSGE.Classes.Buff) As Integer
+            Return SafeNativeMethods.StrCmpLogicalW(a.Name, b.Name)
+        End Function
+    End Class
 
-	Public NotInheritable Class NaturalItemNameComparer
-		Implements IComparer(Of TSGE.Classes.Item)
-		''' <summary>
-		''' Compares two Item classes logically to each other by name.
-		''' </summary>
-		''' <param name="a"></param>
-		''' <param name="b"></param>
-		''' <returns></returns>
-		Public Function Compare(a As TSGE.Classes.Item, b As TSGE.Classes.Item) As Integer
-			Return SafeNativeMethods.StrCmpLogicalW(a.Name, b.Name)
-		End Function
-	End Class
+    Public NotInheritable Class NaturalItemNameComparer
+        Implements IComparer(Of TSGE.Classes.Item)
+        ''' <summary>
+        ''' Compares two Item classes logically to each other by name.
+        ''' </summary>
+        ''' <param name="a"></param>
+        ''' <param name="b"></param>
+        ''' <returns></returns>
+        Public Function Compare(a As TSGE.Classes.Item, b As TSGE.Classes.Item) As Integer
+            Return SafeNativeMethods.StrCmpLogicalW(a.Name, b.Name)
+        End Function
+    End Class
 
-	Public NotInheritable Class NaturalItemPrefixNameComparer
-		Implements IComparer(Of TSGE.Classes.ItemPrefix)
-		''' <summary>
-		''' Compares two ItemPrefix classes logically to each other by name.
-		''' </summary>
-		''' <param name="a"></param>
-		''' <param name="b"></param>
-		''' <returns></returns>
-		Public Function Compare(a As TSGE.Classes.ItemPrefix, b As TSGE.Classes.ItemPrefix) As Integer
-			Return SafeNativeMethods.StrCmpLogicalW(a.Prefix, b.Prefix)
-		End Function
-	End Class
+    Public NotInheritable Class NaturalItemPrefixNameComparer
+        Implements IComparer(Of TSGE.Classes.ItemPrefix)
+        ''' <summary>
+        ''' Compares two ItemPrefix classes logically to each other by name.
+        ''' </summary>
+        ''' <param name="a"></param>
+        ''' <param name="b"></param>
+        ''' <returns></returns>
+        Public Function Compare(a As TSGE.Classes.ItemPrefix, b As TSGE.Classes.ItemPrefix) As Integer
+            Return SafeNativeMethods.StrCmpLogicalW(a.Prefix, b.Prefix)
+        End Function
+    End Class
 End Namespace

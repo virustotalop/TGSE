@@ -16,38 +16,38 @@
 ' -----------------------------------------------------------------------
 
 Namespace Controls
-	NotInheritable Partial Class BuffListBox
-		''' <summary> 
-		''' Required designer variable.
-		''' </summary>
-		Private components As System.ComponentModel.IContainer = Nothing
+    NotInheritable Partial Class BuffListBox
+        ''' <summary> 
+        ''' Required designer variable.
+        ''' </summary>
+        Private components As System.ComponentModel.IContainer = Nothing
 
-		''' <summary> 
-		''' Clean up any resources being used.
-		''' </summary>
-		''' <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-		Protected Overrides Sub Dispose(disposing As Boolean)
-			If disposing AndAlso (components IsNot Nothing) Then
-				components.Dispose()
-			End If
+        ''' <summary> 
+        ''' Clean up any resources being used.
+        ''' </summary>
+        ''' <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        Protected Overrides Sub Dispose(disposing As Boolean)
+            If disposing AndAlso (components IsNot Nothing) Then
+                components.Dispose()
+            End If
 
-			If Me.m_ItalicFont IsNot Nothing Then
-				Me.m_ItalicFont.Dispose()
-			End If
+            If Me.m_ItalicFont IsNot Nothing Then
+                Me.m_ItalicFont.Dispose()
+            End If
 
-			MyBase.Dispose(disposing)
-		End Sub
+            MyBase.Dispose(disposing)
+        End Sub
 
-		#Region "Component Designer generated code"
+        #Region "Component Designer generated code"
 
-		''' <summary> 
-		''' Required method for Designer support - do not modify 
-		''' the contents of this method with the code editor.
-		''' </summary>
-		Private Sub InitializeComponent()
-			components = New System.ComponentModel.Container()
-		End Sub
+        ''' <summary> 
+        ''' Required method for Designer support - do not modify 
+        ''' the contents of this method with the code editor.
+        ''' </summary>
+        Private Sub InitializeComponent()
+            components = New System.ComponentModel.Container()
+        End Sub
 
-		#End Region
-	End Class
+        #End Region
+    End Class
 End Namespace

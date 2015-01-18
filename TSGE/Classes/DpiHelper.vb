@@ -18,34 +18,34 @@
 Imports System.Drawing
 Namespace Classes
 
-	Friend NotInheritable Class DpiHelper
-		Private Sub New()
-		End Sub
-		''' <summary>
-		''' Obtains the current device DPI.
-		''' </summary>
-		''' <returns></returns>
-		Friend Shared Function GetCurrentDpi() As Integer
-			Using g = Graphics.FromHwnd(IntPtr.Zero)
-				Return NativeAPI.GetDeviceCaps(g.GetHdc(), 88)
-			End Using
-		End Function
+    Friend NotInheritable Class DpiHelper
+        Private Sub New()
+        End Sub
+        ''' <summary>
+        ''' Obtains the current device DPI.
+        ''' </summary>
+        ''' <returns></returns>
+        Friend Shared Function GetCurrentDpi() As Integer
+            Using g = Graphics.FromHwnd(IntPtr.Zero)
+                Return NativeAPI.GetDeviceCaps(g.GetHdc(), 88)
+            End Using
+        End Function
 
-		''' <summary>
-		''' Obtains the current device DPI scale percent.
-		''' </summary>
-		''' <returns></returns>
-		Friend Shared Function GetScalePercent() As Integer
-			Return GetCurrentDpi() * 100 \ 96
-		End Function
+        ''' <summary>
+        ''' Obtains the current device DPI scale percent.
+        ''' </summary>
+        ''' <returns></returns>
+        Friend Shared Function GetScalePercent() As Integer
+            Return GetCurrentDpi() * 100 \ 96
+        End Function
 
-		''' <summary>
-		''' Determines the scaled DPI size of an object.
-		''' </summary>
-		''' <param name="baseSize"></param>
-		''' <returns></returns>
-		Friend Shared Function ScaleAsDpi(baseSize As Integer) As Integer
-			Return baseSize * GetScalePercent() \ 100
-		End Function
-	End Class
+        ''' <summary>
+        ''' Determines the scaled DPI size of an object.
+        ''' </summary>
+        ''' <param name="baseSize"></param>
+        ''' <returns></returns>
+        Friend Shared Function ScaleAsDpi(baseSize As Integer) As Integer
+            Return baseSize * GetScalePercent() \ 100
+        End Function
+    End Class
 End Namespace

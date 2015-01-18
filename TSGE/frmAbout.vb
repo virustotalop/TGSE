@@ -20,42 +20,42 @@ Imports System.Reflection
 Imports System.Windows.Forms
 
 Public Partial Class frmAbout
-	Inherits Form
-	''' <summary>
-	''' Default Constructor
-	''' </summary>
-	Public Sub New()
-		InitializeComponent()
+    Inherits Form
+    ''' <summary>
+    ''' Default Constructor
+    ''' </summary>
+    Public Sub New()
+        InitializeComponent()
 
-		' Set the application version label..
-		Dim appVersion = Assembly.GetExecutingAssembly().GetName().Version
-		Me.lblVersion.Text = String.Format("{0}.{1}.{2}.{3}", appVersion.Major, appVersion.Minor, appVersion.Build, appVersion.Revision) & " - Made resisable by Walkman100"
-	End Sub
+        ' Set the application version label..
+        Dim appVersion = Assembly.GetExecutingAssembly().GetName().Version
+        Me.lblVersion.Text = String.Format("{0}.{1}.{2}.{3}", appVersion.Major, appVersion.Minor, appVersion.Build, appVersion.Revision) & " - Made resisable by Walkman100"
+    End Sub
 
-	''' <summary>
-	''' Launches the users browser and navigates to Twitter.
-	''' </summary>
-	''' <param name="sender"></param>
-	''' <param name="e"></param>
-	Private Sub btnTwitter_Click(sender As Object, e As System.EventArgs)
-		Process.Start(New ProcessStartInfo("http://www.twitter.com/atom0s"))
-	End Sub
+    ''' <summary>
+    ''' Launches the users browser and navigates to Twitter.
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub btnTwitter_Click(sender As Object, e As System.EventArgs)
+        Process.Start(New ProcessStartInfo("http://www.twitter.com/atom0s"))
+    End Sub
 
-	''' <summary>
-	''' Launches the users browser and navigates to Paypal.
-	''' </summary>
-	''' <param name="sender"></param>
-	''' <param name="e"></param>
-	Private Sub btnDonate_Click(sender As Object, e As System.EventArgs)
-		Process.Start(New ProcessStartInfo("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7U7Q2GRT6KUJN"))
-	End Sub
+    ''' <summary>
+    ''' Launches the users browser and navigates to Paypal.
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub btnDonate_Click(sender As Object, e As System.EventArgs)
+        Process.Start(New ProcessStartInfo("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7U7Q2GRT6KUJN"))
+    End Sub
 
-	''' <summary>
-	''' Launches the users browser and navigates to Github.
-	''' </summary>
-	''' <param name="sender"></param>
-	''' <param name="e"></param>
-	Private Sub lblSourceCode_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs)
-		Process.Start(New ProcessStartInfo("https://github.com/atom0s/TSGE"))
-	End Sub
+    ''' <summary>
+    ''' Launches the users browser and navigates to Github.
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub lblSourceCode_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs)
+        Process.Start(New ProcessStartInfo("https://github.com/atom0s/TSGE"))
+    End Sub
 End Class

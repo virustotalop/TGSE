@@ -16,64 +16,64 @@
 ' -----------------------------------------------------------------------
 
 Namespace Classes
-	Public Class ServerEntry
-		Inherits ModelBase
-		''' <summary>
-		''' Default Constructor
-		''' </summary>
-		Public Sub New()
-			Me.ServerAddress = -1
-			Me.ServerName = String.Empty
-			Me.SpawnX = -1
-			Me.SpawnY = -1
-		End Sub
+    Public Class ServerEntry
+        Inherits ModelBase
+        ''' <summary>
+        ''' Default Constructor
+        ''' </summary>
+        Public Sub New()
+            Me.ServerAddress = -1
+            Me.ServerName = String.Empty
+            Me.SpawnX = -1
+            Me.SpawnY = -1
+        End Sub
 
-		''' <summary>
-		''' Gets or sets the server address of this server entry.
-		''' </summary>
-		Public Property ServerAddress() As Integer
-			Get
-				Return Me.[Get](Of Integer)("ServerAddress")
-			End Get
-			Set
-				Me.[Set]("ServerAddress", value)
-			End Set
-		End Property
+        ''' <summary>
+        ''' Gets or sets the server address of this server entry.
+        ''' </summary>
+        Public Property ServerAddress() As Integer
+            Get
+                Return Me.[Get](Of Integer)("ServerAddress")
+            End Get
+            Set
+                Me.[Set]("ServerAddress", value)
+            End Set
+        End Property
 
-		''' <summary>
-		''' Gets or sets the server name of this server entry.
-		''' </summary>
-		Public Property ServerName() As String
-			Get
-				Return Me.[Get](Of String)("ServerName")
-			End Get
-			Set
-				Me.[Set]("ServerName", value)
-			End Set
-		End Property
+        ''' <summary>
+        ''' Gets or sets the server name of this server entry.
+        ''' </summary>
+        Public Property ServerName() As String
+            Get
+                Return Me.[Get](Of String)("ServerName")
+            End Get
+            Set
+                Me.[Set]("ServerName", value)
+            End Set
+        End Property
 
-		''' <summary>
-		''' Gets or sets the x spawn location of this server entry.
-		''' </summary>
-		Public Property SpawnX() As Integer
-			Get
-				Return Me.[Get](Of Integer)("SpawnX")
-			End Get
-			Set
-				Me.[Set]("SpawnX", value)
-			End Set
-		End Property
+        ''' <summary>
+        ''' Gets or sets the x spawn location of this server entry.
+        ''' </summary>
+        Public Property SpawnX() As Integer
+            Get
+                Return Me.[Get](Of Integer)("SpawnX")
+            End Get
+            Set
+                Me.[Set]("SpawnX", value)
+            End Set
+        End Property
 
-		''' <summary>
-		''' Gets or sets the y spawn location of this server entry.
-		''' </summary>
-		Public Property SpawnY() As Integer
-			Get
-				Return Me.[Get](Of Integer)("SpawnY")
-			End Get
-			Set
-				Me.[Set]("SpawnY", value)
-			End Set
-		End Property
-	End Class
+        ''' <summary>
+        ''' Gets or sets the y spawn location of this server entry.
+        ''' </summary>
+        Public Property SpawnY() As Integer
+            Get
+                Return Me.[Get](Of Integer)("SpawnY")
+            End Get
+            Set
+                Me.[Set]("SpawnY", value)
+            End Set
+        End Property
+    End Class
 End Namespace

@@ -18,31 +18,31 @@
 Imports System.Drawing
 Namespace Extensions
 
-	Public NotInheritable Class ColorExtensions
-		Private Sub New()
-		End Sub
-		''' <summary>
-		''' Converts a byte array of three bytes to a System.Drawing.Color.
-		''' </summary>
-		''' <param name="c"></param>
-		''' <param name="btColor"></param>
-		''' <returns></returns>
-		<System.Runtime.CompilerServices.Extension> _
-		Public Shared Function FromBytes(c As Color, btColor As Byte()) As Color
-			If btColor Is Nothing OrElse btColor.Length <> 3 Then
-				Throw New ArgumentException("Invalid array size for incoming color.", "btColor")
-			End If
-			Return Color.FromArgb(255, btColor(0), btColor(1), btColor(2))
-		End Function
+    Public NotInheritable Class ColorExtensions
+        Private Sub New()
+        End Sub
+        ''' <summary>
+        ''' Converts a byte array of three bytes to a System.Drawing.Color.
+        ''' </summary>
+        ''' <param name="c"></param>
+        ''' <param name="btColor"></param>
+        ''' <returns></returns>
+        <System.Runtime.CompilerServices.Extension> _
+        Public Shared Function FromBytes(c As Color, btColor As Byte()) As Color
+            If btColor Is Nothing OrElse btColor.Length <> 3 Then
+                Throw New ArgumentException("Invalid array size for incoming color.", "btColor")
+            End If
+            Return Color.FromArgb(255, btColor(0), btColor(1), btColor(2))
+        End Function
 
-		''' <summary>
-		''' Converts a System.Drawing.Color to a three byte array.
-		''' </summary>
-		''' <param name="c"></param>
-		''' <returns></returns>
-		<System.Runtime.CompilerServices.Extension> _
-		Public Shared Function ToBytes(c As Color) As Byte()
-			Return New () {c.R, c.G, c.B}
-		End Function
-	End Class
+        ''' <summary>
+        ''' Converts a System.Drawing.Color to a three byte array.
+        ''' </summary>
+        ''' <param name="c"></param>
+        ''' <returns></returns>
+        <System.Runtime.CompilerServices.Extension> _
+        Public Shared Function ToBytes(c As Color) As Byte()
+            Return New () {c.R, c.G, c.B}
+        End Function
+    End Class
 End Namespace
