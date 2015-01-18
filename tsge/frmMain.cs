@@ -1247,57 +1247,30 @@ namespace TSGE
             foreach (var label in this.m_InventoryLabels.Where(label => label != this.m_SelectedInventoryItem))
                 label.BackColor = Color.Transparent;
 
-            // select the current inventory item prefix if available
-            this.selectItemPrefix(this.m_SelectedInventoryItem, this.cboInventoryPrefixCategory, this.cboInventoryPrefix, this.Player.Inventory);
-        }
-
-        /// <summary>
-        /// select the current item prefix if available
-        /// </summary>
-        /// <param name="lbl"></param>
-        /// <param name="cboPrefixCategory"></param>
-        /// <param name="cboPrefix"></param>
-        private void selectItemPrefix(Label lbl, ComboBox cboPrefixCategory, ComboBox cboPrefix, Item[] items, int offset = 0)
-        {
-            int slot = (int)lbl.Tag;
-
-            // Ensure the slot has an item...
-            if (items[slot - offset].NetID == 0)
+            // Attempt to update the lists with the selected items properties..
+            var item = this.Player.Inventory[(int)lbl.Tag];
+            if (item != null && item.NetID != 0)
             {
-                //deselect the prefix in the list
-                cboPrefixCategory.SelectedIndex = -1;
-                cboPrefix.DataSource = null;
-                cboPrefix.SelectedIndex = -1;
-                return;
-            }
-
-            //get the prefix id
-            byte prefix_id = items[slot - offset].Prefix;
-            if (prefix_id == 0)
-            {
-                //deselect the prefix in the list
-                cboPrefixCategory.SelectedIndex = -1;
-                cboPrefix.DataSource = null;
-                cboPrefix.SelectedIndex = -1;
-                return;
-            }
-
-            //get the Prefix object
-            ItemPrefix prefix = Terraria.Instance.Prefixes.SingleOrDefault(p => p.Id == prefix_id);
-
-            //if valid prefix
-            if (prefix != null && prefix.Id > 0)
-            {
-                //select the prefix in the list
-                cboPrefixCategory.SelectedIndex = 0;
-                cboPrefix.SelectedItem = prefix;
-            }
-            else
-            {
-                //deselect the prefix in the list
-                cboPrefixCategory.SelectedIndex = -1;
-                cboPrefix.DataSource = null;
-                cboPrefix.SelectedIndex = -1;
+                this.cboInventoryPrefixCategory.SelectedIndex = 0;
+                if (item.Prefix != 0)
+                {
+                    for (var x = 0; x < this.cboInventoryPrefix.Items.Count; x++)
+                    {
+                        if (((ItemPrefix)this.cboInventoryPrefix.Items[x]).Id == item.Prefix)
+                        {
+                            this.cboInventoryPrefix.SelectedIndex = x;
+                            return;
+                        }
+                    }
+                }
+                else
+                {
+                    var none = (from ItemPrefix i in this.cboInventoryPrefix.Items
+                                where i.Prefix == "None"
+                                select i).SingleOrDefault();
+                    if (none != null)
+                        this.cboInventoryPrefix.SelectedItem = none;
+                }
             }
         }
 
@@ -1646,39 +1619,52 @@ namespace TSGE
 
             this.SetEquipmentListContext();
 
-            // select the current equipment item prefix if available
-            int index = Convert.ToInt32(this.m_SelectedEquipmentItem.Name.Substring(this.m_SelectedEquipmentItem.Name.Length - 2));
-            int offset;
-            Item[] items;
-            if (index <= 2)
+            // Attempt to set the selected items prefix..
+            var slot = (int)this.m_SelectedEquipmentItem.Tag;
+            this.cboEquipmentPrefixCategory.SelectedIndex = 0;
+
+            var prefix = 0;
+            switch (slot)
             {
-                items = this.Player.Armor;
-                offset = 0;
+                case 0:
+                case 1:
+                case 2:
+                    prefix = this.Player.Armor[slot].Prefix;
+                    break;
+                case 3:
+                case 4:
+                case 5:
+                    prefix = this.Player.Vanity[slot - 3].Prefix;
+                    break;
+                case 6:
+                case 7:
+                case 8:
+                case 9:
+                case 10:
+                case 11:
+                case 12:
+                case 13:
+                    prefix = this.Player.Dye[slot - 6].Prefix;
+                    break;
+                case 14:
+                case 15:
+                case 16:
+                case 17:
+                case 18:
+                    prefix = this.Player.Accessories[slot - 14].Prefix;
+                    break;
+                default:
+                    prefix = this.Player.SocialAccessories[slot - 19].Prefix;
+                    break;
             }
-            else if (index > 2 && index <= 5)
-            {
-                items = this.Player.Vanity;
-                offset = 3;
-            }
-            else if (index > 13 && index <= 18)
-            {
-                items = this.Player.Accessories;
-                offset = 14;
-            }
-            else if (index > 18 && index <= 23)
-            {
-                items = this.Player.SocialAccessories;
-                offset = 19;
-            }
-            else
-            {
-                items = null;
-                offset = 0;
-            }
-            if (items != null)
-            {
-                this.selectItemPrefix(this.m_SelectedEquipmentItem, this.cboEquipmentPrefixCategory, this.cboEquipmentPrefix, items, offset);
-            }   
+
+            var prefixEntry = (from ItemPrefix i in this.cboEquipmentPrefix.Items
+                               where i.Id == prefix
+                               select i).SingleOrDefault();
+            if (prefixEntry != null)
+                this.cboEquipmentPrefix.SelectedItem = prefixEntry;
+
+            this.cboEquipmentPrefix_SelectedIndexChanged(null, null);
         }
 
         /// <summary>
