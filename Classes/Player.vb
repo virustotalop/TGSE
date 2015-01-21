@@ -63,43 +63,43 @@ Namespace Classes
             Dim item = Terraria.Instance.Items.[Single](Function(i) i.NetID = 0)
             Dim buff = Terraria.Instance.Buffs.[Single](Function(b) b.Id = 0)
 
-            For x As var = 0 To Me.Armor.Length - 1
+            For x As Int16 = 0 To Me.Armor.Length - 1
                 Me.Armor(x) = TryCast(item.Clone(), Item)
             Next
 
-            For x As var = 0 To Me.Vanity.Length - 1
+            For x As Int16 = 0 To Me.Vanity.Length - 1
                 Me.Vanity(x) = TryCast(item.Clone(), Item)
             Next
 
-            For x As var = 0 To Me.Accessories.Length - 1
+            For x As Int16 = 0 To Me.Accessories.Length - 1
                 Me.Accessories(x) = TryCast(item.Clone(), Item)
             Next
 
-            For x As var = 0 To Me.SocialAccessories.Length - 1
+            For x As Int16 = 0 To Me.SocialAccessories.Length - 1
                 Me.SocialAccessories(x) = TryCast(item.Clone(), Item)
             Next
 
-            For x As var = 0 To Me.Dye.Length - 1
+            For x As Int16 = 0 To Me.Dye.Length - 1
                 Me.Dye(x) = TryCast(item.Clone(), Item)
             Next
 
-            For x As var = 0 To Me.Inventory.Length - 1
+            For x As Int16 = 0 To Me.Inventory.Length - 1
                 Me.Inventory(x) = TryCast(item.Clone(), Item)
             Next
 
-            For x As var = 0 To Me.Bank1.Length - 1
+            For x As Int16 = 0 To Me.Bank1.Length - 1
                 Me.Bank1(x) = TryCast(item.Clone(), Item)
             Next
 
-            For x As var = 0 To Me.Bank2.Length - 1
+            For x As Int16 = 0 To Me.Bank2.Length - 1
                 Me.Bank2(x) = TryCast(item.Clone(), Item)
             Next
 
-            For x As var = 0 To Me.Buffs.Length - 1
+            For x As Int16 = 0 To Me.Buffs.Length - 1
                 Me.Buffs(x) = TryCast(buff.Clone(), Buff)
             Next
 
-            For x As var = 0 To Me.ServerEntries.Length - 1
+            For x As Int16 = 0 To Me.ServerEntries.Length - 1
                 Me.ServerEntries(x) = New ServerEntry()
             Next
         End Sub

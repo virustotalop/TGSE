@@ -359,12 +359,12 @@ Public Partial Class frmMain
         Dim files = dir.GetFiles("*.plr").OrderBy(Function(f) f, New NaturalFileInfoNameComparer())
 
         ' Insert each file into the combobox..
-        For Each f As Path In files
-            Dim name = Terraria.Instance.GetProfileName(f.GetFullPath(f.ToString))
+        For Each f As FileInfo In files
+            Dim name = Terraria.Instance.GetProfileName(f.FullName)
             If String.IsNullOrEmpty(name) Then
-                name = f.GetFileNameWithoutExtension(f.ToString)
+                name = f.Name
             End If
-            Me.tscboQuickSelect.Items.Add(String.Format("{0} -- {1}", name, f.GetFileNameWithoutExtension(f.ToString)))
+            Me.tscboQuickSelect.Items.Add(String.Format("{0} -- {1}", name, f.Name))
         Next
     End Sub
 
@@ -1104,7 +1104,7 @@ Public Partial Class frmMain
         Me.m_SelectedInventoryItem = lbl
         lbl.Focus()
 
-        For Each label As Label In Me.m_InventoryLabels.Where(Function(label) label <> Me.m_SelectedInventoryItem)
+        For Each label As Label In Me.m_InventoryLabels.Where(label <> Me.m_SelectedInventoryItem)
             label.BackColor = Color.Transparent
         Next
 
@@ -1358,9 +1358,9 @@ Public Partial Class frmMain
         End If
 
         ' Loop each item in the players inventory..
-        For Each i As string In Me.Player.Inventory
+        For Each i As Item In Me.Player.Inventory
             ' Add each item to the xml document..
-            xml.Root.Add(New XElement("item", New Object() {New XAttribute("id", i.NetID), New XAttribute("count", AddressOf i.Count), New XAttribute("prefix", i.Prefix)}))
+            xml.Root.Add(New XElement("item", New Object() {New XAttribute("id", i.NetID), New XAttribute("count", i.Count), New XAttribute("prefix", i.Prefix)}))
         Next
 
         ' Attempt to save the document..
@@ -1447,9 +1447,6 @@ Public Partial Class frmMain
         lbl.Focus()
 
         For Each label As Label In Me.m_EquipmentLabels.Where(label <> Me.m_SelectedEquipmentItem)
-            label.BackColor = Color.Transparent
-        Next
-        For Each label As ItemLabel In Me.m_EquipmentLabels.Where(label <> Me.m_SelectedEquipmentItem)
             label.BackColor = Color.Transparent
         Next
 
@@ -1747,14 +1744,14 @@ Public Partial Class frmMain
     ''' <param name="e"></param>
     Private Sub btnSaveEquipmentSet_Click(sender As Object, e As EventArgs)
         ' Ask where to save to..
-        Dim sfd = New SaveFileDialog() With { _
-            Key .AddExtension = True, _
-            Key .CheckPathExists = True, _
-            Key .DefaultExt = "xml", _
-            Key .Filter = "TSGE Equipment Files (*.xml)|*.xml|All files (*.*)|*.*", _
-            Key .InitialDirectory = Application.StartupPath, _
-            Key .ValidateNames = True _
-        }
+        Dim sfd = New SaveFileDialog()
+        
+        sfd.AddExtension = True
+        sfd.CheckPathExists = True
+        sfd.DefaultExt = "xml"
+        sfd.Filter = "TSGE Buff Files (*.xml)|*.xml|All files (*.*)|*.*"
+        sfd.InitialDirectory = Application.StartupPath
+        sfd.ValidateNames = True
 
         If sfd.ShowDialog() <> DialogResult.OK Then
             MessageBox.Show("Failed to save equipment!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.[Error])
@@ -1811,15 +1808,15 @@ Public Partial Class frmMain
     ''' <param name="e"></param>
     Private Sub btnLoadEquipmentSet_Click(sender As Object, e As EventArgs)
         ' Ask what to open..
-        Dim ofd = New OpenFileDialog() With { _
-            Key .AddExtension = True, _
-            Key .CheckFileExists = True, _
-            Key .CheckPathExists = True, _
-            Key .DefaultExt = "xml", _
-            Key .Filter = "TSGE Equipment Files (*.xml)|*.xml|All files (*.*)|*.*", _
-            Key .InitialDirectory = Application.StartupPath, _
-            Key .ValidateNames = True _
-        }
+        Dim ofd = New OpenFileDialog()
+        
+        ofd.AddExtension = True
+        ofd.CheckFileExists = True
+        ofd.CheckPathExists = True
+        ofd.DefaultExt = "xml"
+        ofd.Filter = "TSGE Buff Files (*.xml)|*.xml|All files (*.*)|*.*"
+        ofd.InitialDirectory = Application.StartupPath
+        ofd.ValidateNames = True
 
         If ofd.ShowDialog() <> DialogResult.OK Then
             MessageBox.Show("Failed to open equipment save!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.[Error])
@@ -2216,14 +2213,14 @@ Public Partial Class frmMain
     ''' <param name="e"></param>
     Private Sub btnSaveBankItems_Click(sender As Object, e As EventArgs)
         ' Ask where to save to..
-        Dim sfd = New SaveFileDialog() With { _
-            Key .AddExtension = True, _
-            Key .CheckPathExists = True, _
-            Key .DefaultExt = "xml", _
-            Key .Filter = "TSGE Bank Files (*.xml)|*.xml|All files (*.*)|*.*", _
-            Key .InitialDirectory = Application.StartupPath, _
-            Key .ValidateNames = True _
-        }
+        Dim sfd = New SaveFileDialog()
+        
+        sfd.AddExtension = True
+        sfd.CheckPathExists = True
+        sfd.DefaultExt = "xml"
+        sfd.Filter = "TSGE Buff Files (*.xml)|*.xml|All files (*.*)|*.*"
+        sfd.InitialDirectory = Application.StartupPath
+        sfd.ValidateNames = True
 
         If sfd.ShowDialog() <> DialogResult.OK Then
             MessageBox.Show("Failed to save bank!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.[Error])
@@ -2256,15 +2253,15 @@ Public Partial Class frmMain
     ''' <param name="e"></param>
     Private Sub btnLoadBankItems_Click(sender As Object, e As EventArgs)
         ' Ask what to open..
-        Dim ofd = New OpenFileDialog() With { _
-            Key .AddExtension = True, _
-            Key .CheckFileExists = True, _
-            Key .CheckPathExists = True, _
-            Key .DefaultExt = "xml", _
-            Key .Filter = "TSGE Bank Files (*.xml)|*.xml|All files (*.*)|*.*", _
-            Key .InitialDirectory = Application.StartupPath, _
-            Key .ValidateNames = True _
-        }
+        Dim ofd = New OpenFileDialog()
+        
+        ofd.AddExtension = True
+        ofd.CheckFileExists = True
+        ofd.CheckPathExists = True
+        ofd.DefaultExt = "xml"
+        ofd.Filter = "TSGE Buff Files (*.xml)|*.xml|All files (*.*)|*.*"
+        ofd.InitialDirectory = Application.StartupPath
+        ofd.ValidateNames = True
 
         If ofd.ShowDialog() <> DialogResult.OK Then
             MessageBox.Show("Failed to open bank!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.[Error])
@@ -2318,14 +2315,14 @@ Public Partial Class frmMain
     ''' <param name="e"></param>
     Private Sub btnSaveSafeItems_Click(sender As Object, e As EventArgs)
         ' Ask where to save to..
-        Dim sfd = New SaveFileDialog() With { _
-            Key .AddExtension = True, _
-            Key .CheckPathExists = True, _
-            Key .DefaultExt = "xml", _
-            Key .Filter = "TSGE Safe Files (*.xml)|*.xml|All files (*.*)|*.*", _
-            Key .InitialDirectory = Application.StartupPath, _
-            Key .ValidateNames = True _
-        }
+        Dim sfd = New SaveFileDialog()
+        
+        sfd.AddExtension = True
+        sfd.CheckPathExists = True
+        sfd.DefaultExt = "xml"
+        sfd.Filter = "TSGE Buff Files (*.xml)|*.xml|All files (*.*)|*.*"
+        sfd.InitialDirectory = Application.StartupPath
+        sfd.ValidateNames = True
 
         If sfd.ShowDialog() <> DialogResult.OK Then
             MessageBox.Show("Failed to save safe!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.[Error])
@@ -2358,15 +2355,15 @@ Public Partial Class frmMain
     ''' <param name="e"></param>
     Private Sub btnLoadSafeItems_Click(sender As Object, e As EventArgs)
         ' Ask what to open..
-        Dim ofd = New OpenFileDialog() With { _
-            Key .AddExtension = True, _
-            Key .CheckFileExists = True, _
-            Key .CheckPathExists = True, _
-            Key .DefaultExt = "xml", _
-            Key .Filter = "TSGE Safe Files (*.xml)|*.xml|All files (*.*)|*.*", _
-            Key .InitialDirectory = Application.StartupPath, _
-            Key .ValidateNames = True _
-        }
+        Dim ofd = New OpenFileDialog()
+        
+        ofd.AddExtension = True
+        ofd.CheckFileExists = True
+        ofd.CheckPathExists = True
+        ofd.DefaultExt = "xml"
+        ofd.Filter = "TSGE Buff Files (*.xml)|*.xml|All files (*.*)|*.*"
+        ofd.InitialDirectory = Application.StartupPath
+        ofd.ValidateNames = True
 
         If ofd.ShowDialog() <> DialogResult.OK Then
             MessageBox.Show("Failed to open safe!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.[Error])

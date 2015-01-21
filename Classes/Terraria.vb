@@ -15,8 +15,8 @@
 '    along with TSGE.  If not, see <http://www.gnu.org/licenses/>.
 ' -----------------------------------------------------------------------
 
-Imports Comparers
-Imports Extensions
+Imports TSGE.Comparers
+Imports TSGE.Extensions
 Imports System.Collections.Generic
 Imports System.Drawing
 Imports System.IO
@@ -51,7 +51,7 @@ Namespace Classes
         ''' <summary>
         ''' Current supported game version.
         ''' </summary>
-        Public Shared GameVersions As New List(Of Integer)(New () {38, 47, 58, 68, 69, 70, _
+        Public Shared GameVersions As New List(Of Integer)({38, 47, 58, 68, 69, 70, _
             71, 72, 73, 77, 81, 83, _
             93, 94, 101, 102})
 
@@ -68,7 +68,7 @@ Namespace Classes
         ''' <summary>
         ''' Profile path to the Terraria save game files.
         ''' </summary>
-        Public Shared ProfilePath As String = String.Join(Path.DirectorySeparatorChar.ToString(), New () {Environment.GetFolderPath(Environment.SpecialFolder.Personal), "My Games", "Terraria", "Players"})
+        Public Shared ProfilePath As String = String.Join(Path.DirectorySeparatorChar.ToString(), {Environment.GetFolderPath(Environment.SpecialFolder.Personal), "My Games", "Terraria", "Players"})
 
         ''' <summary>
         ''' Encryption key used to encrypt and decrypt player files.
@@ -125,9 +125,9 @@ Namespace Classes
 
             ' Load the hair style list..
             Dim dir = New DirectoryInfo("Data\Hair")
-            Dim files = (From f In dir.GetFiles("*.png") Where f.FullName.Contains("_alt_") = Falsef).ToList().OrderBy(Function(file) file, New NaturalFileInfoNameComparer())
+            Dim files = (From f In dir.GetFiles("*.png") Where f.FullName.Contains("_alt_") = False).ToList().OrderBy(Function(file) file, New NaturalFileInfoNameComparer())
 
-            For Each f As var In files
+            For Each f As FileInfo In files
                 Me.HairFiles.Add(f.Name)
             Next
 
@@ -202,9 +202,8 @@ Namespace Classes
                 Using mStream = New MemoryStream(playerData)
                     Using bReader = New BinaryReader(mStream)
                         ' Create the new player object..
-                        Dim p = New Player() With { _
-                            Key .GameVersion = bReader.ReadInt32() _
-                        }
+                        Dim p = New Player()
+                        p.GameVersion = bReader.ReadInt32()
 
                         ' Ensure game version is valid..
                         If p.GameVersion < Terraria.GameVersions.Min() OrElse p.GameVersion > Terraria.GameVersions.Max() Then
@@ -233,35 +232,35 @@ Namespace Classes
                         p.ManaMax = bReader.ReadInt32()
 
                         ' Read character colors..
-                        p.HairColor = New Color().FromBytes(bReader.ReadBytes(3))
-                        p.SkinColor = New Color().FromBytes(bReader.ReadBytes(3))
-                        p.EyeColor = New Color().FromBytes(bReader.ReadBytes(3))
-                        p.ShirtColor = New Color().FromBytes(bReader.ReadBytes(3))
-                        p.UndershirtColor = New Color().FromBytes(bReader.ReadBytes(3))
-                        p.PantsColor = New Color().FromBytes(bReader.ReadBytes(3))
-                        p.ShoesColor = New Color().FromBytes(bReader.ReadBytes(3))
+                        p.HairColor = New Color()'.From (Bytes(bReader.ReadBytes(3)))
+                        p.SkinColor = New Color()'.From (Bytes(bReader.ReadBytes(3)))
+                        p.EyeColor = New Color()'.From (Bytes(bReader.ReadBytes(3)))
+                        p.ShirtColor = New Color()'.From (Bytes(bReader.ReadBytes(3)))
+                        p.UndershirtColor = New Color()'.From (Bytes(bReader.ReadBytes(3)))
+                        p.PantsColor = New Color()'.From (Bytes(bReader.ReadBytes(3)))
+                        p.ShoesColor = New Color()'.From (Bytes(bReader.ReadBytes(3)))
 
                         ' Read Armor..
-                        For x As var = 0 To 2
+                        For x As Int16 = 0 To 2
                             p.Armor(x).SetItem(bReader.ReadInt32())
                             p.Armor(x).Prefix = bReader.ReadByte()
                         Next
 
                         ' Read accessories..
-                        For x As var = 0 To 4
+                        For x As Int16 = 0 To 4
                             p.Accessories(x).SetItem(bReader.ReadInt32())
                             p.Accessories(x).Prefix = bReader.ReadByte()
                         Next
 
                         ' Read vanity items..
-                        For x As var = 0 To 2
+                        For x As Int16 = 0 To 2
                             p.Vanity(x).SetItem(bReader.ReadInt32())
                             p.Vanity(x).Prefix = bReader.ReadByte()
                         Next
 
                         ' Read social accessories..
                         If p.GameVersion >= 81 Then
-                            For x As var = 0 To 4
+                            For x As Int16 = 0 To 4
                                 p.SocialAccessories(x).SetItem(bReader.ReadInt32())
                                 p.SocialAccessories(x).Prefix = bReader.ReadByte()
                             Next
@@ -270,14 +269,14 @@ Namespace Classes
                         ' Read dye items..
                         If p.GameVersion >= 47 Then
                             Dim dyeCount = If((p.GameVersion >= 81), 8, 3)
-                            For x As var = 0 To dyeCount - 1
+                            For x As Int16 = 0 To dyeCount - 1
                                 p.Dye(x).SetItem(bReader.ReadInt32())
                                 p.Dye(x).Prefix = bReader.ReadByte()
                             Next
                         End If
 
                         ' Read inventory..
-                        For x As var = 0 To (If((p.GameVersion >= 58), 58, 48)) - 1
+                        For x As Int16 = 0 To (If((p.GameVersion >= 58), 58, 48)) - 1
                             Dim temp = bReader.ReadInt32()
                             If temp >= Terraria.MaxItemCount Then
                                 p.Inventory(x).SetItem(0)
@@ -289,14 +288,14 @@ Namespace Classes
                         Next
 
                         ' Read Bank1..
-                        For x As var = 0 To (If((p.GameVersion >= 58), 40, 20)) - 1
+                        For x As Int16 = 0 To (If((p.GameVersion >= 58), 40, 20)) - 1
                             p.Bank1(x).SetItem(bReader.ReadInt32())
                             p.Bank1(x).Count = bReader.ReadInt32()
                             p.Bank1(x).Prefix = bReader.ReadByte()
                         Next
 
                         ' Read Bank2..
-                        For x As var = 0 To (If((p.GameVersion >= 58), 40, 20)) - 1
+                        For x As Int16 = 0 To (If((p.GameVersion >= 58), 40, 20)) - 1
                             p.Bank2(x).SetItem(bReader.ReadInt32())
                             p.Bank2(x).Count = bReader.ReadInt32()
                             p.Bank2(x).Prefix = bReader.ReadByte()
@@ -304,13 +303,13 @@ Namespace Classes
 
                         ' Read Buffs..
                         Dim buffCount = If((p.GameVersion < 74), 10, 22)
-                        For x As var = 0 To buffCount - 1
+                        For x As Int16 = 0 To buffCount - 1
                             p.Buffs(x).SetBuff(bReader.ReadInt32())
                             p.Buffs(x).Duration = bReader.ReadInt32()
                         Next
 
                         ' Read Server Entries..
-                        For x As var = 0 To 199
+                        For x As Int16 = 0 To 199
                             Dim temp = bReader.ReadInt32()
                             If temp = -1 Then
                                 Exit For
@@ -374,8 +373,8 @@ Namespace Classes
         ''' <param name="fileName"></param>
         ''' <returns></returns>
         Public Function SaveProfile(player As Player, fileName As String) As Boolean
-            Dim fStream As FileStream = Nothing
-            Dim bWriter As BinaryWriter = Nothing
+            Dim fStream As FileStream
+            Dim bWriter As BinaryWriter
 
             Try
                 ' Open or create temp file to write to..
@@ -401,60 +400,60 @@ Namespace Classes
                 bWriter.Write(player.ManaMax)
 
                 ' Write player colors..
-                bWriter.Write(player.HairColor.ToBytes())
-                bWriter.Write(player.SkinColor.ToBytes())
-                bWriter.Write(player.EyeColor.ToBytes())
-                bWriter.Write(player.ShirtColor.ToBytes())
-                bWriter.Write(player.UndershirtColor.ToBytes())
-                bWriter.Write(player.PantsColor.ToBytes())
-                bWriter.Write(player.ShoesColor.ToBytes())
+                bWriter.Write(player.HairColor.ToBytes)
+                bWriter.Write(player.SkinColor.ToBytes)
+                bWriter.Write(player.EyeColor.ToBytes)
+                bWriter.Write(player.ShirtColor.ToBytes)
+                bWriter.Write(player.UndershirtColor.ToBytes)
+                bWriter.Write(player.PantsColor.ToBytes)
+                bWriter.Write(player.ShoesColor.ToBytes)
 
                 ' Write player armor..
-                For x As var = 0 To 2
+                For x As Int16 = 0 To 2
                     bWriter.Write(player.Armor(x).NetID)
                     bWriter.Write(player.Armor(x).Prefix)
                 Next
 
                 ' Write player accessories..
-                For x As var = 0 To 4
+                For x As Int16 = 0 To 4
                     bWriter.Write(player.Accessories(x).NetID)
                     bWriter.Write(player.Accessories(x).Prefix)
                 Next
 
                 ' Write player vanity items..
-                For x As var = 0 To 2
+                For x As Int16 = 0 To 2
                     bWriter.Write(player.Vanity(x).NetID)
                     bWriter.Write(player.Vanity(x).Prefix)
                 Next
 
                 ' Write social accessories items..
-                For x As var = 0 To 4
+                For x As Int16 = 0 To 4
                     bWriter.Write(player.SocialAccessories(x).NetID)
                     bWriter.Write(player.SocialAccessories(x).Prefix)
                 Next
 
                 ' Write player dye..
-                For x As var = 0 To 7
+                For x As Int16 = 0 To 7
                     bWriter.Write(player.Dye(x).NetID)
                     bWriter.Write(player.Dye(x).Prefix)
                 Next
 
                 ' Write player inventory..
-                For x As var = 0 To 57
+                For x As Int16 = 0 To 57
                     bWriter.Write(player.Inventory(x).NetID)
                     bWriter.Write(player.Inventory(x).Count)
                     bWriter.Write(player.Inventory(x).Prefix)
                 Next
 
                 ' Write player bank1..
-                For x As var = 0 To 39
+                For x As Int16 = 0 To 39
                     bWriter.Write(player.Bank1(x).NetID)
                     bWriter.Write(player.Bank1(x).Count)
                     bWriter.Write(player.Bank1(x).Prefix)
                 Next
 
                 ' Write player bank2..
-                For x As var = 0 To 39
+                For x As Int16 = 0 To 39
                     bWriter.Write(player.Bank2(x).NetID)
                     bWriter.Write(player.Bank2(x).Count)
                     bWriter.Write(player.Bank2(x).Prefix)
@@ -462,13 +461,13 @@ Namespace Classes
 
                 ' Write player buffs..
                 Dim buffCount = If((player.GameVersion < 74), 10, 22)
-                For x As var = 0 To buffCount - 1
+                For x As Int16 = 0 To buffCount - 1
                     bWriter.Write(player.Buffs(x).Id)
                     bWriter.Write(player.Buffs(x).Duration)
                 Next
 
                 ' Write server entries..
-                For x As var = 0 To 199
+                For x As Int16 = 0 To 199
                     If player.ServerEntries(x).SpawnX = -1 Then
                         bWriter.Write(player.ServerEntries(x).SpawnX)
                         Exit For
@@ -495,7 +494,7 @@ Namespace Classes
                 File.Delete(fileName & ".tmp")
                 Return ret
             Catch ex As Exception
-                MessageBox.Show(String.Format("Failed to save profile; error was:" & vbCr & vbLf & vbCr & vbLf & "{0}", ex), "Error!")
+                MessageBox.Show("Failed to save profile; error was:" & vbNewLine & vbNewLine & ex, "Error!")
                 Return False
             Finally
                 ' Ensure streams are cleaned up..
