@@ -158,15 +158,15 @@ Public Partial Class frmMain
 
         ' Initialize the default player object..
         Me.modelViewer.SuspendModelUpdates()
-        Me.Player = New Player() With { _
-            Key EyeColor = InlineAssignHelper(Me.pbEyesColor.BackColor, Color.FromArgb(255, 105, 90, 75)), _
-            Key HairColor = InlineAssignHelper(Me.pbHairColor.BackColor, Color.FromArgb(255, 215, 90, 55)), _
-            Key SkinColor = InlineAssignHelper(Me.pbSkinColor.BackColor, Color.FromArgb(255, 255, 125, 75)), _
-            Key PantsColor = InlineAssignHelper(Me.pbPantsColor.BackColor, Color.FromArgb(255, 255, 230, 175)), _
-            Key ShirtColor = InlineAssignHelper(Me.pbShirtColor.BackColor, Color.FromArgb(255, 175, 165, 140)), _
-            Key ShoesColor = InlineAssignHelper(Me.pbShoesColor.BackColor, Color.FromArgb(255, 160, 106, 60)), _
-            Key UndershirtColor = InlineAssignHelper(Me.pbUndershirtColor.BackColor, Color.FromArgb(255, 160, 180, 215)) _
-        }
+        Me.Player = New Player() 'With { _
+        '    Key EyeColor = InlineAssignHelper(Me.pbEyesColor.BackColor, Color.FromArgb(255, 105, 90, 75)), _
+        '    Key HairColor = InlineAssignHelper(Me.pbHairColor.BackColor, Color.FromArgb(255, 215, 90, 55)), _
+        '    Key SkinColor = InlineAssignHelper(Me.pbSkinColor.BackColor, Color.FromArgb(255, 255, 125, 75)), _
+        '    Key PantsColor = InlineAssignHelper(Me.pbPantsColor.BackColor, Color.FromArgb(255, 255, 230, 175)), _
+        '    Key ShirtColor = InlineAssignHelper(Me.pbShirtColor.BackColor, Color.FromArgb(255, 175, 165, 140)), _
+        '    Key ShoesColor = InlineAssignHelper(Me.pbShoesColor.BackColor, Color.FromArgb(255, 160, 106, 60)), _
+        '    Key UndershirtColor = InlineAssignHelper(Me.pbUndershirtColor.BackColor, Color.FromArgb(255, 160, 180, 215)) _
+        '}
 
         ' Set the binding object data source..
         playerBindingSource.DataSource = Me.Player
@@ -301,7 +301,7 @@ Public Partial Class frmMain
     ''' </summary>
     Private Sub RefreshLoadedPlayer()
         ' Update the inventory..
-        For Each label As Int16 In Me.m_InventoryLabels
+        For Each label As Windows.Forms.Label In Me.m_InventoryLabels
             label.Image = New Bitmap(String.Format("{0}\Data\Items\item_{1}.png", Application.StartupPath, Me.Player.Inventory(CInt(label.Tag)).NetID))
             label.Text = Me.Player.Inventory(CInt(label.Tag)).Count.ToString()
             Me.m_Tooltip.SetToolTip(label, Me.Player.Inventory(CInt(label.Tag)).ToString())
@@ -359,12 +359,12 @@ Public Partial Class frmMain
         Dim files = dir.GetFiles("*.plr").OrderBy(Function(f) f, New NaturalFileInfoNameComparer())
 
         ' Insert each file into the combobox..
-        For Each f As string In files
-            Dim name = Terraria.Instance.GetProfileName(f.FullName)
+        For Each f As Path In files
+            Dim name = Terraria.Instance.GetProfileName(f.GetFullPath(f.ToString))
             If String.IsNullOrEmpty(name) Then
-                name = f.Name
+                name = f.GetFileNameWithoutExtension(f.ToString)
             End If
-            Me.tscboQuickSelect.Items.Add(String.Format("{0} -- {1}", name, f.Name))
+            Me.tscboQuickSelect.Items.Add(String.Format("{0} -- {1}", name, f.GetFileNameWithoutExtension(f.ToString)))
         Next
     End Sub
 
@@ -376,7 +376,7 @@ Public Partial Class frmMain
     Private Sub tscboQuickSelect_SelectedIndexChanged(sender As Object, e As EventArgs)
         ' Attempt to get the file name from the list..
         Dim selectedItem = Me.tscboQuickSelect.SelectedItem
-        Dim PlayerFile = selectedItem.ToString().Split(New () {" -- "}, StringSplitOptions.RemoveEmptyEntries)(1)
+        Dim PlayerFile = selectedItem.ToString().Split({" -- "}, StringSplitOptions.RemoveEmptyEntries)(1)
 
         If String.IsNullOrEmpty(PlayerFile) Then
             Return
@@ -489,7 +489,7 @@ Public Partial Class frmMain
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     Private Sub exitToolStripMenuItem_Click(sender As Object, e As EventArgs)
-        Application.[Exit]()
+        Application.Exit()
     End Sub
 
     ''' <summary>
@@ -625,9 +625,8 @@ Public Partial Class frmMain
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     Private Sub btnSelectHair_Click(sender As Object, e As EventArgs)
-        Dim frmHair = New frmHairSelection() With { _
-            Key .HairId = Me.Player.Hair _
-        }
+        Dim frmHair = New frmHairSelection()
+        
         If frmHair.ShowDialog() <> DialogResult.OK Then
             Return
         End If
@@ -679,14 +678,14 @@ Public Partial Class frmMain
     ''' <param name="e"></param>
     Private Sub btnSaveColorHair_Click(sender As Object, e As EventArgs)
         ' Ask where to save to..
-        Dim sfd = New SaveFileDialog() With { _
-            Key .AddExtension = True, _
-            Key .CheckPathExists = True, _
-            Key .DefaultExt = "xml", _
-            Key .Filter = "TSGE Hair and Color Files (*.xml)|*.xml|All files (*.*)|*.*", _
-            Key .InitialDirectory = Application.StartupPath, _
-            Key .ValidateNames = True _
-        }
+        Dim sfd = New SaveFileDialog()
+        
+        sfd.AddExtension = True
+        sfd.CheckPathExists = True
+        sfd.DefaultExt = "xml"
+        sfd.Filter = "TSGE Hair and Color Files (*.xml)|*.xml|All files (*.*)|*.*"
+        sfd.InitialDirectory = Application.StartupPath
+        sfd.ValidateNames = True
 
         Dim ret = sfd.ShowDialog()
         If ret <> DialogResult.OK Then
@@ -730,15 +729,15 @@ Public Partial Class frmMain
     Private Sub btnLoadColorHair_Click(sender As Object, e As EventArgs)
 
         ' Ask what to open..
-        Dim ofd = New OpenFileDialog() With { _
-            Key .AddExtension = True, _
-            Key .CheckFileExists = True, _
-            Key .CheckPathExists = True, _
-            Key .DefaultExt = "xml", _
-            Key .Filter = "TSGE Hair and Color Files (*.xml)|*.xml|All files (*.*)|*.*", _
-            Key .InitialDirectory = Application.StartupPath, _
-            Key .ValidateNames = True _
-        }
+        Dim ofd = New OpenFileDialog()
+        
+        ofd.AddExtension = True
+        ofd.CheckFileExists = True
+        ofd.CheckPathExists = True
+        ofd.DefaultExt = "xml"
+        ofd.Filter = "TSGE Hair and Color Files (*.xml)|*.xml|All files (*.*)|*.*"
+        ofd.InitialDirectory = Application.StartupPath
+        ofd.ValidateNames = True
 
         Dim ret = ofd.ShowDialog()
         If ret <> DialogResult.OK Then
@@ -891,7 +890,7 @@ Public Partial Class frmMain
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     Private Sub btnDeleteAllBuffs_Click(sender As Object, e As EventArgs)
-        For Each buff As var In Me.Player.Buffs
+        For Each buff As Buff In Me.Player.Buffs
             buff.SetBuff(0)
         Next
 
@@ -906,7 +905,7 @@ Public Partial Class frmMain
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     Private Sub btnMaxAllBuffDurations_Click(sender As Object, e As EventArgs)
-        For Each buff As var In Me.Player.Buffs.Where(Function(b) b.Id > 0)
+        For Each buff As Buff In Me.Player.Buffs.Where(Function(b) b.Id > 0)
             Dim origBuff = Terraria.Instance.Buffs.[Single](Function(b) b.Id = buff.Id)
             buff.Duration = origBuff.Duration
         Next
@@ -922,7 +921,7 @@ Public Partial Class frmMain
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     Private Sub btnHackAllBuffDurations_Click(sender As Object, e As EventArgs)
-        For Each buff As var In Me.Player.Buffs.Where(Function(b) b.Id > 0)
+        For Each buff As Buff In Me.Player.Buffs.Where(Function(b) b.Id > 0)
             buff.Duration = Integer.MaxValue
         Next
 
@@ -957,14 +956,14 @@ Public Partial Class frmMain
     ''' <param name="e"></param>
     Private Sub btnSaveBuffs_Click(sender As Object, e As EventArgs)
         ' Ask where to save to..
-        Dim sfd = New SaveFileDialog() With { _
-            Key .AddExtension = True, _
-            Key .CheckPathExists = True, _
-            Key .DefaultExt = "xml", _
-            Key .Filter = "TSGE Buff Files (*.xml)|*.xml|All files (*.*)|*.*", _
-            Key .InitialDirectory = Application.StartupPath, _
-            Key .ValidateNames = True _
-        }
+        Dim sfd = New SaveFileDialog()
+        
+        sfd.AddExtension = True
+        sfd.CheckPathExists = True
+        sfd.DefaultExt = "xml"
+        sfd.Filter = "TSGE Buff Files (*.xml)|*.xml|All files (*.*)|*.*"
+        sfd.InitialDirectory = Application.StartupPath
+        sfd.ValidateNames = True
 
         If sfd.ShowDialog() <> DialogResult.OK Then
             MessageBox.Show("Failed to save buffs!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.[Error])
@@ -980,7 +979,7 @@ Public Partial Class frmMain
         End If
 
         ' Loop each buff in the players buff list..
-        For Each b As var In Me.Player.Buffs
+        For Each b As Buff In Me.Player.Buffs
             ' Add each item to the xml document..
             xml.Root.Add(New XElement("buff", New Object() {New XAttribute("id", b.Id), New XAttribute("duration", b.Duration)}))
         Next
@@ -997,15 +996,15 @@ Public Partial Class frmMain
     ''' <param name="e"></param>
     Private Sub btnLoadBuffs_Click(sender As Object, e As EventArgs)
         ' Ask what to open..
-        Dim ofd = New OpenFileDialog() With { _
-            Key .AddExtension = True, _
-            Key .CheckFileExists = True, _
-            Key .CheckPathExists = True, _
-            Key .DefaultExt = "xml", _
-            Key .Filter = "TSGE Buff Files (*.xml)|*.xml|All files (*.*)|*.*", _
-            Key .InitialDirectory = Application.StartupPath, _
-            Key .ValidateNames = True _
-        }
+        Dim ofd = New OpenFileDialog()
+        
+        ofd.AddExtension = True
+        ofd.CheckFileExists = True
+        ofd.CheckPathExists = True
+        ofd.DefaultExt = "xml"
+        ofd.Filter = "TSGE Buff Files (*.xml)|*.xml|All files (*.*)|*.*"
+        ofd.InitialDirectory = Application.StartupPath
+        ofd.ValidateNames = True
 
         If ofd.ShowDialog() <> DialogResult.OK Then
             MessageBox.Show("Failed to open buff list!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.[Error])
@@ -1027,7 +1026,7 @@ Public Partial Class frmMain
             Dim items = If(TryCast(itemElements, IList(Of XElement)), itemElements.ToList())
 
             ' Update each item..
-            For x As var = 0 To items.Count - 1
+            For x As Int16 = 0 To items.Count - 1
                 Dim buffId As Integer
                 Dim buffDuration As Integer
 
@@ -1105,7 +1104,7 @@ Public Partial Class frmMain
         Me.m_SelectedInventoryItem = lbl
         lbl.Focus()
 
-        For Each label As var In Me.m_InventoryLabels.Where(Function(label) label <> Me.m_SelectedInventoryItem)
+        For Each label As Label In Me.m_InventoryLabels.Where(Function(label) label <> Me.m_SelectedInventoryItem)
             label.BackColor = Color.Transparent
         Next
 
@@ -1114,14 +1113,14 @@ Public Partial Class frmMain
         If item IsNot Nothing AndAlso item.NetID <> 0 Then
             Me.cboInventoryPrefixCategory.SelectedIndex = 0
             If item.Prefix <> 0 Then
-                For x As var = 0 To Me.cboInventoryPrefix.Items.Count - 1
+                For x As Int16 = 0 To Me.cboInventoryPrefix.Items.Count - 1
                     If DirectCast(Me.cboInventoryPrefix.Items(x), ItemPrefix).Id = item.Prefix Then
                         Me.cboInventoryPrefix.SelectedIndex = x
                         Return
                     End If
                 Next
             Else
-                Dim none = (From i In Me.cboInventoryPrefix.Items Where i.Prefix = "None"i).SingleOrDefault()
+                Dim none = (From i In Me.cboInventoryPrefix.Items Where i.Prefix = "None").SingleOrDefault()
                 If none IsNot Nothing Then
                     Me.cboInventoryPrefix.SelectedItem = none
                 End If
@@ -1276,16 +1275,16 @@ Public Partial Class frmMain
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     Private Sub btnInventoryMaxAllStacks_Click(sender As Object, e As EventArgs)
-        For x As var = 0 To Me.m_InventoryLabels.Count - 1
+        For x As Int16 = 0 To Me.m_InventoryLabels.Count - 1
             ' Update the item..
             Dim item = Me.Player.Inventory(x)
             If item.Id <> 0 Then
-                AddressOf item.Count = InlineAssignHelper(item.Stack, item.MaxStack)
+                item.Count = InlineAssignHelper(item.Stack, item.MaxStack)
             End If
 
             ' Update the item label..
             Me.m_InventoryLabels(x).Image = New Bitmap(String.Format("{0}\Data\Items\item_{1}.png", Application.StartupPath, item.NetID))
-            Me.m_InventoryLabels(x).Text = AddressOf item.Count.ToString()
+            Me.m_InventoryLabels(x).Text = item.Count.ToString()
             Me.m_Tooltip.SetToolTip(Me.m_InventoryLabels(x), item.ToString())
         Next
     End Sub
@@ -1296,15 +1295,15 @@ Public Partial Class frmMain
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     Private Sub btnInventoryDeleteAllItems_Click(sender As Object, e As EventArgs)
-        For x As var = 0 To Me.m_InventoryLabels.Count - 1
+        For x As Int16 = 0 To Me.m_InventoryLabels.Count - 1
             ' Update the item..
             Dim item = Me.Player.Inventory(x)
             item.SetItem(0)
-            AddressOf item.Count = 0
+            item.Count = 0
 
             ' Update the item label..
             Me.m_InventoryLabels(x).Image = New Bitmap(String.Format("{0}\Data\Items\item_{1}.png", Application.StartupPath, item.NetID))
-            Me.m_InventoryLabels(x).Text = AddressOf item.Count.ToString()
+            Me.m_InventoryLabels(x).Text = item.Count.ToString()
             Me.m_Tooltip.SetToolTip(Me.m_InventoryLabels(x), item.ToString())
         Next
     End Sub
@@ -1315,16 +1314,16 @@ Public Partial Class frmMain
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     Private Sub btnInventoryHackAllStacks_Click(sender As Object, e As EventArgs)
-        For x As var = 0 To Me.m_InventoryLabels.Count - 1
+        For x As Int16 = 0 To Me.m_InventoryLabels.Count - 1
             ' Update the item..
             Dim item = Me.Player.Inventory(x)
             If item.Id <> 0 AndAlso item.MaxStack > 1 Then
-                AddressOf item.Count = InlineAssignHelper(item.Stack, Integer.MaxValue)
+                item.Count = InlineAssignHelper(item.Stack, Integer.MaxValue)
             End If
 
             ' Update the item label..
             Me.m_InventoryLabels(x).Image = New Bitmap(String.Format("{0}\Data\Items\item_{1}.png", Application.StartupPath, item.NetID))
-            Me.m_InventoryLabels(x).Text = AddressOf item.Count.ToString()
+            Me.m_InventoryLabels(x).Text = item.Count.ToString()
             Me.m_Tooltip.SetToolTip(Me.m_InventoryLabels(x), item.ToString())
         Next
     End Sub
@@ -1336,14 +1335,14 @@ Public Partial Class frmMain
     ''' <param name="e"></param>
     Private Sub btnSaveInventory_Click(sender As Object, e As EventArgs)
         ' Ask where to save to..
-        Dim sfd = New SaveFileDialog() With { _
-            Key .AddExtension = True, _
-            Key .CheckPathExists = True, _
-            Key .DefaultExt = "xml", _
-            Key .Filter = "TSGE Inventory Files (*.xml)|*.xml|All files (*.*)|*.*", _
-            Key .InitialDirectory = Application.StartupPath, _
-            Key .ValidateNames = True _
-        }
+        Dim sfd = New SaveFileDialog()
+        
+        sfd.AddExtension = True
+        sfd.CheckPathExists = True
+        sfd.DefaultExt = "xml"
+        sfd.Filter = "TSGE Buff Files (*.xml)|*.xml|All files (*.*)|*.*"
+        sfd.InitialDirectory = Application.StartupPath
+        sfd.ValidateNames = True
 
         If sfd.ShowDialog() <> DialogResult.OK Then
             MessageBox.Show("Failed to save inventory!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.[Error])
@@ -1359,7 +1358,7 @@ Public Partial Class frmMain
         End If
 
         ' Loop each item in the players inventory..
-        For Each i As var In Me.Player.Inventory
+        For Each i As string In Me.Player.Inventory
             ' Add each item to the xml document..
             xml.Root.Add(New XElement("item", New Object() {New XAttribute("id", i.NetID), New XAttribute("count", AddressOf i.Count), New XAttribute("prefix", i.Prefix)}))
         Next
@@ -1376,15 +1375,15 @@ Public Partial Class frmMain
     ''' <param name="e"></param>
     Private Sub btnLoadInventory_Click(sender As Object, e As EventArgs)
         ' Ask what to open..
-        Dim ofd = New OpenFileDialog() With { _
-            Key .AddExtension = True, _
-            Key .CheckFileExists = True, _
-            Key .CheckPathExists = True, _
-            Key .DefaultExt = "xml", _
-            Key .Filter = "TSGE Inventory Files (*.xml)|*.xml|All files (*.*)|*.*", _
-            Key .InitialDirectory = Application.StartupPath, _
-            Key .ValidateNames = True _
-        }
+        Dim ofd = New OpenFileDialog()
+        
+        ofd.AddExtension = True
+        ofd.CheckFileExists = True
+        ofd.CheckPathExists = True
+        ofd.DefaultExt = "xml"
+        ofd.Filter = "TSGE Buff Files (*.xml)|*.xml|All files (*.*)|*.*"
+        ofd.InitialDirectory = Application.StartupPath
+        ofd.ValidateNames = True
 
         If ofd.ShowDialog() <> DialogResult.OK Then
             MessageBox.Show("Failed to open inventory!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.[Error])
@@ -1409,7 +1408,7 @@ Public Partial Class frmMain
             End If
 
             ' Update each item..
-            For x As var = 0 To items.Count - 1
+            For x As Int16 = 0 To items.Count - 1
                 Dim itemId As Integer
                 Dim itemCount As Integer
                 Dim itemPrefix As Integer
@@ -1447,7 +1446,10 @@ Public Partial Class frmMain
         Me.m_SelectedEquipmentItem = lbl
         lbl.Focus()
 
-        For Each label As var In Me.m_EquipmentLabels.Where(Function(label) label <> Me.m_SelectedEquipmentItem)
+        For Each label As Label In Me.m_EquipmentLabels.Where(label <> Me.m_SelectedEquipmentItem)
+            label.BackColor = Color.Transparent
+        Next
+        For Each label As ItemLabel In Me.m_EquipmentLabels.Where(label <> Me.m_SelectedEquipmentItem)
             label.BackColor = Color.Transparent
         Next
 
@@ -1477,7 +1479,7 @@ Public Partial Class frmMain
                 Exit Select
         End Select
 
-        Dim prefixEntry = (From i In Me.cboEquipmentPrefix.Items Where i.Id = prefixi).SingleOrDefault()
+        Dim prefixEntry = (From i In Me.cboEquipmentPrefix.Items Where i.Id = prefix).SingleOrDefault()
         If prefixEntry IsNot Nothing Then
             Me.cboEquipmentPrefix.SelectedItem = prefixEntry
         End If

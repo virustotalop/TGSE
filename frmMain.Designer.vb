@@ -4333,14 +4333,6 @@ Partial Class frmMain
         Me.aboutTSGEToolStripMenuItem.Text = "About TSGE"
         AddHandler Me.aboutTSGEToolStripMenuItem.Click, New System.EventHandler(AddressOf Me.aboutTSGEToolStripMenuItem_Click)
         ' 
-        ' checkForUpdatesToolStripMenuItem
-        ' 
-        Me.checkForUpdatesToolStripMenuItem.Image = DirectCast(resources.GetObject("checkForUpdatesToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.checkForUpdatesToolStripMenuItem.Name = "checkForUpdatesToolStripMenuItem"
-        Me.checkForUpdatesToolStripMenuItem.Size = New System.Drawing.Size(182, 22)
-        Me.checkForUpdatesToolStripMenuItem.Text = "Check For Updates"
-        AddHandler Me.checkForUpdatesToolStripMenuItem.Click, New System.EventHandler(AddressOf Me.checkForUpdatesToolStripMenuItem_Click)
-        ' 
         ' inventoryBindingSource
         ' 
         Me.inventoryBindingSource.DataMember = "Inventory"

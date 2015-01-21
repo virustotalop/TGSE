@@ -31,7 +31,7 @@ Public Partial Class frmHairSelection
         InitializeComponent()
 
         Me.m_HairId = 0
-        Me.lstHairSelection.SelectedIndex = Me.HairId
+        Me.lstHairSelection.SelectedIndex = frmMain.Player.Hair
     End Sub
 
     ''' <summary>
