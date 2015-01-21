@@ -1749,7 +1749,7 @@ Public Partial Class frmMain
         sfd.AddExtension = True
         sfd.CheckPathExists = True
         sfd.DefaultExt = "xml"
-        sfd.Filter = "TSGE Buff Files (*.xml)|*.xml|All files (*.*)|*.*"
+        sfd.Filter = "TSGE Equipment Files (*.xml)|*.xml|All files (*.*)|*.*"
         sfd.InitialDirectory = Application.StartupPath
         sfd.ValidateNames = True
 
@@ -1814,7 +1814,7 @@ Public Partial Class frmMain
         ofd.CheckFileExists = True
         ofd.CheckPathExists = True
         ofd.DefaultExt = "xml"
-        ofd.Filter = "TSGE Buff Files (*.xml)|*.xml|All files (*.*)|*.*"
+        ofd.Filter = "TSGE Equipment Files (*.xml)|*.xml|All files (*.*)|*.*"
         ofd.InitialDirectory = Application.StartupPath
         ofd.ValidateNames = True
 
@@ -2218,7 +2218,7 @@ Public Partial Class frmMain
         sfd.AddExtension = True
         sfd.CheckPathExists = True
         sfd.DefaultExt = "xml"
-        sfd.Filter = "TSGE Buff Files (*.xml)|*.xml|All files (*.*)|*.*"
+        sfd.Filter = "TSGE Bank Files (*.xml)|*.xml|All files (*.*)|*.*"
         sfd.InitialDirectory = Application.StartupPath
         sfd.ValidateNames = True
 
@@ -2259,7 +2259,7 @@ Public Partial Class frmMain
         ofd.CheckFileExists = True
         ofd.CheckPathExists = True
         ofd.DefaultExt = "xml"
-        ofd.Filter = "TSGE Buff Files (*.xml)|*.xml|All files (*.*)|*.*"
+        ofd.Filter = "TSGE Bank Files (*.xml)|*.xml|All files (*.*)|*.*"
         ofd.InitialDirectory = Application.StartupPath
         ofd.ValidateNames = True
 
@@ -2320,7 +2320,7 @@ Public Partial Class frmMain
         sfd.AddExtension = True
         sfd.CheckPathExists = True
         sfd.DefaultExt = "xml"
-        sfd.Filter = "TSGE Buff Files (*.xml)|*.xml|All files (*.*)|*.*"
+        sfd.Filter = "TSGE Safe Files (*.xml)|*.xml|All files (*.*)|*.*"
         sfd.InitialDirectory = Application.StartupPath
         sfd.ValidateNames = True
 
@@ -2361,7 +2361,7 @@ Public Partial Class frmMain
         ofd.CheckFileExists = True
         ofd.CheckPathExists = True
         ofd.DefaultExt = "xml"
-        ofd.Filter = "TSGE Buff Files (*.xml)|*.xml|All files (*.*)|*.*"
+        ofd.Filter = "TSGE Safe Files (*.xml)|*.xml|All files (*.*)|*.*"
         ofd.InitialDirectory = Application.StartupPath
         ofd.ValidateNames = True
 
