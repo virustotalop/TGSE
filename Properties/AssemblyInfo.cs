@@ -22,7 +22,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("TSGE (Sizable)")]
-[assembly: AssemblyDescription("Terraria Save Game Editor - by atom0s (Sizable by Walkman100)")]
+[assembly: AssemblyDescription("Terraria Save Game Editor - by atom0s (Sizable2 by Walkman100)")]
 [assembly: AssemblyConfiguration("Release")]
 [assembly: AssemblyCompany("atom0s")]
 [assembly: AssemblyProduct("TSGE (Sizable)")]

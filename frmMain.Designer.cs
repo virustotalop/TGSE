@@ -832,6 +832,7 @@ namespace TSGE
             // cboDifficulty
             // 
             this.cboDifficulty.DataBindings.Add(new System.Windows.Forms.Binding("SelectedIndex", this.playerBindingSource, "Difficulty", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cboDifficulty.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboDifficulty.FormattingEnabled = true;
             this.cboDifficulty.Items.AddRange(new object[] {
             "Softcore",
@@ -4500,7 +4501,6 @@ namespace TSGE
             ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         
